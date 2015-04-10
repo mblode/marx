@@ -1,0 +1,58 @@
+main,
+header,
+footer,
+nav,
+article,
+section,
+aside,
+details,
+summary {
+  clear: both;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  max-width: 102.4rem;
+  padding: 0 1.6rem;
+}
+
+article,
+section {
+  clear: left;
+  display: inline-block;
+  float: left;
+  margin-bottom: 1.6rem;
+  max-width: calc(60% - .5rem);
+}
+
+aside {
+  clear: right;
+  display: inline-block;
+  float: right;
+  margin-bottom: 1.6rem;
+  max-width: calc(40% - .5rem);
+}
+
+footer {
+  background: $light-grey;
+  height: 4em;
+  text-align: center;
+
+  p {
+    line-height: 4em;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: $small-break) {
+  article,
+  section,
+  aside {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+}

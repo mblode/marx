@@ -1,0 +1,109 @@
+body {
+  font-family: $sans-serif-font-family;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+blockquote {
+  border-left: 2px solid $primary-color;
+  font-family: $serif-font-family;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 1.6rem 0 2rem;
+  padding-left: 25px;
+}
+
+p {
+  margin: 0 0 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  margin: 1.6rem 0;
+  padding-bottom: .8rem;
+}
+
+h1 {
+  border-bottom: 1px solid rgb(238, 238, 238);
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h2 {
+  border-bottom: 1px solid rgb(238, 238, 238);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  border-bottom: 1px solid rgb(238, 238, 238);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+pre {
+  background: $black;
+  color: $white;
+  display: block;
+  font-family: $monospace-font-family;
+  font-size: 13px;
+  margin: 0 0 $padding/2;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+code {
+  background: $light-grey;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: $br;
+  font-family: $monospace-font-family;
+  font-size: 13px;
+  padding: 2px 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+ul,
+ol,
+menu,
+dir {
+  -webkit-padding-start: 4rem;
+}

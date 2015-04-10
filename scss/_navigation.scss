@@ -1,0 +1,58 @@
+nav {
+  ul,
+  ol {
+    background: $white;
+    display: inline-block;
+    height: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  ol {
+    width: auto;
+    float: right;
+  }
+
+  li {
+    float: right;
+    margin: 1rem 0;
+  }
+
+  a {
+    color: $black;
+    padding: 1rem 2rem;
+    text-decoration: none;
+
+    &:hover {
+      background: $light-grey;
+      transition: $transition;
+    }
+
+    &:active {
+      background: $white;
+    }
+  }
+}
+
+@media screen and (max-width: $small-break) {
+  nav {
+    ul {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+    }
+
+    ol {
+      display: flex;
+      justify-content: space-between;
+      float: none;
+    }
+
+    li {
+      float: none;
+    }
+  }
+
+}
