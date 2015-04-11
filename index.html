@@ -27,158 +27,106 @@
     </nav>
 
     <section>
-      <h1 id="mou">Mou</h1>
-      <p><img alt="Mou icon" src="http://mouapp.com/Mou_128.png"></p>
-      <h2 id="overview">Overview</h2>
-      <p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
-      <h3 id="syntax">Syntax</h3>
-      <h4 id="strong-and-emphasize">Strong and Emphasize</h4>
-      <p><strong>strong</strong> or <strong>strong</strong> ( Cmd + B )</p>
-      <p><em>emphasize</em> or <em>emphasize</em> ( Cmd + I )</p>
-      <p><strong>Sometimes I want a lot of text to be bold.
-      Like, seriously, a <em>LOT</em> of text</strong></p>
-      <h4 id="blockquotes">Blockquotes</h4>
-      <blockquote>
-      <p>Right angle brackets &gt; are used for block quotes.</p>
-      </blockquote>
-      <h4 id="links-and-email">Links and Email</h4>
-      <p>An email <a href="mailto:example@example.com">example@example.com</a> link.</p>
-      <p>Simple inline link <a href="http://chenluois.com">http://chenluois.com</a>, another inline link <a href="http://smallerapp.com">Smaller</a>, one more inline link with title <a href="http://resizesafari.com" title="a Safari extension">Resize</a>.</p>
-      <p>A <a href="http://mouapp.com" title="Markdown editor on Mac OS X">reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
-      <p>Titles ( or called tool tips ) in the links are optional.</p>
-      <h4 id="images">Images</h4>
-      <p>An inline image <img alt="Smaller icon" src="http://smallerapp.com/favicon.ico" title="Title here">, title is optional.</p>
-      <p>A <img alt="Resize icon" src="http://resizesafari.com/favicon.ico" title="Title"> reference style image.</p>
-      <h4 id="inline-code-and-block-code">Inline code and Block code</h4>
-      <p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
-      <p>Indent each line by at least 1 tab, or 4 spaces.
-          var Mou = exactlyTheAppIwant;</p>
-      <h4 id="ordered-lists">Ordered Lists</h4>
-      <p>Ordered lists are created using "1." + Space:</p>
-      <ol>
-      <li>Ordered list item</li>
-      <li>Ordered list item</li>
-      <li>Ordered list item</li>
-      </ol>
-      <h4 id="unordered-lists">Unordered Lists</h4>
-      <p>Unordered list are created using "*" + Space:</p>
-      <ul>
-      <li>Unordered list item</li>
-      <li>Unordered list item</li>
-      <li>Unordered list item</li>
-      </ul>
-      <p>Or using "-" + Space:</p>
-      <ul>
-      <li>Unordered list item</li>
-      <li>Unordered list item</li>
-      <li>Unordered list item</li>
-      </ul>
-      <h4 id="hard-linebreak">Hard Linebreak</h4>
-      <p>End a line with two or more spaces will create a hard linebreak, called <code>&lt;br /&gt;</code> in HTML. ( Control + Return )
-      Above line ended with 2 spaces.</p>
-      <h4 id="horizontal-rules">Horizontal Rules</h4>
-      <p>Three or more asterisks or dashes:</p>
-      <hr>
-      <hr>
-      <hr>
-      <h4 id="headers">Headers</h4>
-      <p>Setext-style:</p>
-      <h1 id="this-is-h1">This is H1</h1>
-      <h2 id="this-is-h2">This is H2</h2>
-      <p>atx-style:</p>
-      <h1 id="this-is-h1_1">This is H1</h1>
-      <h2 id="this-is-h2_1">This is H2</h2>
-      <h3 id="this-is-h3">This is H3</h3>
-      <h4 id="this-is-h4">This is H4</h4>
-      <h5 id="this-is-h5">This is H5</h5>
-      <h6 id="this-is-h6">This is H6</h6>
-      <h3 id="extra-syntax">Extra Syntax</h3>
-      <h4 id="footnotes">Footnotes</h4>
-      <p>Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:</p>
-      <p>That's some text with a footnote.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-      <h4 id="strikethrough">Strikethrough</h4>
-      <p>Wrap with 2 tilde characters:</p>
-      <p>~~Strikethrough~~</p>
-      <h4 id="fenced-code-blocks">Fenced Code Blocks</h4>
-      <p>Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:</p>
-      <pre><code>Fenced code blocks are like Stardard Markdownâ€™s regular code
-      blocks, except that theyâ€™re not indented and instead rely on
-      a start and end fence lines to delimit the code block.</code></pre>
-      <h4 id="tables">Tables</h4>
-      <p>A simple table looks like this:</p>
-      <table>
-      <thead>
-      <tr>
-      <th>First Header</th>
-      <th>Second Header</th>
-      <th>Third Header</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      </tr>
-      <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      </tr>
-      </tbody>
-      </table>
-      <p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
-      <table>
-      <thead>
-      <tr>
-      <th>First Header</th>
-      <th>Second Header</th>
-      <th>Third Header</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      </tr>
-      <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-      </tr>
-      </tbody>
-      </table>
-      <p>Specify alignement for each column by adding colons to separator lines:</p>
-      <table>
-      <thead>
-      <tr>
-      <th align="left">First Header</th>
-      <th>Second Header</th>
-      <th align="right">Third Header</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td align="left">Left</td>
-      <td>Center</td>
-      <td align="right">Right</td>
-      </tr>
-      <tr>
-      <td align="left">Left</td>
-      <td>Center</td>
-      <td align="right">Right</td>
-      </tr>
-      </tbody>
-      </table>
-      <div class="footnote">
-      <hr>
-      <ol>
-      <li id="fn:1">
-      <p>And that's the footnote.&nbsp;<a href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
-      </li>
-      </ol>
+      <form action="#">
+
+  <header>
+    <h2>Example Responsive Form</h2>
+    <p>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</p>
+  </header>
+
+  <div>
+    <label class="desc" id="title1" for="Field1">Full Name</label>
+    <div>
+      <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title3" for="Field3">
+      Email
+    </label>
+    <div>
+      <input id="Field3" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3">
+   </div>
+  </div>
+
+  <div>
+    <label class="desc" id="title4" for="Field4">
+      Message
+    </label>
+
+    <div>
+      <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    </div>
+  </div>
+
+  <div>
+    <fieldset>
+
+      <legend id="title5" class="desc">
+        Select a Choice
+      </legend>
+
+      <div>
+      	<input id="radioDefault_5" name="Field5" type="hidden" value="">
+      	<div>
+      		<input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5" checked="checked">
+      		<label class="choice" for="Field5_0">First Choice</label>
+      	</div>
+        <div>
+        	<input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
+        	<label class="choice" for="Field5_1">Second Choice</label>
+        </div>
+        <div>
+        	<input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
+        	<label class="choice" for="Field5_2">Third Choice</label>
+        </div>
       </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <fieldset>
+      <legend id="title6" class="desc">
+        Check All That Apply
+      </legend>
+      <div>
+      <div>
+      	<input id="Field6" name="Field6" type="checkbox" value="First Choice" tabindex="8">
+      	<label class="choice" for="Field6">First Choice</label>
+      </div>
+      <div>
+      	<input id="Field7" name="Field7" type="checkbox" value="Second Choice" tabindex="9">
+      	<label class="choice" for="Field7">Second Choice</label>
+      </div>
+      <div>
+      	<input id="Field8" name="Field8" type="checkbox" value="Third Choice" tabindex="10">
+      	<label class="choice" for="Field8">Third Choice</label>
+      </span>
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <label class="desc" id="title106" for="Field106">
+    	Select a Choice
+    </label>
+    <div>
+    <select id="Field106" name="Field106" class="field select medium" tabindex="11">
+      <option value="First Choice">First Choice</option>
+      <option value="Second Choice">Second Choice</option>
+      <option value="Third Choice">Third Choice</option>
+    </select>
+    </div>
+  </div>
+
+  <div>
+		<div>
+  		<input id="saveForm" name="saveForm" type="submit" value="Submit">
+    </div>
+	</div>
+
+</form>
 
   </main>
 

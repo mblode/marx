@@ -6,13 +6,18 @@ nav {
     height: auto;
     list-style: none;
     margin: 0;
+    margin-bottom: 1.6rem;
     padding: 0;
     text-align: center;
   }
 
   ol {
-    width: auto;
     float: right;
+    width: auto;
+
+    li {
+      margin-left: 2rem;
+    }
   }
 
   li {
@@ -22,7 +27,7 @@ nav {
 
   a {
     color: $black;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     text-decoration: none;
 
     &:hover {
@@ -47,12 +52,17 @@ nav {
 
     ol {
       display: flex;
-      justify-content: space-between;
       float: none;
+      justify-content: space-between;
+
+      li {
+        margin: 0;
+      }
     }
 
     li {
       float: none;
+      margin-left: 1rem;
     }
   }
 

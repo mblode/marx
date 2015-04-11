@@ -80,6 +80,7 @@ audio, canvas, iframe, img, svg, video {
 
 button, input, select, textarea {
   background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: inherit;
   font-family: inherit;
   font-style: inherit;
@@ -245,7 +246,7 @@ footer {
   position: absolute;
   width: 100%; }
   footer p {
-    line-height: 4rem;
+    line-height: 8rem;
     margin: 0;
     text-align: center; }
 
@@ -266,23 +267,94 @@ img {
     display: block;
     max-width: 100%; } }
 
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+  background-clip: padding-box;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  color: #444;
+  text-align: left;
+  font-size: 1em;
+  vertical-align: middle; }
+
+select, select, select {
+  background: #fff url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  padding: 0 25px 0 8px; }
+
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0; }
+
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0; }
+
+form > div > label, legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px; }
+
+form > div > div, form > div > fieldset > div {
+  width: 75%;
+  float: right; }
+
+form > div > fieldset label {
+  font-size: 90%; }
+
+fieldset {
+  border: 0;
+  padding: 0; }
+
+input[type=text], input[type=email], input[type=url], input[type=password], textarea {
+  width: 100%; }
+
+input[type=text], input[type=email], input[type=url], input[type=password] {
+  width: 50%; }
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, textarea:focus {
+  outline: 0;
+  border-color: #4697e4; }
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; }
+  form > div > label, legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0; }
+  form > div > div, form > div > fieldset > div {
+    width: 100%;
+    float: none; }
+  input[type=text], input[type=email], input[type=url], input[type=password], textarea, select {
+    width: 100%; } }
+
+@media (min-width: 1200px) {
+  form > div > label, legend {
+    text-align: right; } }
+
 nav ul, nav ol {
   background: #fff;
   display: inline-block;
   height: auto;
   list-style: none;
   margin: 0;
+  margin-bottom: 1.6rem;
   padding: 0;
   text-align: center; }
 nav ol {
-  width: auto;
-  float: right; }
+  float: right;
+  width: auto; }
+  nav ol li {
+    margin-left: 2rem; }
 nav li {
   float: right;
   margin: 1rem 0; }
 nav a {
   color: #444;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   text-decoration: none; }
   nav a:hover {
     background: #efefef;
@@ -302,20 +374,19 @@ nav a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    float: none;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    float: none; }
+            justify-content: space-between; }
+    nav ol li {
+      margin: 0; }
   nav li {
-    float: none; } }
+    float: none;
+    margin-left: 1rem; } }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-bottom: 1.6rem;
-  word-break: normal;
-  word-wrap: break-word; }
+  margin-bottom: 1.6rem; }
 
 caption {
   padding: .8rem 0; }
@@ -338,7 +409,7 @@ tfoot tr {
   background: none; }
 
 tfoot td {
-  color: #8a97a0;
+  color: #efefef;
   font-size: .8rem;
   font-style: italic;
   padding: 1.6rem .2rem; }

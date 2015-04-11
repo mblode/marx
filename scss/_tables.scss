@@ -1,9 +1,5 @@
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
   margin-bottom: 1.6rem;
-  word-break: normal;
-  word-wrap: break-word;
 }
 
 caption {
@@ -33,7 +29,7 @@ tfoot tr {
 }
 
 tfoot td {
-  color: #8a97a0;
+  color: $light-grey;
   font-size: .8rem;
   font-style: italic;
   padding: 1.6rem .2rem;
