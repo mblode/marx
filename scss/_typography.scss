@@ -1,4 +1,5 @@
 body {
+  color: $black;
   font-family: $sans-serif-font-family;
   font-size: 1.6rem;
   font-style: normal;
@@ -12,7 +13,7 @@ blockquote {
   font-style: italic;
   font-weight: 400;
   margin: 1.6rem 0 2rem;
-  padding-left: 25px;
+  padding-left: 2.5rem;
 }
 
 p {
@@ -26,26 +27,25 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  margin: 1.6rem 0;
-  padding-bottom: .8rem;
+  margin: 2rem 0 1.6rem;
 }
 
 h1 {
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 500;
 }
 
 h2 {
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
   font-size: 3rem;
   font-style: normal;
   font-weight: 500;
 }
 
 h3 {
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
@@ -64,30 +64,29 @@ h5 {
 }
 
 h6 {
+  color: $grey;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
 }
 
 pre {
-  background: $black;
-  color: $white;
+  background: $light-grey;
+  color: $black;
   display: block;
   font-family: $monospace-font-family;
-  font-size: 13px;
-  margin: 0 0 $padding/2;
-  padding: 10px;
+  font-size: 1.4rem;
+  margin-bottom: .8remrem;
+  padding: 1.6rem;
   word-break: break-all;
   word-wrap: break-word;
 }
 
 code {
   background: $light-grey;
-  border: 1px solid rgba(0, 0, 0, .1);
-  border-radius: $br;
+  color: $black;
   font-family: $monospace-font-family;
-  font-size: 13px;
-  padding: 2px 10px;
+  font-size: 1.4rem;
   word-break: break-all;
   word-wrap: break-word;
 }
@@ -105,5 +104,6 @@ ul,
 ol,
 menu,
 dir {
+  margin-bottom: 1.6rem;
   -webkit-padding-start: 4rem;
 }

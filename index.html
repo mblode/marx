@@ -27,89 +27,158 @@
     </nav>
 
     <section>
-      <h1 id="burger">Burger</h1>
-      <p>Burger is a minimal hamburger menu with fullscreen navigation. It is created by mblode.</p>
-      <p>This project officially requires zero external bower dependencies. Woo-hoo!</p>
-      <h2 id="burger-in-action">Burger in action</h2>
-      <p>
-        <img alt="Burger Gif" src="http://i.imgur.com/spSuHHZ.gif">
-      </p>
-      <h2 id="demo-on-codepen"><a href="http://codepen.io/mblode/pen/qEGWwB">Demo on Codepen</a></h2>
-      <h2 id="screenshots">Screenshots</h2>
-      <p>
-        <img alt="Burger: Closed" src="http://i.imgur.com/eElVkQI.png">
-      </p>
-      <p>
-        <img alt="Burger: Opened" src="http://i.imgur.com/tI0ZeNw.png">
-      </p>
-      <h2 id="quick-start">Quick Start</h2>
-      <p>Several quick start options are available:</p>
-      <ul>
-        <li>Install with <a href="http://bower.io">Bower</a>:
-          <code>bower install burger</code> (recommended).</li>
-        <li><a href="https://github.com/mblode/burger/archive/master.zip">Download the latest release</a>.</li>
-        <li>Clone the repo:
-          <code>git clone https://github.com/mblode/burger.git</code>.</li>
-      </ul>
-      <p>if you have cloned the repo or downloaded from .zip, there are a few steps you must take within the terminal.</p>
+      <h1 id="mou">Mou</h1>
+      <p><img alt="Mou icon" src="http://mouapp.com/Mou_128.png"></p>
+      <h2 id="overview">Overview</h2>
+      <p><strong>Mou</strong>, the missing Markdown editor for <em>web developers</em>.</p>
+      <h3 id="syntax">Syntax</h3>
+      <h4 id="strong-and-emphasize">Strong and Emphasize</h4>
+      <p><strong>strong</strong> or <strong>strong</strong> ( Cmd + B )</p>
+      <p><em>emphasize</em> or <em>emphasize</em> ( Cmd + I )</p>
+      <p><strong>Sometimes I want a lot of text to be bold.
+      Like, seriously, a <em>LOT</em> of text</strong></p>
+      <h4 id="blockquotes">Blockquotes</h4>
+      <blockquote>
+      <p>Right angle brackets &gt; are used for block quotes.</p>
+      </blockquote>
+      <h4 id="links-and-email">Links and Email</h4>
+      <p>An email <a href="mailto:example@example.com">example@example.com</a> link.</p>
+      <p>Simple inline link <a href="http://chenluois.com">http://chenluois.com</a>, another inline link <a href="http://smallerapp.com">Smaller</a>, one more inline link with title <a href="http://resizesafari.com" title="a Safari extension">Resize</a>.</p>
+      <p>A <a href="http://mouapp.com" title="Markdown editor on Mac OS X">reference style</a> link. Input id, then anywhere in the doc, define the link with corresponding id:</p>
+      <p>Titles ( or called tool tips ) in the links are optional.</p>
+      <h4 id="images">Images</h4>
+      <p>An inline image <img alt="Smaller icon" src="http://smallerapp.com/favicon.ico" title="Title here">, title is optional.</p>
+      <p>A <img alt="Resize icon" src="http://resizesafari.com/favicon.ico" title="Title"> reference style image.</p>
+      <h4 id="inline-code-and-block-code">Inline code and Block code</h4>
+      <p>Inline code are surround by <code>backtick</code> key. To create a block code:</p>
+      <p>Indent each line by at least 1 tab, or 4 spaces.
+          var Mou = exactlyTheAppIwant;</p>
+      <h4 id="ordered-lists">Ordered Lists</h4>
+      <p>Ordered lists are created using "1." + Space:</p>
       <ol>
-        <li>Change directory:
-          <code>cd burger</code>.</li>
-        <li>Install node modules:
-          <code>npm install</code>.</li>
-        <li>Install scss-lint Ruby gem:
-          <code>gem install scss-lint</code>.</li>
-        <li>To run gulp server:
-          <code>gulp</code>.</li>
-        <li>To run build process:
-          <code>gulp build</code>.</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
       </ol>
-      <h2>Running Github Pages</h2>
-      <p>The gh-pages branch is built using Jekyll and must therefore be install with
-        <code>gem install jekyll</code>.</p>
-      <ol>
-        <li>Checkout in to gh-pages:
-          <code>git checkout gh-pages</code>.</li>
-        <li>Install burger dependency:
-          <code>bower install</code>.</li>
-        <li>Run jekyll:
-          <code>jekyll serve</code>.</li>
-        <li>Open in browser:
-          <code>localhost:4000/burger/</code>.</li>
-      </ol>
-      <h2>What's Included</h2>
-      <p>These are the files that are generated from
-        <code>bower install burger</code>
-      </p>
-      <pre>
-        <code>. ├── README.md ├── bower.json └── dist ├── css │ ├── burger.css │ └── burger.min.css ├── index.html ├── scripts │ ├── burger.js │ └── burger.min.js └── scss ├── _burger.scss ├── _config.scss └── burger.scss
-        </code>
-      </pre>
-
-      <h2>Documentation</h2>
-      <h3>HTML Markup</h3>
-      <pre>
-        <code> &lt;!-- Navigation --&gt; &lt;div class="burger-nav"&gt; &lt;li&gt;&lt;a class="burger-link active" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link" href="#"&gt;About&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link"
-          href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt; &lt;/div&gt; &lt;!-- Burger-Icon --&gt; &lt;div class="burger-contain"&gt; &lt;div class="burger"&gt; &lt;div class="bun
-          bun-top"&gt;&lt;/div&gt; &lt;div class="bun bun-mid"&gt;&lt;/div&gt; &lt;div class="bun bun-bottom"&gt;&lt;/div&gt; &lt;/div&gt; &lt;!-- Burger-Brand --&gt; &lt;a href="#" class="burger-brand"&gt;Burger&lt;/a&gt; &lt;/div&gt;
-        </code>
-      </pre>
-
-      <h2 id="browser-compatibility">Browser Compatibility</h2>
+      <h4 id="unordered-lists">Unordered Lists</h4>
+      <p>Unordered list are created using "*" + Space:</p>
       <ul>
-        <li>Safari 6.1+</li>
-        <li>IE 10+</li>
-        <li>Firefox 29+</li>
-        <li>Chrome 26+</li>
-        <li>Opera 17+</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
       </ul>
-      <h2 id="contributing-to-burger">Contributing to Burger</h2>
-      <p>Pull requests are the way to go.</p>
-      <h2 id="creators">Creators</h2>
-      <p>
-        <strong>Matthew Blode</strong>
-        - <a href="https://twitter.com/mblode">https://twitter.com/mblode</a> - <a href="https://github.com/mblode">https://github.com/mblode</a> - <a href="http://codepen.io/mblode">http://codepen.io/mblode</a></p>
-    </section>
+      <p>Or using "-" + Space:</p>
+      <ul>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      </ul>
+      <h4 id="hard-linebreak">Hard Linebreak</h4>
+      <p>End a line with two or more spaces will create a hard linebreak, called <code>&lt;br /&gt;</code> in HTML. ( Control + Return )
+      Above line ended with 2 spaces.</p>
+      <h4 id="horizontal-rules">Horizontal Rules</h4>
+      <p>Three or more asterisks or dashes:</p>
+      <hr>
+      <hr>
+      <hr>
+      <h4 id="headers">Headers</h4>
+      <p>Setext-style:</p>
+      <h1 id="this-is-h1">This is H1</h1>
+      <h2 id="this-is-h2">This is H2</h2>
+      <p>atx-style:</p>
+      <h1 id="this-is-h1_1">This is H1</h1>
+      <h2 id="this-is-h2_1">This is H2</h2>
+      <h3 id="this-is-h3">This is H3</h3>
+      <h4 id="this-is-h4">This is H4</h4>
+      <h5 id="this-is-h5">This is H5</h5>
+      <h6 id="this-is-h6">This is H6</h6>
+      <h3 id="extra-syntax">Extra Syntax</h3>
+      <h4 id="footnotes">Footnotes</h4>
+      <p>Footnotes work mostly like reference-style links. A footnote is made of two things: a marker in the text that will become a superscript number; a footnote definition that will be placed in a list of footnotes at the end of the document. A footnote looks like this:</p>
+      <p>That's some text with a footnote.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+      <h4 id="strikethrough">Strikethrough</h4>
+      <p>Wrap with 2 tilde characters:</p>
+      <p>~~Strikethrough~~</p>
+      <h4 id="fenced-code-blocks">Fenced Code Blocks</h4>
+      <p>Start with a line containing 3 or more backticks, and ends with the first line with the same number of backticks:</p>
+      <pre><code>Fenced code blocks are like Stardard Markdownâ€™s regular code
+      blocks, except that theyâ€™re not indented and instead rely on
+      a start and end fence lines to delimit the code block.</code></pre>
+      <h4 id="tables">Tables</h4>
+      <p>A simple table looks like this:</p>
+      <table>
+      <thead>
+      <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+      <th>Third Header</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      </tr>
+      <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
+      <table>
+      <thead>
+      <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+      <th>Third Header</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      </tr>
+      <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Specify alignement for each column by adding colons to separator lines:</p>
+      <table>
+      <thead>
+      <tr>
+      <th align="left">First Header</th>
+      <th>Second Header</th>
+      <th align="right">Third Header</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td align="left">Left</td>
+      <td>Center</td>
+      <td align="right">Right</td>
+      </tr>
+      <tr>
+      <td align="left">Left</td>
+      <td>Center</td>
+      <td align="right">Right</td>
+      </tr>
+      </tbody>
+      </table>
+      <div class="footnote">
+      <hr>
+      <ol>
+      <li id="fn:1">
+      <p>And that's the footnote.&nbsp;<a href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+      </li>
+      </ol>
+      </div>
 
   </main>
 

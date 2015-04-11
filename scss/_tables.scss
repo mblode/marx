@@ -1,0 +1,40 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.6rem;
+  word-break: normal;
+  word-wrap: break-word;
+}
+
+caption {
+  padding: .8rem 0;
+}
+
+thead th {
+  background: $light-grey;
+  color: $black;
+}
+
+tr {
+  background: $white;
+  margin-bottom: .8rem;
+}
+
+th,
+td {
+  border: 1px solid $silver;
+  padding: .8rem 1.6rem;
+  text-align: center;
+  vertical-align: inherit;
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  color: #8a97a0;
+  font-size: .8rem;
+  font-style: italic;
+  padding: 1.6rem .2rem;
+}

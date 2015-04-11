@@ -15,7 +15,7 @@ summary {
 }
 
 main {
-  max-width: 102.4rem;
+  max-width: 76.8rem;
   padding: 0 1.6rem 1.6rem;
 }
 
@@ -36,7 +36,7 @@ aside {
 }
 
 footer {
-  background: $primary-color;
+  border-top: 1px solid rgba(0, 0, 0, .12);
   bottom: 0;
   height: 4rem;
   left: 0;
@@ -50,16 +50,18 @@ footer {
   }
 }
 
-pre {
-  background: $light-grey;
-  border: 1px solid rgba(0, 0, 0, .25);
-  border-radius: $br;
+hr {
+  border-top: 4px solid rgba(0, 0, 0, .12);
+  display: block;
+  margin-bottom: 1.6rem;
+  width: 100%;
 
-  code {
-    background: transparent;
-    border: 0;
-    color: $black;
-  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
 }
 
 @media screen and (max-width: $small-break) {
