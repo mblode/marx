@@ -7,7 +7,6 @@ section,
 aside,
 details,
 summary {
-  clear: both;
   display: block;
   height: auto;
   margin: 0 auto;
@@ -15,7 +14,10 @@ summary {
 }
 
 main {
+  display: inline-block;
+  margin: 0 auto;
   max-width: 76.8rem;
+  overflow: hidden;
   padding: 0 1.6rem 1.6rem;
 }
 
@@ -24,7 +26,7 @@ article {
   display: inline-block;
   float: left;
   margin-bottom: 1.6rem;
-  max-width: calc(60% - .5rem);
+  max-width: calc(60% - 1rem);
 }
 
 aside {
@@ -32,7 +34,15 @@ aside {
   display: inline-block;
   float: right;
   margin-bottom: 1.6rem;
-  max-width: calc(40% - .5rem);
+  max-width: calc(40% - 1rem);
+}
+
+section {
+  clear: both;
+  display: inline-block;
+  float: left;
+  margin-bottom: 1.6rem;
+  max-width: 100%;
 }
 
 footer {
@@ -40,11 +50,11 @@ footer {
   bottom: 0;
   height: 4rem;
   left: 0;
+  line-height: 4rem;
   position: absolute;
   width: 100%;
 
   p {
-    line-height: 8rem;
     margin: 0;
     text-align: center;
   }

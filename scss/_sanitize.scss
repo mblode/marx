@@ -131,7 +131,7 @@ input,
 select,
 textarea {
   background-color: $form-element-background-color;
-  border: 1px solid rgba(0, 0, 0, .12);
+  border: 1px solid $silver;
   // specify inheritance of form elements
   color: inherit;
   font-family: inherit;
@@ -155,21 +155,6 @@ samp {
 nav ol,
 nav ul {
   list-style: $nav-list-style;
-}
-
-// style select like a standard input
-
-select {
-  -moz-appearance: none;    // Firefox 36+
-  -webkit-appearance: none; // Chrome 41+
-
-  &::-ms-expand {
-    display: none;        // Internet Explorer 11+
-  }
-
-  &::-ms-value {
-    color: currentColor;  // Internet Explorer 11+
-  }
 }
 
 // specify the border styles of tables

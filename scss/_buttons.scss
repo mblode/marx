@@ -1,0 +1,43 @@
+input[type=submit],
+button {
+  background-color: $light-grey;
+  border: 0;
+  border-radius: $br;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+}
+
+input[type=submit]:hover,
+button:hover {
+  background: darken($light-grey, 3);
+}
+
+input[type=submit]:focus,
+button:focus {
+  outline: 0;
+}
+
+input[type=submit]:active,
+button:active {
+  background: darken($light-grey, 8);
+  box-shadow: 0 0 3px rgba(0, 0, 0, .12) inset;
+}
+
+input[type=submit]:disabled,
+button:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: .40;
+}

@@ -1,113 +1,149 @@
-textarea,
-select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
 input[type="date"],
+input[type="month"],
+input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
+input[type="week"],
 input[type="number"],
-input[type="password"],
 input[type="search"],
 input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
-  background-clip: padding-box;
-  background-color: $white;
-  border-radius: 0;
-  -webkit-appearance: none;
-  color: $black;
-  text-align: left;
-  font-size: 1em;
+input[type="color"],
+select,
+textarea {
+  border: 1px solid $silver;
+  border-radius: $br;
+  box-shadow: inset 0 1px 3px $silver;
+  display: inline-block;
+  padding: .8rem;
   vertical-align: middle;
 }
-select,
-select,
-select {
-  background: $white url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
-  background-position: 97% center;
-  background-repeat: no-repeat;
-  padding: 0 25px 0 8px;
+
+input:not([type]) {
+  -webkit-appearance: none;
+  background-clip: padding-box;
+  background-color: $white;
+  border: 1px solid $silver;
+  border-radius: $br;
+  box-shadow: inset 0 1px 3px $silver;
+  color: $black;
+  display: inline-block;
+  font-size: 1em;
+  padding: .8rem;
+  text-align: left;
 }
 
-form > div {
-  clear: both;
-  overflow: hidden;
-  padding: 1px;
-  margin: 0 0 10px 0;
-}
-form > div > fieldset > div > div {
-  margin: 0 0 5px 0;
-}
-form > div > label,
-legend {
-	width: 25%;
-  float: left;
-  padding-right: 10px;
-}
-form > div > div,
-form > div > fieldset > div {
-  width: 75%;
-  float: right;
-}
-form > div > fieldset label {
-	font-size: 90%;
-}
-fieldset {
-	border: 0;
-  padding: 0;
+input[type="color"] {
+  padding: .2rem .5rem;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password],
-textarea {
-	width: 100%;
-}
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password] {
-  width: 50%;
-}
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=password]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
 textarea:focus {
+  border-color: $selection-background-color;
   outline: 0;
-  border-color: #4697e4;
 }
 
-@media (max-width: 600px) {
-  form > div {
-    margin: 0 0 15px 0;
-  }
-  form > div > label,
-  legend {
-	  width: 100%;
-    float: none;
-    margin: 0 0 5px 0;
-  }
-  form > div > div,
-  form > div > fieldset > div {
-    width: 100%;
-    float: none;
-  }
-  input[type=text],
-  input[type=email],
-  input[type=url],
-  input[type=password],
-  textarea,
-  select {
-    width: 100%;
-  }
+input:not([type]):focus {
+  border-color: $selection-background-color;
+  outline: 0;
 }
-@media (min-width: 1200px) {
-  form > div > label,
-	legend {
-  	text-align: right;
-  }
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 1px thin solid #129fea;
+}
+
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+select[disabled],
+textarea[disabled] {
+  background-color: $light-grey;
+  color: $grey;
+  cursor: not-allowed;
+}
+
+input:not([type])[disabled] {
+  background-color: $light-grey;
+  color: $grey;
+  cursor: not-allowed;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: $light-grey;
+  border-color: $silver;
+  color: $grey;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  border-color: #e9322d;
+  color: #b94a48;
+}
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+  outline-color: $red;
+}
+
+select {
+  background-color: $white;
+  border: 1px solid $silver;
+  height: 2.25em;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+label {
+  margin: .8rem 0 .4rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: .8rem 0;
+}
+
+legend {
+  border-bottom: 1px solid $silver;
+  color: $black;
+  display: block;
+  margin-bottom: .8rem;
+  padding: .8rem 0;
+  width: 100%;
 }

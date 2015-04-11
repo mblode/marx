@@ -45,7 +45,6 @@ h2 {
 }
 
 h3 {
-  border-bottom: 1px solid rgba(0, 0, 0, .12);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
@@ -68,6 +67,10 @@ h6 {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
+}
+
+small {
+  color: $grey;
 }
 
 pre {
