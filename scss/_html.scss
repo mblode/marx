@@ -16,11 +16,10 @@ summary {
 
 main {
   max-width: 102.4rem;
-  padding: 0 1.6rem;
+  padding: 0 1.6rem 1.6rem;
 }
 
-article,
-section {
+article {
   clear: left;
   display: inline-block;
   float: left;
@@ -37,13 +36,29 @@ aside {
 }
 
 footer {
-  background: $light-grey;
-  height: 4em;
-  text-align: center;
+  background: $primary-color;
+  bottom: 0;
+  height: 4rem;
+  left: 0;
+  position: absolute;
+  width: 100%;
 
   p {
-    line-height: 4em;
+    line-height: 4rem;
     margin: 0;
+    text-align: center;
+  }
+}
+
+pre {
+  background: $light-grey;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: $br;
+
+  code {
+    background: transparent;
+    border: 0;
+    color: $black;
   }
 }
 

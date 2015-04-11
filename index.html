@@ -14,6 +14,7 @@
   <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
   <main>
+
     <nav>
       <ul>
         <li><a href="#"><b>Marx</b></a></li>
@@ -24,32 +25,97 @@
         <li><a href="#">Html</a></li>
       </ol>
     </nav>
-    <header><h1>Marx</h1></header>
-    <p>The classless CSS framework (perfect for Communists).</p>
-    <blockquote>The classless CSS framework (perfect for Communists).</blockquote>
-    <code>The classless CSS framework (perfect for Communists).</code>
-    <figure>The classless CSS framework (perfect for Communists).</figure>
-    <p>The classless CSS framework (perfect for Communists).</p>
+
     <section>
-      <h1>Section</h1>
+      <h1 id="burger">Burger</h1>
+      <p>Burger is a minimal hamburger menu with fullscreen navigation. It is created by mblode.</p>
+      <p>This project officially requires zero external bower dependencies. Woo-hoo!</p>
+      <h2 id="burger-in-action">Burger in action</h2>
+      <p>
+        <img alt="Burger Gif" src="http://i.imgur.com/spSuHHZ.gif">
+      </p>
+      <h2 id="demo-on-codepen"><a href="http://codepen.io/mblode/pen/qEGWwB">Demo on Codepen</a></h2>
+      <h2 id="screenshots">Screenshots</h2>
+      <p>
+        <img alt="Burger: Closed" src="http://i.imgur.com/eElVkQI.png">
+      </p>
+      <p>
+        <img alt="Burger: Opened" src="http://i.imgur.com/tI0ZeNw.png">
+      </p>
+      <h2 id="quick-start">Quick Start</h2>
+      <p>Several quick start options are available:</p>
       <ul>
-        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae eius eaque, dolore, dolorum beatae quos similique! Officia quod eos, totam fugit voluptas, ex, dolorem vitae est pariatur obcaecati amet.</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae eius eaque, dolore, dolorum beatae quos similique! Officia quod eos, totam fugit voluptas, ex, dolorem vitae est pariatur obcaecati amet.</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae eius eaque, dolore, dolorum beatae quos similique! Officia quod eos, totam fugit voluptas, ex, dolorem vitae est pariatur obcaecati amet.</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae eius eaque, dolore, dolorum beatae quos similique! Officia quod eos, totam fugit voluptas, ex, dolorem vitae est pariatur obcaecati amet.</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae eius eaque, dolore, dolorum beatae quos similique! Officia quod eos, totam fugit voluptas, ex, dolorem vitae est pariatur obcaecati amet.</a></li>
+        <li>Install with <a href="http://bower.io">Bower</a>:
+          <code>bower install burger</code> (recommended).</li>
+        <li><a href="https://github.com/mblode/burger/archive/master.zip">Download the latest release</a>.</li>
+        <li>Clone the repo:
+          <code>git clone https://github.com/mblode/burger.git</code>.</li>
       </ul>
+      <p>if you have cloned the repo or downloaded from .zip, there are a few steps you must take within the terminal.</p>
+      <ol>
+        <li>Change directory:
+          <code>cd burger</code>.</li>
+        <li>Install node modules:
+          <code>npm install</code>.</li>
+        <li>Install scss-lint Ruby gem:
+          <code>gem install scss-lint</code>.</li>
+        <li>To run gulp server:
+          <code>gulp</code>.</li>
+        <li>To run build process:
+          <code>gulp build</code>.</li>
+      </ol>
+      <h2>Running Github Pages</h2>
+      <p>The gh-pages branch is built using Jekyll and must therefore be install with
+        <code>gem install jekyll</code>.</p>
+      <ol>
+        <li>Checkout in to gh-pages:
+          <code>git checkout gh-pages</code>.</li>
+        <li>Install burger dependency:
+          <code>bower install</code>.</li>
+        <li>Run jekyll:
+          <code>jekyll serve</code>.</li>
+        <li>Open in browser:
+          <code>localhost:4000/burger/</code>.</li>
+      </ol>
+      <h2>What's Included</h2>
+      <p>These are the files that are generated from
+        <code>bower install burger</code>
+      </p>
+      <pre>
+        <code>. ├── README.md ├── bower.json └── dist ├── css │ ├── burger.css │ └── burger.min.css ├── index.html ├── scripts │ ├── burger.js │ └── burger.min.js └── scss ├── _burger.scss ├── _config.scss └── burger.scss
+        </code>
+      </pre>
+
+      <h2>Documentation</h2>
+      <h3>HTML Markup</h3>
+      <pre>
+        <code> &lt;!-- Navigation --&gt; &lt;div class="burger-nav"&gt; &lt;li&gt;&lt;a class="burger-link active" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link" href="#"&gt;About&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link"
+          href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a class="burger-link" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt; &lt;/div&gt; &lt;!-- Burger-Icon --&gt; &lt;div class="burger-contain"&gt; &lt;div class="burger"&gt; &lt;div class="bun
+          bun-top"&gt;&lt;/div&gt; &lt;div class="bun bun-mid"&gt;&lt;/div&gt; &lt;div class="bun bun-bottom"&gt;&lt;/div&gt; &lt;/div&gt; &lt;!-- Burger-Brand --&gt; &lt;a href="#" class="burger-brand"&gt;Burger&lt;/a&gt; &lt;/div&gt;
+        </code>
+      </pre>
+
+      <h2 id="browser-compatibility">Browser Compatibility</h2>
+      <ul>
+        <li>Safari 6.1+</li>
+        <li>IE 10+</li>
+        <li>Firefox 29+</li>
+        <li>Chrome 26+</li>
+        <li>Opera 17+</li>
+      </ul>
+      <h2 id="contributing-to-burger">Contributing to Burger</h2>
+      <p>Pull requests are the way to go.</p>
+      <h2 id="creators">Creators</h2>
+      <p>
+        <strong>Matthew Blode</strong>
+        - <a href="https://twitter.com/mblode">https://twitter.com/mblode</a> - <a href="https://github.com/mblode">https://github.com/mblode</a> - <a href="http://codepen.io/mblode">http://codepen.io/mblode</a></p>
     </section>
-    <aside>
-      <h1>Aside</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam cum maxime quam pariatur autem doloremque asperiores voluptatem rerum, voluptatum culpa, rem placeat minima dolores tempora incidunt iste sunt expedita. Tempora.</p>
-    </aside>
+
   </main>
 
+
   <footer>
-    <main>
-      <p>Copyright 2015 Matthew Blode</p>
-    </main>
+    <p>&copy Matthew Blode 2015</p>
   </footer>
 
 </body>

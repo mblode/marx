@@ -1,8 +1,18 @@
 @import 'variables';
-@import 'config';
 @import 'sanitize';
 @import 'typography';
+@import 'config';
 @import 'html';
 @import 'forms';
 @import 'buttons';
 @import 'navigation';
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 4rem;
+}

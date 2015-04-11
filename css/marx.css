@@ -1,6 +1,3 @@
-html {
-  font-size: 62.5%; }
-
 :root {
   box-sizing: border-box;
   cursor: default;
@@ -216,9 +213,9 @@ main, header, footer, nav, article, section, aside, details, summary {
 
 main {
   max-width: 102.4rem;
-  padding: 0 1.6rem; }
+  padding: 0 1.6rem 1.6rem; }
 
-article, section {
+article {
   clear: left;
   display: inline-block;
   float: left;
@@ -233,12 +230,25 @@ aside {
   max-width: calc(40% - .5rem); }
 
 footer {
-  background: #efefef;
-  height: 4em;
-  text-align: center; }
+  background: #1271db;
+  bottom: 0;
+  height: 4rem;
+  left: 0;
+  position: absolute;
+  width: 100%; }
   footer p {
-    line-height: 4em;
-    margin: 0; }
+    line-height: 4rem;
+    margin: 0;
+    text-align: center; }
+
+pre {
+  background: #efefef;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.4rem; }
+  pre code {
+    background: transparent;
+    border: 0;
+    color: #444; }
 
 @media screen and (max-width: 40rem) {
   article, section, aside {
@@ -288,6 +298,14 @@ nav a {
     float: none; }
   nav li {
     float: none; } }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  position: relative; }
+
+body {
+  margin-bottom: 4rem; }
 
 
 /*# sourceMappingURL=marx.css.map */
