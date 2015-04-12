@@ -16,16 +16,16 @@ summary {
 main {
   display: inline-block;
   margin: 0 auto;
-  max-width: 76.8rem;
+  max-width: $big-break;
   overflow: hidden;
-  padding: 0 1.6rem 1.6rem;
+  padding: 0 $md-pad $md-pad;
 }
 
 article {
   clear: left;
   display: inline-block;
   float: left;
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
   max-width: calc(60% - 1rem);
 }
 
@@ -33,7 +33,7 @@ aside {
   clear: right;
   display: inline-block;
   float: right;
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
   max-width: calc(40% - 1rem);
 }
 
@@ -41,12 +41,12 @@ section {
   clear: both;
   display: inline-block;
   float: left;
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
   max-width: 100%;
 }
 
 footer {
-  border-top: 1px solid rgba(0, 0, 0, .12);
+  border-top: 1px solid $trans-light;
   bottom: 0;
   height: 4rem;
   left: 0;
@@ -61,9 +61,9 @@ footer {
 }
 
 hr {
-  border-top: 4px solid rgba(0, 0, 0, .12);
+  border-top: 4px solid $trans-light;
   display: block;
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
   width: 100%;
 
 }

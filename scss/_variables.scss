@@ -30,30 +30,21 @@ $textarea-resize: vertical !default;
 
 //Basic stylings
 $br: .4rem;
-$btn-br: .4rem;
-$padding: 4rem;
+$xs-pad: .4rem;
+$sm-pad: .8rem;
+$md-pad: 1.6rem;
+$lg-pad: 2rem;
+$xlg-pad: 4rem;
 $transition: all .25s ease;
+$border: .1rem solid;
 
 //Breakpoints
 $small-break: 40rem;
-$big-break: 7.68rem;
+$big-break: 76.8rem;
 
 //Colors
-$aqua: #7fdbff;
-$blue: #0074d9;
-$navy: #001f3f;
-$teal: #39cccc;
-$green: #2ecc40;
-$olive: #3d9970;
-$lime: #01ff70;
-
-//Warm
-$yellow: #ffdc00;
-$orange: #ff851b;
+$primary-color: #1271db;
 $red: #ff4136;
-$fuchsia: #f012be;
-$purple: #b10dc9;
-$maroon: #85144b;
 
 //Greyscale
 $white: #fff;
@@ -62,14 +53,7 @@ $silver: #ddd;
 $grey: #777;
 $black: #444;
 
-//Project Colors
-$primary-color: #1271db;
-$secondary-color: #233e5b;
-$tertiary-color: #aaa;
-
-//Button Colors
-$danger-color: $red;
-$success-color: $green;
-$info-color: $blue;
-$warning-color: $orange;
-$subtle-color: $grey;
+//Transparency
+$trans-light: rgba(0, 0, 0, .12);
+$trans-mid: rgba(0, 0, 0, .56);
+$trans-dark: rgba(0, 0, 0, .87);

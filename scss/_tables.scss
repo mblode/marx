@@ -1,9 +1,9 @@
 table {
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
 }
 
 caption {
-  padding: .8rem 0;
+  padding: $sm-pad 0;
 }
 
 thead th {
@@ -13,13 +13,13 @@ thead th {
 
 tr {
   background: $white;
-  margin-bottom: .8rem;
+  margin-bottom: $sm-pad;
 }
 
 th,
 td {
-  border: 1px solid $silver;
-  padding: .8rem 1.6rem;
+  border: $border $silver;
+  padding: $sm-pad $md-pad;
   text-align: center;
   vertical-align: inherit;
 }
@@ -30,7 +30,7 @@ tfoot tr {
 
 tfoot td {
   color: $light-grey;
-  font-size: .8rem;
+  font-size: $sm-pad;
   font-style: italic;
-  padding: 1.6rem .2rem;
+  padding: $md-pad $xs-pad;
 }

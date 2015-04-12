@@ -12,12 +12,12 @@ blockquote {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 400;
-  margin: 1.6rem 0 2rem;
-  padding-left: 2.5rem;
+  margin: $md-pad 0;
+  padding-left: $md-pad;
 }
 
 p {
-  margin: 0 0 1.6rem;
+  margin: 0 0 $md-pad;
 }
 
 h1,
@@ -27,7 +27,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  margin: 2rem 0 1.6rem;
+  margin: $lg-pad 0 $md-pad;
 }
 
 h1 {
@@ -80,7 +80,7 @@ pre {
   font-family: $monospace-font-family;
   font-size: 1.4rem;
   margin-bottom: .8remrem;
-  padding: 1.6rem;
+  padding: $md-pad;
   word-break: break-all;
   word-wrap: break-word;
 }
@@ -103,10 +103,14 @@ a {
   }
 }
 
+dd {
+  margin-left: $xlg-pad;
+}
+
 ul,
 ol,
 menu,
 dir {
-  margin-bottom: 1.6rem;
+  margin-bottom: $md-pad;
   -webkit-padding-start: 4rem;
 }

@@ -1,6 +1,6 @@
 nav {
   display: block;
-  
+
   ul,
   ol {
     background: $white;
@@ -8,7 +8,7 @@ nav {
     height: auto;
     list-style: none;
     margin: 0;
-    margin-bottom: .8rem;
+    margin-bottom: $sm-pad;
     padding: 0;
     text-align: center;
   }
@@ -24,22 +24,22 @@ nav {
 
   li {
     float: right;
-    margin: .8rem 0;
+    margin: $sm-pad 0;
   }
 
   a {
     border-bottom: 2px solid rgba(0, 0, 0, 0);
     color: $black;
-    padding: .8rem 0;
+    padding: $sm-pad 0;
     text-decoration: none;
     transition: $transition;
 
     &:hover {
-      border-color: rgba(0, 0, 0, .12);
+      border-color: $trans-light;
     }
 
     &:active {
-      border-color: rgba(0, 0, 0, .56);
+      border-color: $trans-mid;
     }
   }
 }

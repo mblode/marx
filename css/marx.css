@@ -80,7 +80,7 @@ audio, canvas, iframe, img, svg, video {
 
 button, input, select, textarea {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border: .1rem solid #ddd;
   color: inherit;
   font-family: inherit;
   font-style: inherit;
@@ -125,8 +125,8 @@ blockquote {
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 400;
-  margin: 1.6rem 0 2rem;
-  padding-left: 2.5rem; }
+  margin: 1.6rem 0;
+  padding-left: 1.6rem; }
 
 p {
   margin: 0 0 1.6rem; }
@@ -194,6 +194,9 @@ a {
   color: #1271db; }
   a:hover, a:focus {
     text-decoration: none; }
+
+dd {
+  margin-left: 4rem; }
 
 ul, ol, menu, dir {
   margin-bottom: 1.6rem;
@@ -271,28 +274,27 @@ img {
     max-width: 100%; } }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
-  border: 1px solid #ddd;
+  border: .1rem solid #ddd;
   border-radius: 0.4rem;
   box-shadow: inset 0 1px 3px #ddd;
   display: inline-block;
-  padding: .8rem;
+  padding: 0.8rem;
   vertical-align: middle; }
 
 input:not([type]) {
   -webkit-appearance: none;
   background-clip: padding-box;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: .1rem solid #ddd;
   border-radius: 0.4rem;
   box-shadow: inset 0 1px 3px #ddd;
   color: #444;
   display: inline-block;
-  font-size: 1em;
-  padding: .8rem;
+  padding: 0.8rem;
   text-align: left; }
 
 input[type="color"] {
-  padding: .2rem .5rem; }
+  padding: 0.8rem 1.6rem; }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, select:focus, textarea:focus {
   border-color: #b3d4fc;
@@ -303,7 +305,7 @@ input:not([type]):focus {
   outline: 0; }
 
 input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
-  outline: 1px thin solid #129fea; }
+  outline: .1rem solid thin #129fea; }
 
 input[type="text"][disabled], input[type="password"][disabled], input[type="email"][disabled], input[type="url"][disabled], input[type="date"][disabled], input[type="month"][disabled], input[type="time"][disabled], input[type="datetime"][disabled], input[type="datetime-local"][disabled], input[type="week"][disabled], input[type="number"][disabled], input[type="search"][disabled], input[type="tel"][disabled], input[type="color"][disabled], select[disabled], textarea[disabled] {
   background-color: #efefef;
@@ -329,36 +331,39 @@ input[type="file"]:focus:invalid:focus, input[type="radio"]:focus:invalid:focus,
 
 select {
   background-color: #fff;
-  border: 1px solid #ddd;
-  height: 2.25em; }
+  border: .1rem solid #ddd;
+  height: 2.25rem; }
 
 select[multiple] {
   height: auto; }
 
 label {
-  margin: .8rem 0 .4rem; }
+  margin: 0.8rem 0 0.4rem; }
 
 fieldset {
   border: 0;
   margin: 0;
-  padding: .8rem 0; }
+  padding: 0.8rem 0; }
 
 legend {
-  border-bottom: 1px solid #ddd;
+  border-bottom: .1rem solid #ddd;
   color: #444;
   display: block;
-  margin-bottom: .8rem;
-  padding: .8rem 0;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 0;
   width: 100%; }
 
+textarea {
+  display: block !important; }
+
 input[type=submit], button {
-  background-color: #efefef;
+  background-color: #ddd;
   border: 0;
   border-radius: 0.4rem;
   color: #444;
   cursor: pointer;
   display: inline-block;
-  padding: .8rem 1.6rem;
+  padding: 0.8rem 1.6rem;
   text-align: center;
   text-decoration: none;
   -webkit-user-drag: none;
@@ -372,14 +377,14 @@ input[type=submit]::-moz-focus-inner, button::-moz-focus-inner {
   padding: 0; }
 
 input[type=submit]:hover, button:hover {
-  background: #e7e7e7; }
+  background: #d5d5d5; }
 
 input[type=submit]:focus, button:focus {
   outline: 0; }
 
 input[type=submit]:active, button:active {
-  background: #dbdbdb;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.12) inset; }
+  background: #c9c9c9;
+  box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.12) inset; }
 
 input[type=submit]:disabled, button:disabled {
   box-shadow: none;
@@ -394,7 +399,7 @@ nav {
     height: auto;
     list-style: none;
     margin: 0;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     padding: 0;
     text-align: center; }
   nav ol {
@@ -404,11 +409,11 @@ nav {
       margin-left: 2rem; }
   nav li {
     float: right;
-    margin: .8rem 0; }
+    margin: 0.8rem 0; }
   nav a {
     border-bottom: 2px solid transparent;
     color: #444;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
     text-decoration: none;
     -webkit-transition: all .25s ease;
             transition: all .25s ease; }
@@ -443,7 +448,7 @@ table {
   margin-bottom: 1.6rem; }
 
 caption {
-  padding: .8rem 0; }
+  padding: 0.8rem 0; }
 
 thead th {
   background: #efefef;
@@ -451,11 +456,11 @@ thead th {
 
 tr {
   background: #fff;
-  margin-bottom: .8rem; }
+  margin-bottom: 0.8rem; }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: .8rem 1.6rem;
+  border: .1rem solid #ddd;
+  padding: 0.8rem 1.6rem;
   text-align: center;
   vertical-align: inherit; }
 
@@ -464,9 +469,9 @@ tfoot tr {
 
 tfoot td {
   color: #efefef;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-style: italic;
-  padding: 1.6rem .2rem; }
+  padding: 1.6rem 0.4rem; }
 
 
 /*# sourceMappingURL=marx.css.map */

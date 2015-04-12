@@ -1,12 +1,12 @@
 input[type=submit],
 button {
-  background-color: $light-grey;
+  background-color: $silver;
   border: 0;
   border-radius: $br;
   color: $black;
   cursor: pointer;
   display: inline-block;
-  padding: .8rem 1.6rem;
+  padding: $sm-pad $md-pad;
   text-align: center;
   text-decoration: none;
   -webkit-user-drag: none;
@@ -21,7 +21,7 @@ button::-moz-focus-inner {
 
 input[type=submit]:hover,
 button:hover {
-  background: darken($light-grey, 3);
+  background: darken($silver, 3);
 }
 
 input[type=submit]:focus,
@@ -31,8 +31,8 @@ button:focus {
 
 input[type=submit]:active,
 button:active {
-  background: darken($light-grey, 8);
-  box-shadow: 0 0 3px rgba(0, 0, 0, .12) inset;
+  background: darken($silver, 8);
+  box-shadow: 0 0 .8rem $trans-light inset;
 }
 
 input[type=submit]:disabled,

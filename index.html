@@ -26,7 +26,9 @@
     </nav>
 
     <article>
-      <h1>Article <small>This spans 60%</small></h1>
+      <h1>Article
+        <small>This spans 60%</small>
+      </h1>
       <h2>Buttons</h2>
       <input type="submit" value="Submit">
       <input type="submit" value="Submit" disabled>
@@ -34,30 +36,148 @@
       <button disabled>Hello</button>
 
       <h2>Forms</h2>
-      <input type="submit" value="Submit">
-      <input type="submit" value="Submit" disabled>
-      <button>Hello</button>
-      <button disabled>Hello</button>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Text Input:</label>
+          <input type="text" name="name" id="name" value="" tabindex="1" />
+        </div>
 
-      <h2>Buttons</h2>
-      <input type="submit" value="Submit">
-      <input type="submit" value="Submit" disabled>
-      <button>Hello</button>
-      <button disabled>Hello</button>
+        <div>
+          <h4>Radio Button Choice</h4>
 
-      <h2>Buttons</h2>
-      <input type="submit" value="Submit">
-      <input type="submit" value="Submit" disabled>
-      <button>Hello</button>
-      <button disabled>Hello</button>
+          <label for="radio-choice-1">Choice 1</label>
+          <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+          <label for="radio-choice-2">Choice 2</label>
+          <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+        </div>
+
+        <div>
+          <label for="select-choice">Select Dropdown Choice:</label>
+          <select name="select-choice" id="select-choice">
+            <option value="Choice 1">Choice 1</option>
+            <option value="Choice 2">Choice 2</option>
+            <option value="Choice 3">Choice 3</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="textarea">Textarea:</label>
+          <textarea class="tex"></textarea>
+        </div>
+
+        <div>
+          <label for="checkbox">Checkbox:</label>
+          <input type="checkbox" name="checkbox" id="checkbox" />
+        </div>
+
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+        </form>
+
+
+      <h2>Tables</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>One</th>
+            <th>Two</th>
+            <th>Three</th>
+            <th>Four</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>One</td>
+            <td>Two</td>
+            <td>Three</td>
+            <td>Four</td>
+          </tr>
+          <tr>
+            <td>One</td>
+            <td>Two</td>
+            <td>Three</td>
+            <td>Four</td>
+          </tr>
+          <tr>
+            <td>One</td>
+            <td>Two</td>
+            <td>Three</td>
+            <td>Four</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Typography</h2>
+      <h1>This is H1</h1>
+      <h2>This is H2</h2>
+      <h3>This is H3</h3>
+      <h4>This is H4</h4>
+      <h5>This is H5</h5>
+      <h6>This is H6</h6>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<pre><code>
+  pre {
+    background: #efefef;
+    color: #444;
+    display: block;
+    font-family: Menlo, monospace;
+    font-size: 1.4rem;
+    margin-bottom: .8remrem;
+    padding: 1.6rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  code {
+    background: #efefef;
+    color: #444;
+    font-family: Menlo, monospace;
+    font-size: 1.4rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+</code></pre>
+      <a href="#">This is a link</a>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+      </ul>
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+      </ol>
+
+      <dl>
+        <dt>Definition list</dt>
+        <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+        <dt>Lorem ipsum dolor sit amet</dt>
+        <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+      </dl>
+
+      <figcaption>Hello</figcaption>
+      <blockquote>This is a blockquote</blockquote>
     </article>
 
     <aside>
-      <h1>Aside <small>This spans 40%</small></h1>
+      <h1>Aside
+        <small>This spans 40%</small>
+      </h1>
+
+      <img src="http://i.imgur.com/znOVmv9.png" alt="">
+      <img src="http://i.imgur.com/znOVmv9.png" alt="">
+      <p>Hello</p>
+      <h1 align="center">align="center"</h1>
+      <h1 align="right">align="right"</h1>
     </aside>
 
     <section>
-      <h1>Section <small>This spans 100%</small></h1>
+      <h1>Section
+        <small>This spans 100%</small>
+      </h1>
     </section>
   </main>
 

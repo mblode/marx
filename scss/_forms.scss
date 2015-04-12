@@ -14,11 +14,11 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-  border: 1px solid $silver;
+  border: $border $silver;
   border-radius: $br;
   box-shadow: inset 0 1px 3px $silver;
   display: inline-block;
-  padding: .8rem;
+  padding: $sm-pad;
   vertical-align: middle;
 }
 
@@ -26,18 +26,17 @@ input:not([type]) {
   -webkit-appearance: none;
   background-clip: padding-box;
   background-color: $white;
-  border: 1px solid $silver;
+  border: $border $silver;
   border-radius: $br;
   box-shadow: inset 0 1px 3px $silver;
   color: $black;
   display: inline-block;
-  font-size: 1em;
-  padding: .8rem;
+  padding: $sm-pad;
   text-align: left;
 }
 
 input[type="color"] {
-  padding: .2rem .5rem;
+  padding: $sm-pad $md-pad;
 }
 
 input[type="text"]:focus,
@@ -68,7 +67,7 @@ input:not([type]):focus {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px thin solid #129fea;
+  outline: $border thin #129fea;
 }
 
 input[type="text"][disabled],
@@ -121,8 +120,8 @@ input[type="checkbox"]:focus:invalid:focus {
 
 select {
   background-color: $white;
-  border: 1px solid $silver;
-  height: 2.25em;
+  border: $border $silver;
+  height: 2.25rem;
 }
 
 select[multiple] {
@@ -130,20 +129,24 @@ select[multiple] {
 }
 
 label {
-  margin: .8rem 0 .4rem;
+  margin: $sm-pad 0 $xs-pad;
 }
 
 fieldset {
   border: 0;
   margin: 0;
-  padding: .8rem 0;
+  padding: $sm-pad 0;
 }
 
 legend {
-  border-bottom: 1px solid $silver;
+  border-bottom: $border $silver;
   color: $black;
   display: block;
-  margin-bottom: .8rem;
-  padding: .8rem 0;
+  margin-bottom: $sm-pad;
+  padding: $sm-pad 0;
   width: 100%;
+}
+
+textarea {
+  display: block !important;
 }
