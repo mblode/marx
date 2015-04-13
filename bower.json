@@ -13,12 +13,23 @@
   ],
   "keywords": [
     "marx",
+    "karl",
+    "mblode",
+    "matthew blode",
+    "matt",
+    "blode",
+    "layout",
     "framework",
     "css",
     "sass",
     "scss",
     "web",
-    "frontend"
+    "frontend",
+    "bootstrap",
+    "pure",
+    "markdown",
+    "format",
+    "classless"
   ],
   "license": "MIT",
   "ignore": [
@@ -28,6 +39,7 @@
     "test",
     "tests",
     "gulpfile.js",
-    "package.json"
+    "package.json",
+    "LICENSE"
   ]
 }

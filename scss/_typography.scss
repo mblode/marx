@@ -9,11 +9,13 @@ body {
 blockquote {
   border-left: 2px solid $primary-color;
   font-family: $serif-font-family;
-  font-size: 1.6rem;
   font-style: italic;
-  font-weight: 400;
   margin: $md-pad 0;
   padding-left: $md-pad;
+}
+
+figcaption {
+  font-family: $serif-font-family;
 }
 
 p {
@@ -79,7 +81,7 @@ pre {
   display: block;
   font-family: $monospace-font-family;
   font-size: 1.4rem;
-  margin-bottom: .8remrem;
+  margin-bottom: $md-pad;
   padding: $md-pad;
   word-break: break-all;
   word-wrap: break-word;
@@ -103,14 +105,17 @@ a {
   }
 }
 
+dl {
+  margin-bottom: $md-pad;
+}
+
 dd {
   margin-left: $xlg-pad;
 }
 
 ul,
 ol,
-menu,
-dir {
+menu {
   margin-bottom: $md-pad;
   -webkit-padding-start: 4rem;
 }

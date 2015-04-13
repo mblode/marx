@@ -122,11 +122,12 @@ body {
 blockquote {
   border-left: 2px solid #1271db;
   font-family: Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.6rem;
   font-style: italic;
-  font-weight: 400;
   margin: 1.6rem 0;
   padding-left: 1.6rem; }
+
+figcaption {
+  font-family: Georgia, Times, 'Times New Roman', serif; }
 
 p {
   margin: 0 0 1.6rem; }
@@ -177,7 +178,7 @@ pre {
   display: block;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 1.4rem;
-  margin-bottom: .8remrem;
+  margin-bottom: 1.6rem;
   padding: 1.6rem;
   word-break: break-all;
   word-wrap: break-word; }
@@ -195,10 +196,13 @@ a {
   a:hover, a:focus {
     text-decoration: none; }
 
+dl {
+  margin-bottom: 1.6rem; }
+
 dd {
   margin-left: 4rem; }
 
-ul, ol, menu, dir {
+ul, ol, menu {
   margin-bottom: 1.6rem;
   -webkit-padding-start: 4rem; }
 
@@ -209,6 +213,10 @@ html {
 
 body {
   margin-bottom: 4rem; }
+
+@media screen and (max-width: 40rem) {
+  html {
+    font-size: 75%; } }
 
 main, header, footer, nav, article, section, aside, details, summary {
   display: block;
@@ -257,7 +265,7 @@ footer {
     text-align: center; }
 
 hr {
-  border-top: 4px solid rgba(0, 0, 0, 0.12);
+  border-top: .1rem solid rgba(0, 0, 0, 0.12);
   display: block;
   margin-bottom: 1.6rem;
   width: 100%; }
@@ -331,14 +339,13 @@ input[type="file"]:focus:invalid:focus, input[type="radio"]:focus:invalid:focus,
 
 select {
   background-color: #fff;
-  border: .1rem solid #ddd;
-  height: 2.25rem; }
+  border: .1rem solid #ddd; }
 
 select[multiple] {
   height: auto; }
 
 label {
-  margin: 0.8rem 0 0.4rem; }
+  line-height: 2; }
 
 fieldset {
   border: 0;
@@ -354,7 +361,8 @@ legend {
   width: 100%; }
 
 textarea {
-  display: block !important; }
+  display: block !important;
+  margin-bottom: 0.8rem; }
 
 input[type=submit], button {
   background-color: #ddd;
@@ -363,6 +371,7 @@ input[type=submit], button {
   color: #444;
   cursor: pointer;
   display: inline-block;
+  margin-bottom: 0.8rem;
   padding: 0.8rem 1.6rem;
   text-align: center;
   text-decoration: none;

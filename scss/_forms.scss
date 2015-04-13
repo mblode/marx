@@ -121,7 +121,6 @@ input[type="checkbox"]:focus:invalid:focus {
 select {
   background-color: $white;
   border: $border $silver;
-  height: 2.25rem;
 }
 
 select[multiple] {
@@ -129,7 +128,7 @@ select[multiple] {
 }
 
 label {
-  margin: $sm-pad 0 $xs-pad;
+  line-height: 2;
 }
 
 fieldset {
@@ -149,4 +148,5 @@ legend {
 
 textarea {
   display: block !important;
+  margin-bottom: $sm-pad;
 }
