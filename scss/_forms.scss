@@ -64,6 +64,10 @@ input:not([type]):focus {
   outline: 0;
 }
 
+input[type="radio"] {
+  vertical-align: middle;
+}
+
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -121,6 +125,7 @@ input[type="checkbox"]:focus:invalid:focus {
 select {
   background-color: $white;
   border: $border $silver;
+  outline: 0;
 }
 
 select[multiple] {

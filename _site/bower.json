@@ -1,0 +1,17 @@
+{
+  "name": "marx",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mblode/marx",
+  "authors": [
+    "mblode <m.blode@gmail.com>"
+  ],
+  "description": "The classless CSS framework (perfect for Communists).",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
