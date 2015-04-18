@@ -1,6 +1,6 @@
 {
   "name": "marx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/mblode/marx",
   "authors": [
     "mblode <m.blode@gmail.com>"
@@ -40,6 +40,7 @@
     "tests",
     "gulpfile.js",
     "package.json",
-    "LICENSE"
+    "LICENSE",
+    "_site"
   ]
 }

@@ -80,7 +80,7 @@ audio, canvas, iframe, img, svg, video {
 
 button, input, select, textarea {
   background-color: transparent;
-  border: .1rem solid #ddd;
+  border: .1rem solid #ccc;
   color: inherit;
   font-family: inherit;
   font-style: inherit;
@@ -214,10 +214,6 @@ html {
 body {
   margin-bottom: 4rem; }
 
-@media screen and (max-width: 40rem) {
-  html {
-    font-size: 75%; } }
-
 main, header, footer, nav, article, section, aside, details, summary {
   display: block;
   height: auto;
@@ -282,9 +278,9 @@ img {
     max-width: 100%; } }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
-  border: .1rem solid #ddd;
-  border-radius: 0.4rem;
-  box-shadow: inset 0 1px 3px #ddd;
+  border: .1rem solid #ccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 3px #ccc;
   display: inline-block;
   padding: 0.8rem;
   vertical-align: middle; }
@@ -293,9 +289,9 @@ input:not([type]) {
   -webkit-appearance: none;
   background-clip: padding-box;
   background-color: #fff;
-  border: .1rem solid #ddd;
-  border-radius: 0.4rem;
-  box-shadow: inset 0 1px 3px #ddd;
+  border: .1rem solid #ccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 3px #ccc;
   color: #444;
   display: inline-block;
   padding: 0.8rem;
@@ -330,7 +326,7 @@ input:not([type])[disabled] {
 
 input[readonly], select[readonly], textarea[readonly] {
   background-color: #efefef;
-  border-color: #ddd;
+  border-color: #ccc;
   color: #777; }
 
 input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
@@ -342,7 +338,7 @@ input[type="file"]:focus:invalid:focus, input[type="radio"]:focus:invalid:focus,
 
 select {
   background-color: #fff;
-  border: .1rem solid #ddd;
+  border: .1rem solid #ccc;
   outline: 0; }
 
 select[multiple] {
@@ -357,7 +353,7 @@ fieldset {
   padding: 0.8rem 0; }
 
 legend {
-  border-bottom: .1rem solid #ddd;
+  border-bottom: .1rem solid #ccc;
   color: #444;
   display: block;
   margin-bottom: 0.8rem;
@@ -369,35 +365,41 @@ textarea {
   margin-bottom: 0.8rem; }
 
 input[type=submit], button {
-  background-color: #ddd;
-  border: 0;
-  border-radius: 0.4rem;
+  background-color: transparent;
+  border: 3px solid #ccc;
+  border-radius: 0;
   color: #444;
   cursor: pointer;
   display: inline-block;
   margin-bottom: 0.8rem;
+  margin-right: 0.4rem;
   padding: 0.8rem 1.6rem;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
   -webkit-user-drag: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  vertical-align: middle; }
+  vertical-align: baseline; }
 
 input[type=submit]::-moz-focus-inner, button::-moz-focus-inner {
   padding: 0; }
 
 input[type=submit]:hover, button:hover {
-  background: #d5d5d5; }
+  background: #b8b8b8;
+  border-color: #b8b8b8;
+  color: #fff; }
 
 input[type=submit]:focus, button:focus {
   outline: 0; }
 
 input[type=submit]:active, button:active {
-  background: #c9c9c9;
-  box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.12) inset; }
+  background: #a6a6a6;
+  border-color: #a6a6a6;
+  color: #fff; }
 
 input[type=submit]:disabled, button:disabled {
   box-shadow: none;
@@ -472,7 +474,7 @@ tr {
   margin-bottom: 0.8rem; }
 
 th, td {
-  border: .1rem solid #ddd;
+  border: .1rem solid #ccc;
   padding: 0.8rem 1.6rem;
   text-align: center;
   vertical-align: inherit; }

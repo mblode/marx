@@ -1,6 +1,6 @@
 {
   "name": "marx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The classless CSS framework (perfect for Communists).",
   "main": "index.js",
   "scripts": {

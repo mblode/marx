@@ -7,9 +7,3 @@ html {
 body {
   margin-bottom: $xlg-pad;
 }
-
-@media screen and (max-width: $small-break) {
-  html {
-    font-size: 75%;
-  }
-}
