@@ -1,7 +1,7 @@
 input[type=submit],
 button {
   background-color: rgba(0, 0, 0, 0);
-  border: 3px solid $silver;
+  border: 2px solid $black;
   border-radius: $br;
   color: $black;
   cursor: pointer;
@@ -11,6 +11,7 @@ button {
   padding: $sm-pad $md-pad;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   transition: $transition;
   -webkit-user-drag: none;
   user-select: none;
@@ -24,8 +25,8 @@ button::-moz-focus-inner {
 
 input[type=submit]:hover,
 button:hover {
-  background: darken($silver, 8);
-  border-color: darken($silver, 8);
+  background: $black;
+  border-color: $black;
   color: $white;
 }
 
@@ -36,8 +37,8 @@ button:focus {
 
 input[type=submit]:active,
 button:active {
-  background: darken($silver, 15);
-  border-color: darken($silver, 15);
+  background: lighten($black, 15);
+  border-color: lighten($black, 15);
   color: $white;
 }
 

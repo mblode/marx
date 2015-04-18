@@ -16,7 +16,6 @@ select,
 textarea {
   border: $border $silver;
   border-radius: $br;
-  box-shadow: inset 0 1px 3px $silver;
   display: inline-block;
   padding: $sm-pad;
   vertical-align: middle;
@@ -28,7 +27,6 @@ input:not([type]) {
   background-color: $white;
   border: $border $silver;
   border-radius: $br;
-  box-shadow: inset 0 1px 3px $silver;
   color: $black;
   display: inline-block;
   padding: $sm-pad;

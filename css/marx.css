@@ -280,7 +280,6 @@ img {
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
   border: .1rem solid #ccc;
   border-radius: 0;
-  box-shadow: inset 0 1px 3px #ccc;
   display: inline-block;
   padding: 0.8rem;
   vertical-align: middle; }
@@ -291,7 +290,6 @@ input:not([type]) {
   background-color: #fff;
   border: .1rem solid #ccc;
   border-radius: 0;
-  box-shadow: inset 0 1px 3px #ccc;
   color: #444;
   display: inline-block;
   padding: 0.8rem;
@@ -366,7 +364,7 @@ textarea {
 
 input[type=submit], button {
   background-color: transparent;
-  border: 3px solid #ccc;
+  border: 2px solid #444;
   border-radius: 0;
   color: #444;
   cursor: pointer;
@@ -376,6 +374,7 @@ input[type=submit], button {
   padding: 0.8rem 1.6rem;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   -webkit-transition: all .25s ease;
           transition: all .25s ease;
   -webkit-user-drag: none;
@@ -389,16 +388,16 @@ input[type=submit]::-moz-focus-inner, button::-moz-focus-inner {
   padding: 0; }
 
 input[type=submit]:hover, button:hover {
-  background: #b8b8b8;
-  border-color: #b8b8b8;
+  background: #444;
+  border-color: #444;
   color: #fff; }
 
 input[type=submit]:focus, button:focus {
   outline: 0; }
 
 input[type=submit]:active, button:active {
-  background: #a6a6a6;
-  border-color: #a6a6a6;
+  background: #6a6a6a;
+  border-color: #6a6a6a;
   color: #fff; }
 
 input[type=submit]:disabled, button:disabled {
