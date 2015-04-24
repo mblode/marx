@@ -119,16 +119,6 @@ body {
   font-style: normal;
   font-weight: 400; }
 
-blockquote {
-  border-left: 2px solid #1271db;
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-style: italic;
-  margin: 1.6rem 0;
-  padding-left: 1.6rem; }
-
-figcaption {
-  font-family: Georgia, Times, 'Times New Roman', serif; }
-
 p {
   margin: 0 0 1.6rem; }
 
@@ -137,13 +127,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2rem 0 1.6rem; }
 
 h1 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 500; }
 
 h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 3rem;
   font-style: normal;
   font-weight: 500; }
@@ -206,13 +196,25 @@ ul, ol, menu {
   margin-bottom: 1.6rem;
   -webkit-padding-start: 4rem; }
 
+blockquote {
+  border-left: 2px solid #1271db;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  margin: 1.6rem 0;
+  padding-left: 1.6rem; }
+
+figcaption {
+  font-family: Georgia, Times, 'Times New Roman', serif; }
+
 html {
   font-size: 62.5%;
   min-height: 100%;
   position: relative; }
 
 body {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 0 1.6rem 1.6rem; }
 
 main, header, footer, nav, article, section, aside, details, summary {
   display: block;
@@ -249,7 +251,7 @@ section {
   max-width: 100%; }
 
 footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   bottom: 0;
   height: 4rem;
   left: 0;
@@ -261,7 +263,7 @@ footer {
     text-align: center; }
 
 hr {
-  border-top: .1rem solid rgba(0, 0, 0, 0.12);
+  border-top: .1rem solid rgba(0, 0, 0, 0.2);
   display: block;
   margin-bottom: 1.6rem;
   width: 100%; }
@@ -432,7 +434,7 @@ nav {
     -webkit-transition: all .25s ease;
             transition: all .25s ease; }
     nav a:hover {
-      border-color: rgba(0, 0, 0, 0.12); }
+      border-color: rgba(0, 0, 0, 0.2); }
     nav a:active {
       border-color: rgba(0, 0, 0, 0.56); }
 

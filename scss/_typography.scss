@@ -1,21 +1,10 @@
+//Base typography for the stylesheet
 body {
   color: $black;
   font-family: $sans-serif-font-family;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
-}
-
-blockquote {
-  border-left: 2px solid $primary-color;
-  font-family: $serif-font-family;
-  font-style: italic;
-  margin: $md-pad 0;
-  padding-left: $md-pad;
-}
-
-figcaption {
-  font-family: $serif-font-family;
 }
 
 p {
@@ -33,14 +22,14 @@ h6 {
 }
 
 h1 {
-  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  border-bottom: 1px solid $trans-light;
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 500;
 }
 
 h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  border-bottom: 1px solid $trans-light;
   font-size: 3rem;
   font-style: normal;
   font-weight: 500;
@@ -118,4 +107,16 @@ ol,
 menu {
   margin-bottom: $md-pad;
   -webkit-padding-start: 4rem;
+}
+
+blockquote {
+  border-left: 2px solid $primary-color;
+  font-family: $serif-font-family;
+  font-style: italic;
+  margin: $md-pad 0;
+  padding-left: $md-pad;
+}
+
+figcaption {
+  font-family: $serif-font-family;
 }

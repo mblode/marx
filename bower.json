@@ -8,8 +8,7 @@
   "description": "The classless CSS framework (perfect for Communists).",
   "main": [
     "css/*.css",
-    "scss/*.scss",
-    "index.html"
+    "scss/*.scss"
   ],
   "keywords": [
     "marx",
@@ -41,6 +40,8 @@
     "gulpfile.js",
     "package.json",
     "LICENSE",
-    "_site"
+    "_site",
+    "_sass",
+    "index.html"
   ]
 }
