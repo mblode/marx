@@ -377,8 +377,6 @@ input[type=submit], button {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: all .25s ease;
-          transition: all .25s ease;
   -webkit-user-drag: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -431,8 +429,8 @@ nav {
     color: #444;
     padding: 0.8rem 0;
     text-decoration: none;
-    -webkit-transition: all .25s ease;
-            transition: all .25s ease; }
+    -webkit-transition: .25s ease;
+            transition: .25s ease; }
     nav a:hover {
       border-color: rgba(0, 0, 0, 0.2); }
     nav a:active {
