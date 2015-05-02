@@ -15,7 +15,7 @@
 ![Karl Marx](http://upload.wikimedia.org/wikipedia/commons/a/a2/Marx_old.jpg)
 > Karl Marx was a German philosopher who created the socialist worldview known as Marxism. It was a structure where everyone was equal.
 
-This framework aims to be merely a base for you to build off of or just leave raw. To edit simply add classes, styles or customize variables. Oh and did I mention that it is almost as beautiful as Karl Marx himself.
+This framework aims to be a base to be built off or to just leave raw. To edit the framework, simply add classes, styles or customize variables. Oh, and did I mention that it is almost as beautiful as Karl Marx himself.
 
 ## [Demo](http://mblode.github.io/marx)
 
