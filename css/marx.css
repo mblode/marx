@@ -214,7 +214,7 @@ html {
 body {
   margin-bottom: 4rem;
   overflow: hidden;
-  padding: 0 1.6rem 1.6rem; }
+  padding: 0; }
 
 main, header, footer, nav, article, section, aside, details, summary {
   display: block;
@@ -223,10 +223,9 @@ main, header, footer, nav, article, section, aside, details, summary {
   width: 100%; }
 
 main {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   max-width: 76.8rem;
-  overflow: hidden;
   padding: 0 1.6rem 1.6rem; }
 
 article {

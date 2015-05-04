@@ -14,10 +14,9 @@ summary {
 }
 
 main {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   max-width: $big-break;
-  overflow: hidden;
   padding: 0 $md-pad $md-pad;
 }
 
