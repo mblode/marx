@@ -1,7 +1,7 @@
 ## Marx
 #### The classless CSS framework (perfect for Communists).
 
-> No Javacript. No Classes. Just raw *CSS.*
+> No Javascript. No Classes. Just raw *CSS.*
 
 ##Key features
 - Built atop of Sanitize.css.
