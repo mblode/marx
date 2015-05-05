@@ -1,7 +1,7 @@
 {
   "name": "marx",
-  "version": "1.0.8",
-  "description": "The classless CSS framework (perfect for Communists).",
+  "version": "1.0.9",
+  "description": "The stylish CSS reset.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

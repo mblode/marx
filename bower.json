@@ -1,11 +1,11 @@
 {
   "name": "marx",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "homepage": "https://github.com/mblode/marx",
   "authors": [
     "mblode <m.blode@gmail.com>"
   ],
-  "description": "The classless CSS framework (perfect for Communists).",
+  "description": "The stylish CSS reset.",
   "main": [
     "css/*.css",
     "scss/*.scss"
