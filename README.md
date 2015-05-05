@@ -1,21 +1,18 @@
 ## Marx
-#### The classless CSS framework (perfect for Communists).
+#### The stylish CSS reset.
 
 > No Javascript. No Classes. Just raw *CSS.*
 
 ##Key features
-- Built atop of Sanitize.css.
-- Clean typography.
-- Custom forms, buttons and navigation.
+- Built atop of Sanitize.css, meaning all browsers render consistently.
 - Responsive.
 - Drop-dead gorgeous.
+- Clean typography.
+- Custom forms, buttons and navigation.
 - 7.7 kb minified.
+- It just works.
 
-## About the name
-![Karl Marx](http://upload.wikimedia.org/wikipedia/commons/a/a2/Marx_old.jpg)
-> Karl Marx was a German philosopher who created the socialist worldview known as Marxism. It was a structure where everyone was equal.
-
-This framework aims to be a base to be built off or to be just left raw. To edit the framework simply add classes, styles or customize variables. Oh, and did I mention that it is almost as beautiful as Karl Marx himself.
+Marx aims to be a base stylesheet to be built off or to be just left raw. To edit the framework simply add classes, styles or customize variables.
 
 ## [Demo](http://codepen.io/mblode/details/JdYbJj/)
 
