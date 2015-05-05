@@ -16,6 +16,10 @@ button {
   -webkit-user-drag: none;
   user-select: none;
   vertical-align: baseline;
+
+  a {
+    color: $black;
+  }
 }
 
 input[type=submit]::-moz-focus-inner,
@@ -28,6 +32,10 @@ button:hover {
   background: $black;
   border-color: $black;
   color: $white;
+
+  a {
+    color: $white;
+  }
 }
 
 input[type=submit]:focus,
@@ -40,6 +48,10 @@ button:active {
   background: lighten($black, 15);
   border-color: lighten($black, 15);
   color: $white;
+
+  a {
+    color: $white;
+  }
 }
 
 input[type=submit]:disabled,

@@ -3,5 +3,7 @@ node_modules
 bower_components
 _site
 _sass
+public
+_posts
 .sass_cache
 components

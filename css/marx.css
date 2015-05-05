@@ -281,7 +281,9 @@ img {
   article, section, aside {
     clear: both;
     display: block;
-    max-width: 100%; } }
+    max-width: 100%; }
+  img {
+    margin-right: 1.6rem; } }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
   border: .1rem solid #ccc;
@@ -389,6 +391,8 @@ input[type=submit], button {
       -ms-user-select: none;
           user-select: none;
   vertical-align: baseline; }
+  input[type=submit] a, button a {
+    color: #444; }
 
 input[type=submit]::-moz-focus-inner, button::-moz-focus-inner {
   padding: 0; }
@@ -397,6 +401,8 @@ input[type=submit]:hover, button:hover {
   background: #444;
   border-color: #444;
   color: #fff; }
+  input[type=submit]:hover a, button:hover a {
+    color: #fff; }
 
 input[type=submit]:focus, button:focus {
   outline: 0; }
@@ -405,6 +411,8 @@ input[type=submit]:active, button:active {
   background: #6a6a6a;
   border-color: #6a6a6a;
   color: #fff; }
+  input[type=submit]:active a, button:active a {
+    color: #fff; }
 
 input[type=submit]:disabled, button:disabled {
   box-shadow: none;
