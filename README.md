@@ -17,7 +17,7 @@
 
 This framework aims to be a base to be built off or to be just left raw. To edit the framework simply add classes, styles or customize variables. Oh, and did I mention that it is almost as beautiful as Karl Marx himself.
 
-## [Demo](http://codepen.io/mblode/full/MwWgyW/)
+## [Demo](http://codepen.io/mblode/details/JdYbJj/)
 
 ## Quick Start
 Several quick start options are available:
