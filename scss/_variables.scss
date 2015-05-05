@@ -16,7 +16,7 @@ $root-text-rendering: optimizeLegibility !default;
 //Other
 $anchor-text-decoration: none !default;
 $form-element-background-color: transparent !default;
-$form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
+$form-element-min-height: if(unitless($root-line-height), $root-line-height * 1em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
 $media-element-vertical-align: middle !default;
 $monospace-font-family: $monospace-font-family !default;
 $nav-list-style: none !default;
