@@ -45,18 +45,13 @@ section {
 }
 
 footer {
-  border-top: 1px solid $trans-light;
-  bottom: 0;
-  height: 4rem;
-  left: 0;
-  line-height: 4rem;
-  position: absolute;
-  width: 100%;
-
-  p {
-    margin: 0;
-    text-align: center;
-  }
+  border-top: .1rem solid $trans-light;
+  clear: both;
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 hr {

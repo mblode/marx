@@ -62,7 +62,8 @@ input:not([type]):focus {
   outline: 0;
 }
 
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
   vertical-align: middle;
 }
 

@@ -171,6 +171,14 @@ table {
   text-shadow: $selection-text-shadow;
 }
 
+:focus {outline: none;}
+::-moz-focus-inner {border: 0;}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+
 // hide content from screens but not screenreaders
 
 @media screen {
