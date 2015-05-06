@@ -140,26 +140,27 @@ h2 {
 h3 {
   font-size: 2.4rem;
   font-style: normal;
-  font-weight: 500; }
+  font-weight: 500;
+  margin: 1.6rem 0 0.4rem; }
 
 h4 {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
-  margin: 2rem 0; }
+  margin: 1.6rem 0 0.4rem; }
 
 h5 {
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  margin: 1.6rem 0; }
+  margin: 1.6rem 0 0.4rem; }
 
 h6 {
   color: #777;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
-  margin: 1.6rem 0; }
+  margin: 1.6rem 0 0.4rem; }
 
 small {
   color: #777; }
@@ -170,7 +171,7 @@ pre {
   display: block;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 1.4rem;
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0;
   padding: 1.6rem;
   word-break: break-all;
   word-wrap: break-word; }
