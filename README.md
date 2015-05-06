@@ -3,16 +3,18 @@
 
 > No Javascript. No Classes. Just raw *CSS.*
 
+##Is Marx for you?
+Marx is a CSS stylesheet to be used in any projects (namely small ones). If you don't need the weight of heavy frameworks or you would just like to make an edible website quickly, Marx is perfect for you. It can be used out of the minified box but it can also be customised and styled through the use of HTML classes.
+
 ##Key features
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Responsive.
+- Created using the SASS preprocessor (Customise all the variables!).
+- Responsive and mobile-friendly.
+- Clean, beautiful typography.
+- Forms, tables, buttons and navigation.
+- Zero classes so it already works with your HTML.
 - Drop-dead gorgeous.
-- Clean typography.
-- Custom forms, buttons and navigation.
-- 7.7 kb minified.
 - It just works.
-
-Marx aims to be a base stylesheet to be built off or to be just left raw. To edit the framework simply add classes, styles or customize variables.
 
 ## [Demo](http://codepen.io/mblode/details/JdYbJj/)
 
