@@ -1,36 +1,21 @@
 nav {
-  display: block;
 
-  ul,
-  ol {
-    background: $white;
-    display: inline-block;
-    height: auto;
+  ul {
     list-style: none;
     margin: 0;
-    margin-bottom: $sm-pad;
     padding: 0;
+    padding-top: $md-pad;
     text-align: center;
-  }
-
-  ol {
-    float: right;
-    width: auto;
-
+    
     li {
-      margin-left: 2rem;
+      display: inline;
     }
   }
 
-  li {
-    float: right;
-    margin: $sm-pad 0;
-  }
-
   a {
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: .2rem solid rgba(0, 0, 0, 0);
     color: $black;
-    padding: $sm-pad 0;
+    padding: $sm-pad $md-pad;
     text-decoration: none;
     transition: $transition;
 
@@ -42,31 +27,4 @@ nav {
       border-color: $trans-mid;
     }
   }
-}
-
-@media screen and (max-width: $small-break) {
-  nav {
-    ul {
-      display: inline-block;
-      margin-left: -.5rem;
-      text-align: center;
-      width: 100%;
-    }
-
-    ol {
-      display: flex;
-      float: none;
-      justify-content: space-between;
-
-      li {
-        margin: 0;
-      }
-    }
-
-    li {
-      float: none;
-      margin-left: 1rem;
-    }
-  }
-
 }

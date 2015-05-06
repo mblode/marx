@@ -22,14 +22,13 @@ h6 {
 }
 
 h1 {
-  border-bottom: 1px solid $trans-light;
+  border-bottom: $border $trans-light;
   font-size: 3.6rem;
   font-style: normal;
   font-weight: 500;
 }
 
 h2 {
-  border-bottom: 1px solid $trans-light;
   font-size: 3rem;
   font-style: normal;
   font-weight: 500;
@@ -45,14 +44,14 @@ h4 {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
-  margin-bottom: $xs-pad;
+  margin: $lg-pad 0;
 }
 
 h5 {
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  margin-bottom: $xs-pad;
+  margin: $md-pad 0;
 }
 
 h6 {
@@ -60,7 +59,7 @@ h6 {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
-  margin-bottom: $xs-pad;
+  margin: $md-pad 0;
 }
 
 small {
@@ -90,6 +89,7 @@ code {
 
 a {
   color: $primary-color;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -106,14 +106,13 @@ dd {
 }
 
 ul,
-ol,
-menu {
-  margin-bottom: $md-pad;
-  -webkit-padding-start: 4rem;
+ol {
+  margin-bottom: $sm-pad;
+  padding-left: $lg-pad;
 }
 
 blockquote {
-  border-left: 2px solid $primary-color;
+  border-left: .2rem solid $primary-color;
   font-family: $serif-font-family;
   font-style: italic;
   margin: $md-pad 0;

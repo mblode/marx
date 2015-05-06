@@ -152,11 +152,6 @@ samp {
 
 // specify the list style of nav lists
 
-nav ol,
-nav ul {
-  list-style: $nav-list-style;
-}
-
 // specify the border styles of tables
 
 table {
@@ -170,9 +165,6 @@ table {
   background-color: $selection-background-color; // required when declaring ::selection
   text-shadow: $selection-text-shadow;
 }
-
-:focus {outline: none;}
-::-moz-focus-inner {border: 0;}
 
 button::-moz-focus-inner {
   border: 0;

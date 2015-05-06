@@ -83,8 +83,8 @@ These are the files that are generated from `bower install marx`
 
   <title>Marx Template</title>
 
-  <!-- Marx -->
-  <link href="css/marx.min.css" rel="stylesheet">
+  <!-- Marx CSS -->
+  <link rel="stylesheet" href="css/marx.min.css">
 </head>
 
 <body>
@@ -92,39 +92,34 @@ These are the files that are generated from `bower install marx`
   <main>
     <!-- Navigation -->
     <nav>
-      <!-- left align (brand) -->
       <ul>
-        <li><a href="#"><b>Marx</b></a></li>
+        <li><a href="#"><b>First</b></a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Fourth</a></li>
       </ul>
-
-      <!-- right align -->
-      <ol>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ol>
     </nav>
 
     <!-- article -->
     <article>
-      <h1>Article<small>This spans 60%</small></h1>
+      <h1>Article</h1>
     </article>
 
     <!-- aside -->
     <aside>
-      <h1>Aside<small>This spans 40%</small></h1>
+      <h1>Aside</h1>
     </aside>
 
     <!-- section -->
     <section>
-      <h1>Section<small>This spans 100%</small></h1>
+      <h1>Section</h1>
     </section>
-  </main>
 
-  <!-- footer (outside of main) -->
-  <footer>
-    <p>&copy Matthew Blode 2015</p>
-  </footer>
+    <!-- footer -->
+    <footer>
+      <p>&copy Matthew Blode 2015</p>
+    </footer>
+  </main>
 
 </body>
 </html>

@@ -12,8 +12,7 @@ input[type="number"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-select,
-textarea {
+select {
   border: $border $silver;
   border-radius: $br;
   display: inline-block;
@@ -54,12 +53,10 @@ input[type="color"]:focus,
 select:focus,
 textarea:focus {
   border-color: $selection-background-color;
-  outline: 0;
 }
 
 input:not([type]):focus {
   border-color: $selection-background-color;
-  outline: 0;
 }
 
 input[type="radio"],
@@ -70,7 +67,7 @@ input[type="checkbox"] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: $border thin #129fea;
+  outline: $border thin $black;
 }
 
 input[type="text"][disabled],
@@ -124,7 +121,6 @@ input[type="checkbox"]:focus:invalid:focus {
 select {
   background-color: $white;
   border: $border $silver;
-  outline: 0;
 }
 
 select[multiple] {
@@ -151,6 +147,10 @@ legend {
 }
 
 textarea {
-  display: block !important;
+  border: $border $silver;
+  border-radius: $br;
+  display: block;
   margin-bottom: $sm-pad;
+  padding: $sm-pad;
+  vertical-align: middle;
 }
