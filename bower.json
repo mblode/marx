@@ -1,6 +1,6 @@
 {
   "name": "marx",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "homepage": "https://github.com/mblode/marx",
   "authors": [
     "mblode <m.blode@gmail.com>"
@@ -43,5 +43,8 @@
     "_sass",
     "index.html",
     "components"
-  ]
+  ],
+  "dependencies": {
+    "burger": "~2.0.1"
+  }
 }
