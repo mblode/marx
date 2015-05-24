@@ -1,6 +1,6 @@
 {
   "name": "marx",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The stylish CSS reset.",
   "main": "index.js",
   "scripts": {
