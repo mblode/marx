@@ -41,6 +41,7 @@
     "package.json",
     "_site",
     "_sass",
+    "_posts",
     "index.html",
     "components"
   ],
