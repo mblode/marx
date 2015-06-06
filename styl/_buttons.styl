@@ -1,0 +1,49 @@
+input[type=submit],
+button
+  background-color      rgba(0, 0, 0, 0)
+  border                .2rem solid $black
+  border-radius         br
+  color                 $black
+  cursor                pointer
+  display               inline-block
+  margin-bottom         $sm-pad
+  margin-right          $xs-pad
+  padding               $sm-pad $md-pad
+  text-align            center
+  text-decoration       none
+  text-transform        uppercase
+  transition            $transition
+  -webkit-user-drag     none
+  user-select           none
+  vertical-align        baseline
+
+  a
+    color               $black
+
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner
+  padding               0
+
+input[type=submit]:hover,
+button:hover
+  background            $black
+  border-color          $black
+  color                 $white
+
+  a
+    color               $white
+
+input[type=submit]:active,
+button:active
+  background            lighten($black, 15%)
+  border-color          lighten($black, 15%)
+  color                 $white
+
+  a
+    color               $white
+
+input[type=submit]:disabled,
+button:disabled
+  box-shadow            none
+  cursor                not-allowed
+  opacity               .40

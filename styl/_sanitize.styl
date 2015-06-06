@@ -1,0 +1,155 @@
+// sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css
+
+// Normalization
+
+:root
+  // specify the root styles of the document
+  box-sizing              $root-box-sizing
+  cursor                  $root-cursor
+  font-family             $root-font-family
+  line-height             $root-line-height
+  -ms-overflow-style      -ms-autohiding-scrollbar // IE11+
+  overflow-y              scroll // All browsers without overlaying scrollbars
+  text-rendering          $root-text-rendering
+  text-size-adjust        100% // iOS 8+
+
+audio:not([controls])
+  display                 none // Chrome 40+, iOS 8+, Safari 8+
+
+details
+  display                 block // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
+
+input
+  &[type="number"]
+    width                 auto // Firefox 36+
+
+  &[type="search"]
+    -webkit-appearance    textfield // Safari 8+
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration
+      -webkit-appearance  none // Safari 8+
+
+main
+  display                 block // Android 4.3-, Internet Explorer 11+, Windows Phone 8.1+
+
+summary
+  display                 block // Firefox 36+, Internet Explorer 11+, Windows Phone 8.1+
+
+pre
+  overflow                auto // Internet Explorer 11+
+
+progress
+  display                 inline-block // Internet Explorer 11+, Windows Phone 8.1+
+
+small
+  font-size               $small-font-size // All browsers
+
+big
+  font-size               $big-font-size // All browsers
+
+template
+  display                 none // Android 4.3-, Internet Explorer 11+, iOS 7-, Safari 7-, Windows Phone 8.1+
+
+textarea
+  overflow                auto // Internet Explorer 11+
+  resize                  $textarea-resize // specify textarea resizability
+
+[hidden]
+  display                 none // Internet Explorer 10-
+
+[unselectable]
+  user-select             none // Android 4.4+, Chrome 40+, Firefox 36+, iOS 8+, Safari 8+
+
+// Universal inheritance
+
+*,
+::before,
+::after
+  // specify solid border style of all elements
+  border-style            solid
+  border-width            0
+  box-sizing              inherit
+
+*
+  font-size               inherit
+  line-height             inherit
+  // remove margin and padding of all elements
+  margin                  0
+  padding                 0
+
+::before,
+::after
+  text-decoration         inherit
+  vertical-align          inherit
+
+
+
+// Opinionated defaults
+
+// specify the text decoration of anchors
+
+a
+  text-decoration         $anchor-text-decoration
+
+// specify media element style
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align          $media-element-vertical-align
+
+// specify the background color of form elements
+
+button,
+input,
+select,
+textarea
+  background-color        $form-element-background-color
+  border                  .1rem solid $silver
+  // specify inheritance of form elements
+  color                   inherit
+  font-family             inherit
+  font-style              inherit
+  font-weight             inherit
+  // specify the minimum height of form elements
+  min-height              $form-element-min-height
+
+// specify the font family of code elements
+
+code,
+kbd,
+pre,
+samp
+  font-family             $monospace-font-family, monospace
+
+// specify the list style of nav lists
+
+// specify the border styles of tables
+
+table
+  border-collapse          $table-border-collapse
+  border-spacing           $table-border-spacing
+
+// specify text selection background color and omit drop shadow
+
+::selection
+  background-color          $selection-background-color // required when declaring ::selection
+  text-shadow               $selection-text-shadow
+
+button::-moz-focus-inner
+  border                    0
+
+
+// hide content from screens but not screenreaders
+
+@media screen
+  [hidden~="screen"]
+    display                 inherit
+
+  [hidden~="screen"]:not(:active):not(:focus):not(:target)
+    clip                    rect(0 0 0 0) !important
+    position                absolute !important

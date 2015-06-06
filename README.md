@@ -8,7 +8,7 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 
 ##Key features
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Created using the SASS preprocessor (Customise all the variables!).
+- Created using the SASS/Stylus preprocessors (Customise all the variables!).
 - Responsive and mobile-friendly.
 - Clean, beautiful typography.
 - Forms, tables, buttons and navigation.
@@ -39,6 +39,9 @@ if you have cloned the repo or downloaded from .zip, there are a few steps you m
 4. To run gulp server: `gulp`.
 5. To run build process: `gulp build`.
 
+> Optional:
+To run server or build using Stylus instead of SASS, then try `gulp stylus` and `gulp build styus`, respectively.
+
 ## Running Github Pages
 The gh-pages branch is built using Jekyll and must therefore be install with `gem install jekyll`.
 
@@ -61,16 +64,27 @@ These are the files that are generated from `bower install marx`
 │   ├── marx.min.css
 │   └── marx.min.css.map
 └── scss
-    ├── _buttons.scss
-    ├── _config.scss
-    ├── _forms.scss
-    ├── _html.scss
-    ├── _navigation.scss
-    ├── _sanitize.scss
-    ├── _tables.scss
-    ├── _typography.scss
-    ├── _variables.scss
-    └── marx.scss
+│   ├── _buttons.scss
+│   ├── _config.scss
+│   ├── _forms.scss
+│   ├── _html.scss
+│   ├── _navigation.scss
+│   ├── _sanitize.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _variables.scss
+│   └── marx.scss
+└── styl
+    ├── _buttons.styl
+    ├── _config.styl
+    ├── _forms.styl
+    ├── _html.styl
+    ├── _navigation.styl
+    ├── _sanitize.styl
+    ├── _tables.styl
+    ├── _typography.styl
+    ├── _variables.styl
+    └── marx.styl
 ```
 
 ## Documentation
