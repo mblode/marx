@@ -28,7 +28,7 @@ Several quick start options are available:
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css">
 ```
-- [Source code.](https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css)
+- [Source code.](https://raw.githubusercontent.com/mblode/marx/master/css/marx.min.css)
 - [Download the latest release](https://github.com/mblode/marx/archive/master.zip).
 - Clone the repo: `git clone https://github.com/mblode/marx.git`.
 
