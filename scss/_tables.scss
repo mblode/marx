@@ -1,5 +1,5 @@
 table {
-  border: 0;
+  border-top: $border;
   margin-bottom: $md-pad;
 }
 
@@ -8,7 +8,8 @@ caption {
 }
 
 thead th {
-  border-bottom: 2px solid $light-dividers;
+  border: 0;
+  border-bottom: 2px solid $dividers;
   text-align: left;
 }
 
@@ -18,8 +19,8 @@ tr {
 
 th,
 td {
-  border-bottom: $light-border;
-  padding: $sm-pad $md-pad;
+  border-bottom: $border;
+  padding: $md-pad;
   vertical-align: inherit;
 }
 
@@ -28,7 +29,7 @@ tfoot tr {
 }
 
 tfoot td {
-  color: $light-secondary;
+  color: $secondary;
   font-size: $sm-pad;
   font-style: italic;
   padding: $md-pad $xs-pad;

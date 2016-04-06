@@ -16,14 +16,15 @@ $primary: #2196f3;
 $accent: #64ffda;
 $red: #f44336;
 $yellow: #ffeb3b;
+$grey: #efefef;
 $white: #fff;
 $black: #000;
 
 //Text
-$light-text: rgba(0, 0, 0, .87);
-$light-secondary: rgba(0, 0, 0, .54);
-$light-disabled: rgba(0, 0, 0, .38);
-$light-dividers: rgba(0, 0, 0, .12);
+$text: rgba(0, 0, 0, .8);
+$secondary: rgba(0, 0, 0, .54);
+$disabled: rgba(0, 0, 0, .38);
+$dividers: rgba(0, 0, 0, .12);
 
 //Links
 $link-color: $primary;
@@ -48,4 +49,4 @@ $font-size-h6: $font-size-small;
 $line-height-base: 1.4;
 
 //Other
-$light-border: 1px solid $light-dividers;
+$border: 1px solid $dividers;

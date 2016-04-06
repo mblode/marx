@@ -1,11 +1,13 @@
 body {
+  color: $text;
   font-family: $font-family;
   font-size: $font-size-base;
   line-height: $line-height-base;
 }
 
 p {
-  margin: 0 0 $md-pad;
+  margin: 0;
+  margin-bottom: $md-pad;
 }
 
 h1,
@@ -14,12 +16,13 @@ h3,
 h4,
 h5,
 h6 {
+  color: inherit;
   font-family: inherit;
   line-height: inherit;
 }
 
 h1 {
-  border-bottom: $light-border;
+  border-bottom: $border;
   font-size: $font-size-h1;
   font-weight: 500;
   margin: $lg-pad 0 $md-pad;
@@ -50,31 +53,30 @@ h5 {
 }
 
 h6 {
-  color: $light-secondary;
+  color: $secondary;
   font-size: $font-size-h6;
   font-weight: 600;
   margin: $md-pad 0 $xs-pad;
 }
 
 small {
-  color: $light-secondary;
+  color: $secondary;
   vertical-align: bottom;
 }
 
 pre {
-  background: $light-dividers;
-  color: $light-text;
+  background: $grey;
+  color: $text;
   display: block;
   font-family: $monospace;
   font-size: $font-size-base;
   margin: $md-pad 0;
   padding: $md-pad;
-  word-break: break-all;
-  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 code {
-  color: $light-text;
+  color: $text;
   font-family: $monospace;
   font-size: $font-size-base;
   line-height: inherit;

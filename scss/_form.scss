@@ -13,9 +13,9 @@ input[type="search"],
 input[type="tel"],
 select {
   background: $white;
-  border: $light-border;
+  border: $border;
   border-radius: $br;
-  color: $light-text;
+  color: $text;
   display: inline-block;
   padding: $xs-pad;
   vertical-align: middle;
@@ -23,7 +23,7 @@ select {
 
 input[type="color"], {
   background: $white;
-  border: $light-border;
+  border: $border;
   border-radius: $br;
   display: inline-block;
   vertical-align: middle;
@@ -33,7 +33,7 @@ input[type="color"], {
 input:not([type]) {
   -webkit-appearance: none;
   background-clip: padding-box;
-  border: $light-border;
+  border: $border;
   border-radius: $br;
   display: inline-block;
   padding: $sm-pad;
@@ -66,7 +66,7 @@ input:not([type]):focus {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px thin $light-dividers;
+  outline: 1px thin $dividers;
 }
 
 input[type="text"][disabled],
@@ -85,22 +85,22 @@ input[type="tel"][disabled],
 input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
-  background-color: $light-dividers;
-  color: $light-secondary;
+  background-color: $dividers;
+  color: $secondary;
   cursor: not-allowed;
 }
 
 input:not([type])[disabled] {
-  background-color: $light-dividers;
-  color: $light-secondary;
+  background-color: $dividers;
+  color: $secondary;
   cursor: not-allowed;
 }
 
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  border-color: $light-dividers;
-  color: $light-secondary;
+  border-color: $dividers;
+  color: $secondary;
 }
 
 input:focus:invalid,
@@ -118,7 +118,7 @@ input[type="checkbox"]:focus:invalid:focus {
 
 select {
   -webkit-appearance: menulist-button;
-  border: $light-border;
+  border: $border;
   vertical-align: sub;
 }
 
@@ -137,8 +137,8 @@ fieldset {
 }
 
 legend {
-  border-bottom: $light-border;
-  color: $light-text;
+  border-bottom: $border;
+  color: $text;
   display: block;
   margin-bottom: $sm-pad;
   padding: $sm-pad 0;
@@ -147,7 +147,7 @@ legend {
 
 textarea {
   background: $white;
-  border: $light-border;
+  border: $border;
   border-radius: $br;
   display: block;
   margin-bottom: $sm-pad;

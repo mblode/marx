@@ -234,9 +234,6 @@ textarea {
   color: #ffffff;
   text-shadow: none; }
 
-body {
-  color: rgba(0, 0, 0, 0.87); }
-
 main,
 header,
 footer,
@@ -262,8 +259,6 @@ footer {
   max-width: 100%;
   padding: 16px 0;
   text-align: center; }
-  footer p {
-    margin-bottom: 0; }
 
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -287,12 +282,14 @@ img {
     margin-right: 16px; } }
 
 body {
+  color: rgba(0, 0, 0, 0.8);
   font-family: "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
   font-size: 16px;
   line-height: 1.4; }
 
 p {
-  margin: 0 0 16px; }
+  margin: 0;
+  margin-bottom: 16px; }
 
 h1,
 h2,
@@ -300,6 +297,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: inherit;
   font-family: inherit;
   line-height: inherit; }
 
@@ -340,18 +338,17 @@ small {
   vertical-align: bottom; }
 
 pre {
-  background: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.87);
+  background: #efefef;
+  color: rgba(0, 0, 0, 0.8);
   display: block;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
   margin: 16px 0;
   padding: 16px;
-  word-break: break-all;
-  word-wrap: break-word; }
+  white-space: pre-wrap; }
 
 code {
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.8);
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 16px;
   line-height: inherit;
@@ -423,7 +420,7 @@ select {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.8);
   display: inline-block;
   padding: 4px;
   vertical-align: middle; }
@@ -530,7 +527,7 @@ fieldset {
 
 legend {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.8);
   display: block;
   margin-bottom: 8px;
   padding: 8px 0;
@@ -549,10 +546,10 @@ textarea {
 input[type=submit],
 input[type=reset],
 button {
-  background: rgba(0, 0, 0, 0.12);
+  background: #2196f3;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  color: inherit;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -569,13 +566,13 @@ button::-moz-focus-inner {
 input[type=submit]:hover,
 input[type=reset]:hover,
 button:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.2));
+  background: #0c7cd5;
   border-color: 1px solid rgba(0, 0, 0, 0.54); }
 
 input[type=submit]:active,
 input[type=reset]:active,
 button:active {
-  background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.2));
+  background: #0c7cd5;
   border-color: 1px solid rgba(0, 0, 0, 0.54);
   box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
   outline-offset: -2px; }
@@ -583,7 +580,7 @@ button:active {
 input[type=submit]:focus,
 input[type=reset]:focus,
 button:focus {
-  background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.2));
+  background: #0c7cd5;
   border-color: 1px solid rgba(0, 0, 0, 0.54);
   box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
   outline: 0; }
@@ -595,13 +592,14 @@ button:disabled {
   cursor: not-allowed; }
 
 table {
-  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
   margin-bottom: 16px; }
 
 caption {
   padding: 8px 0; }
 
 thead th {
+  border: 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
   text-align: left; }
 
@@ -611,7 +609,7 @@ tr {
 th,
 td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 8px 16px;
+  padding: 16px;
   vertical-align: inherit; }
 
 tfoot tr {
