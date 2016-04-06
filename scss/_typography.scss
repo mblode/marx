@@ -1,10 +1,7 @@
-//Base typography for the stylesheet
 body {
-  color: $black;
-  font-family: $sans-serif-font-family;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 p {
@@ -17,62 +14,59 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  margin: $lg-pad 0 $md-pad;
+  font-family: inherit;
+  line-height: inherit;
 }
 
 h1 {
-  border-bottom: $border $trans-light;
-  font-size: 3.6rem;
-  font-style: normal;
+  border-bottom: $light-border;
+  font-size: $font-size-h1;
   font-weight: 500;
+  margin: $lg-pad 0 $md-pad;
 }
 
 h2 {
-  font-size: 3rem;
-  font-style: normal;
+  font-size: $font-size-h2;
   font-weight: 500;
+  margin: $lg-pad 0 $md-pad;
 }
 
 h3 {
-  font-size: 2.4rem;
-  font-style: normal;
+  font-size: $font-size-h3;
   font-weight: 500;
   margin: $md-pad 0 $xs-pad;
 }
 
 h4 {
-  font-size: 1.8rem;
-  font-style: normal;
+  font-size: $font-size-h4;
   font-weight: 600;
   margin: $md-pad 0 $xs-pad;
 }
 
 h5 {
-  font-size: 1.6rem;
-  font-style: normal;
+  font-size: $font-size-h5;
   font-weight: 600;
   margin: $md-pad 0 $xs-pad;
 }
 
 h6 {
-  color: $grey;
-  font-size: 1.4rem;
-  font-style: normal;
+  color: $light-secondary;
+  font-size: $font-size-h6;
   font-weight: 600;
   margin: $md-pad 0 $xs-pad;
 }
 
 small {
-  color: $grey;
+  color: $light-secondary;
+  vertical-align: bottom;
 }
 
 pre {
-  background: $light-grey;
-  color: $black;
+  background: $light-dividers;
+  color: $light-text;
   display: block;
-  font-family: $monospace-font-family;
-  font-size: 1.4rem;
+  font-family: $monospace;
+  font-size: $font-size-base;
   margin: $md-pad 0;
   padding: $md-pad;
   word-break: break-all;
@@ -80,21 +74,24 @@ pre {
 }
 
 code {
-  background: $light-grey;
-  color: $black;
-  font-family: $monospace-font-family;
-  font-size: 1.4rem;
+  color: $light-text;
+  font-family: $monospace;
+  font-size: $font-size-base;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
   word-break: break-all;
   word-wrap: break-word;
 }
 
 a {
-  color: $primary-color;
-  transition: $transition;
+  color: $link-color;
 
   &:hover,
   &:focus {
-    text-decoration: none;
+    color: $primary;
+    text-decoration: underline;
   }
 }
 
@@ -109,17 +106,40 @@ dd {
 ul,
 ol {
   margin-bottom: $sm-pad;
-  padding-left: $lg-pad;
+  padding-left: $xlg-pad;
+  vertical-align: baseline;
 }
 
 blockquote {
-  border-left: .2rem solid $primary-color;
-  font-family: $serif-font-family;
+  border-left: 2px solid $primary;
+  font-family: $serif;
   font-style: italic;
   margin: $md-pad 0;
   padding-left: $md-pad;
 }
 
 figcaption {
-  font-family: $serif-font-family;
+  font-family: $serif;
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+sup {
+  font-size: $font-size-small;
+  vertical-align: super;
+}
+
+sub {
+  font-size: $font-size-small;
+  vertical-align: sub;
+}
+
+mark {
+  background: $yellow;
 }

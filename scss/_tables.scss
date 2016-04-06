@@ -1,4 +1,5 @@
 table {
+  border: 0;
   margin-bottom: $md-pad;
 }
 
@@ -7,29 +8,27 @@ caption {
 }
 
 thead th {
-  background: $light-grey;
-  color: $black;
+  border-bottom: 2px solid $light-dividers;
+  text-align: left;
 }
 
 tr {
-  background: $white;
   margin-bottom: $sm-pad;
 }
 
 th,
 td {
-  border: $border $silver;
+  border-bottom: $light-border;
   padding: $sm-pad $md-pad;
-  text-align: center;
   vertical-align: inherit;
 }
 
 tfoot tr {
-  background: none;
+  text-align: left;
 }
 
 tfoot td {
-  color: $light-grey;
+  color: $light-secondary;
   font-size: $sm-pad;
   font-style: italic;
   padding: $md-pad $xs-pad;

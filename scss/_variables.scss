@@ -1,59 +1,51 @@
-//Fonts
-$sans-serif-font-family:        'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
-$serif-font-family:             Georgia, Times, 'Times New Roman', serif;
-$heading-font-family:           'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
-$monospace-font-family:         Menlo, Monaco, Consolas, 'Courier New', monospace;
-
-//Santize.scss
-//Root
-$root-box-sizing:               border-box !default;
-$root-cursor:                   default !default;
-$root-font-family:              $sans-serif-font-family !default;
-$root-font-size:                1rem !default;
-$root-line-height:              1.4 !default;
-$root-text-rendering:           optimizeLegibility !default;
-
-//Other
-$anchor-text-decoration:        none !default;
-$form-element-background-color: transparent !default;
-$form-element-min-height:       if(unitless($root-line-height), $root-line-height * 1em, if(unit($root-line-height) != '%', $root-line-height, null)) !default;
-$media-element-vertical-align:  middle !default;
-$monospace-font-family:         $monospace-font-family !default;
-$nav-list-style:                none !default;
-$selection-background-color:    #b3d4fc !default;
-$selection-text-shadow:         none !default;
-$small-font-size:               75% !default;
-$big-font-size:                 125% !default;
-$table-border-collapse:         collapse !default;
-$table-border-spacing:          0 !default;
-$textarea-resize:               vertical !default;
-
 //Basic stylings
-$br:                            0;
-$xs-pad:                        .4rem;
-$sm-pad:                        .8rem;
-$md-pad:                        1.6rem;
-$lg-pad:                        2rem;
-$xlg-pad:                       4rem;
-$transition:                    .25s ease;
-$border:                        .1rem solid;
+$br: 4px;
+$xs-pad: 4px;
+$sm-pad: 8px;
+$md-pad: 16px;
+$lg-pad: 20px;
+$xlg-pad: 40px;
+$trans: .3s;
 
 //Breakpoints
-$small-break:                   40rem;
-$big-break:                     76.8rem;
+$small-breakpoint: 400px;
+$large-breakpoint: 768px;
 
 //Colors
-$primary-color:                 #1271db;
-$red:                           #ff4136;
+$primary: #2196f3;
+$accent: #64ffda;
+$red: #f44336;
+$yellow: #ffeb3b;
+$white: #fff;
+$black: #000;
 
-//Greyscale
-$white:                         #fff;
-$light-grey:                    #efefef;
-$silver:                        #ccc;
-$grey:                          #777;
-$black:                         #444;
+//Text
+$light-text: rgba(0, 0, 0, .87);
+$light-secondary: rgba(0, 0, 0, .54);
+$light-disabled: rgba(0, 0, 0, .38);
+$light-dividers: rgba(0, 0, 0, .12);
 
-//Transparency
-$trans-light:                   rgba(0, 0, 0, .2);
-$trans-mid:                     rgba(0, 0, 0, .56);
-$trans-dark:                    rgba(0, 0, 0, .87);
+//Links
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%);
+
+//Font
+$sans-serif: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family: $sans-serif;
+
+//Typography
+$font-size-base: 16px;
+$font-size-large: ceil(($font-size-base * 1.25));
+$font-size-small: ceil(($font-size-base * .85));
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: $font-size-base;
+$font-size-h6: $font-size-small;
+$line-height-base: 1.4;
+
+//Other
+$light-border: 1px solid $light-dividers;

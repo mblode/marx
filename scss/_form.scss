@@ -11,29 +11,33 @@ input[type="week"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
-input[type="color"],
 select {
-  border: $border $silver;
+  background: $white;
+  border: $light-border;
   border-radius: $br;
+  color: $light-text;
   display: inline-block;
-  padding: $sm-pad;
+  padding: $xs-pad;
   vertical-align: middle;
 }
+
+input[type="color"], {
+  background: $white;
+  border: $light-border;
+  border-radius: $br;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 input:not([type]) {
   -webkit-appearance: none;
   background-clip: padding-box;
-  background-color: $white;
-  border: $border $silver;
+  border: $light-border;
   border-radius: $br;
-  color: $black;
   display: inline-block;
   padding: $sm-pad;
   text-align: left;
-}
-
-input[type="color"] {
-  padding: $sm-pad $md-pad;
 }
 
 input[type="text"]:focus,
@@ -52,22 +56,17 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  border-color: $selection-background-color;
+  border-color: $primary;
 }
 
 input:not([type]):focus {
-  border-color: $selection-background-color;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  vertical-align: middle;
+  border-color: $primary;
 }
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: $border thin $black;
+  outline: 1px thin $light-dividers;
 }
 
 input[type="text"][disabled],
@@ -86,30 +85,29 @@ input[type="tel"][disabled],
 input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
-  background-color: $light-grey;
-  color: $grey;
+  background-color: $light-dividers;
+  color: $light-secondary;
   cursor: not-allowed;
 }
 
 input:not([type])[disabled] {
-  background-color: $light-grey;
-  color: $grey;
+  background-color: $light-dividers;
+  color: $light-secondary;
   cursor: not-allowed;
 }
 
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  background-color: $light-grey;
-  border-color: $silver;
-  color: $grey;
+  border-color: $light-dividers;
+  color: $light-secondary;
 }
 
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-  border-color: #e9322d;
-  color: #b94a48;
+  border-color: darken($red, 10);
+  color: $red;
 }
 
 input[type="file"]:focus:invalid:focus,
@@ -119,8 +117,9 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 select {
-  background-color: $white;
-  border: $border $silver;
+  -webkit-appearance: menulist-button;
+  border: $light-border;
+  vertical-align: sub;
 }
 
 select[multiple] {
@@ -138,8 +137,8 @@ fieldset {
 }
 
 legend {
-  border-bottom: $border $silver;
-  color: $black;
+  border-bottom: $light-border;
+  color: $light-text;
   display: block;
   margin-bottom: $sm-pad;
   padding: $sm-pad 0;
@@ -147,10 +146,12 @@ legend {
 }
 
 textarea {
-  border: $border $silver;
+  background: $white;
+  border: $light-border;
   border-radius: $br;
   display: block;
   margin-bottom: $sm-pad;
+  max-width: 100%;
   padding: $sm-pad;
   vertical-align: middle;
 }

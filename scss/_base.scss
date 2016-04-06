@@ -1,0 +1,63 @@
+body {
+  color: $light-text;
+}
+
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: $large-breakpoint;
+  padding: 0 $md-pad $md-pad;
+}
+
+footer {
+  border-top: $light-border;
+  clear: both;
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  padding: $md-pad 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  border-top: $light-border;
+  display: block;
+  margin-bottom: $md-pad;
+  width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  article,
+  section,
+  aside {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    margin-right: $md-pad;
+  }
+}

@@ -1,0 +1,13 @@
+.DS_Store
+**/.*
+node_modules
+bower_components
+test
+tests
+public
+gulpfile.js
+_site
+_sass
+_posts
+index.html
+components
