@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The classless CSS reset (perfect for Communists).",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,6 @@
   "files": [
     "css",
     "scss",
-    "gulpfile.js",
     "LICENSE"
   ],
   "keywords": [
