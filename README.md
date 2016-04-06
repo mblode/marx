@@ -1,5 +1,5 @@
 ## Marx
-#### The stylish CSS reset.
+#### The classless CSS reset (perfect for Communists).
 
 > No JavaScript. No Classes. Just raw *CSS.*
 
@@ -8,11 +8,11 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 
 ##Key features
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Created using the SASS/Stylus preprocessors (Customise all the variables!).
+- Created using the SASS preprocessors (Customise all the variables!).
 - Responsive and mobile-friendly.
 - Clean, beautiful typography.
 - Forms, tables, buttons and navigation.
-- Zero classes so it already works with your HTML.
+- Zero classes, so it already works with your HTML.
 - Drop-dead gorgeous.
 - It just works.
 
@@ -21,7 +21,8 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 ## Quick Start
 Several quick start options are available:
 
-- Install with [Bower](http://bower.io): `bower install marx` (recommended).
+- Install with [NPM](https://www.npmjs.com/): `npm install marx` (recommended).
+- Install with [Bower](http://bower.io): `bower install marx`.
 - Use the latest Marx CDN
 ```
 <!-- Latest compiled and minified CSS -->
@@ -39,9 +40,6 @@ if you have cloned the repo or downloaded from .zip, there are a few steps you m
 4. To run gulp server: `gulp`.
 5. To run build process: `gulp build`.
 
-> Optional:
-To run server or build using Stylus instead of SASS, then try `gulp stylus` and `gulp build styus`, respectively.
-
 ## Running Github Pages
 The gh-pages branch is built using Jekyll and must therefore be install with `gem install jekyll`.
 
@@ -50,41 +48,28 @@ The gh-pages branch is built using Jekyll and must therefore be install with `ge
 3. Run jekyll: `jekyll serve`.
 4. Open in browser: `localhost:4000/marx/`.
 
-
 ## What's Included
 These are the files that are generated from `bower install marx`
 
 ```
 .
 ├── README.md
+├── LICENSE.md
 ├── bower.json
+├── package.json
 ├── css
 │   ├── marx.css
-│   ├── marx.css.map
 │   ├── marx.min.css
-│   └── marx.min.css.map
 └── scss
-│   ├── _buttons.scss
-│   ├── _config.scss
-│   ├── _forms.scss
-│   ├── _html.scss
-│   ├── _navigation.scss
-│   ├── _sanitize.scss
-│   ├── _tables.scss
-│   ├── _typography.scss
-│   ├── _variables.scss
-│   └── marx.scss
-└── styl
-    ├── _buttons.styl
-    ├── _config.styl
-    ├── _forms.styl
-    ├── _html.styl
-    ├── _navigation.styl
-    ├── _sanitize.styl
-    ├── _tables.styl
-    ├── _typography.styl
-    ├── _variables.styl
-    └── marx.styl
+    ├── _base.scss
+    ├── _buttons.scss
+    ├── _forms.scss
+    ├── _sanitize.scss
+    ├── _tables.scss
+    ├── _typography.scss
+    ├── _variables.scss
+    └── marx.scss
+
 ```
 
 ## Documentation

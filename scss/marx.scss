@@ -1,9 +1,10 @@
-@import 'variables';
-@import 'sanitize';
-@import 'typography';
-@import 'config';
-@import 'html';
-@import 'forms';
-@import 'buttons';
-@import 'navigation';
-@import 'tables';
+@charset 'utf-8';
+
+@import
+'sanitize',
+'variables',
+'base',
+'typography',
+'form',
+'buttons',
+'tables';

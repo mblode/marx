@@ -1,11 +1,11 @@
 {
   "name": "marx",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/mblode/marx",
   "authors": [
     "mblode <m.blode@gmail.com>"
   ],
-  "description": "The stylish CSS reset.",
+  "description": "The classless CSS reset (perfect for Communists).",
   "main": [
     "css/*.css",
     "scss/*.scss"
@@ -38,7 +38,6 @@
     "test",
     "tests",
     "gulpfile.js",
-    "package.json",
     "_site",
     "_sass",
     "_posts",

@@ -1,83 +1,40 @@
-var gulp = require('gulp');
-var g = require('gulp-load-plugins')();
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+var gulp = require('gulp')
+var plumber = require('gulp-plumber')
+var rename = require('gulp-rename')
+var autoprefixer = require('gulp-autoprefixer')
+var cleanCSS = require('gulp-clean-css')
+var sass = require('gulp-sass')
+var browserSync = require('browser-sync')
 
-function isStylus() {
-  var stylus = false;
-  for(var i = 0; i < process.argv.length; i++) {
-    if(process.argv[i] == "stylus") {
-      stylus = true;
-    }
-  }
-  return stylus;
-}
-
-gulp.task('browser-sync', ['scss', 'styl'], function() {
+gulp.task('browser-sync', function () {
   browserSync({
     server: {
       baseDir: './'
     }
-  });
-});
+  })
+})
 
-gulp.task('scss-lint', function(){
-  if(!isStylus()) {
-    return gulp.src('scss/**/*.scss')
-      .pipe(g.scssLint());
-  }
-});
+gulp.task('bs-reload', function () {
+  browserSync.reload()
+})
 
-gulp.task('scss', ['scss-lint'], function() {
-  if(!isStylus()) {
-    return gulp.src('scss/*.scss')
-      .pipe(g.sourcemaps.init())
-        .pipe(g.sass({
-          precision: 10,
-          onError: console.error.bind(console, 'Sass error:')
-        }))
-        .pipe(g.autoprefixer('last 2 versions'))
-        .pipe(g.minifyCss())
-        .pipe(g.rename({suffix: '.min'}))
-      .pipe(g.sourcemaps.write('.'))
-      .pipe(browserSync.reload({stream:true}))
-      .pipe(gulp.dest('css/'));
-  }
-});
+gulp.task('styles', function () {
+  gulp.src(['scss/**/*.scss'])
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message)
+        this.emit('end')
+      }}))
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest('css/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('css/'))
+    .pipe(browserSync.reload({stream: true}))
+})
 
-gulp.task('styl-lint', function(){
-  if(isStylus()) {
-    return gulp.src('styl/**/*.styl')
-      .pipe(g.stylint({config: '.stylintrc'}));
-  }
-});
-
-gulp.task('styl', ['styl-lint'], function() {
-  if(isStylus()) {
-    return gulp.src('styl/marx.styl')
-      .pipe(g.sourcemaps.init())
-        .pipe(g.stylus())
-        .pipe(g.autoprefixer('last 2 versions'))
-        .pipe(g.minifyCss())
-        .pipe(g.rename({suffix: '.min'}))
-      .pipe(g.sourcemaps.write('.'))
-      .pipe(browserSync.reload({stream:true}))
-      .pipe(gulp.dest('css/'));
-  }
-
-});
-
-gulp.task('watch', function() {
-  if(isStylus()) {
-    gulp.watch('styl/**/*.styl', ['styl', reload]);
-  } else {
-    gulp.watch('scss/**/*.scss', ['scss', reload]);
-  }
-  gulp.watch('*.html').on('change', reload);
-});
-
-gulp.task('default', ['scss-lint', 'scss', 'browser-sync', 'watch']);
-
-gulp.task('stylus', ['styl-lint', 'styl', 'browser-sync', 'watch']);
-
-gulp.task('build', ['scss-lint', 'scss', 'styl-lint', 'styl']);
+gulp.task('default', ['browser-sync'], function () {
+  gulp.watch('scss/**/*.scss', ['styles'])
+  gulp.watch('*.html', ['bs-reload'])
+})
