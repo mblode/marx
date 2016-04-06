@@ -1,8 +1,7 @@
 {
-  "name": "marx",
-  "version": "2.0.0",
+  "name": "marx-css",
+  "version": "2.0.1",
   "description": "The classless CSS reset (perfect for Communists).",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -36,7 +35,7 @@
     "format",
     "classless"
   ],
-  "author": "Matthew Blode",
+  "author": "Matthew Blode <m.blode@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mblode/marx/issues"
@@ -49,6 +48,6 @@
     "gulp-clean-css": "^2.0.4",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
+    "gulp-sass": "^2.0.4"
   }
 }

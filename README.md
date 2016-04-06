@@ -21,7 +21,7 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 ## Quick Start
 Several quick start options are available:
 
-- Install with [NPM](https://www.npmjs.com/): `npm install marx` (recommended).
+- Install with [NPM](https://www.npmjs.com/): `npm install marx-css` (recommended).
 - Install with [Bower](http://bower.io): `bower install marx`.
 - Use the latest Marx CDN
 ```
@@ -118,7 +118,7 @@ These are the files that are generated from `bower install marx`
 
     <!-- footer -->
     <footer>
-      <p>&copy Matthew Blode 2015</p>
+      <p>&copy; Matthew Blode 2016</p>
     </footer>
   </main>
 
@@ -134,9 +134,8 @@ Pull requests are the way to go.
 ## Creators
 
 **Matthew Blode**
-- <https://twitter.com/mblode>
 - <https://github.com/mblode>
 - <http://codepen.io/mblode>
 
 ## License
-MIT © [Matthew Blode](http://mblode.github.io)
+MIT © [Matthew Blode](http://matthewblode.com)
