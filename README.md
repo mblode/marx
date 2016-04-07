@@ -16,7 +16,7 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 - Drop-dead gorgeous.
 - It just works.
 
-## [Demo](http://codepen.io/mblode/details/JdYbJj/)
+## [Demo](http://codepen.io/mblode/details/QNaKMe)
 
 ## Quick Start
 Several quick start options are available:
