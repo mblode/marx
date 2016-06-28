@@ -1,17 +1,50 @@
-/* sanitize.stylus v2.0.0 | CC0 1.0 Public Domain | github.com/sotayamashita/sanitize.stylus */
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
+/* sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 audio:not([controls]) {
   display: none;
 }
+b,
+strong {
+  font-weight: bolder;
+}
 button {
+  -webkit-appearance: button;
   overflow: visible;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+button,
+select {
+  text-transform: none;
 }
 details {
   display: block;
+}
+hr {
+  overflow: visible;
+}
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+}
+input {
+  -webkit-border-radius: 0;
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
 }
 input[type="number"] {
   width: auto;
@@ -19,14 +52,11 @@ input[type="number"] {
 input[type="search"] {
   -webkit-appearance: textfield;
 }
-input::-webkit-search-cancel-button,
-input::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 main {
-  display: block;
-}
-summary {
   display: block;
 }
 pre {
@@ -35,8 +65,11 @@ pre {
 progress {
   display: inline-block;
 }
-small {
-  font-size: 75%;
+summary {
+  display: block;
+}
+svg:not(:root) {
+  overflow: hidden;
 }
 template {
   display: none;
@@ -61,25 +94,74 @@ textarea {
   text-decoration: inherit;
   vertical-align: inherit;
 }
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 *,
 ::before,
 ::after {
   border-style: solid;
   border-width: 0;
 }
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select::-ms-value {
+  color: currentColor;
+}
+svg {
+  fill: currentColor;
+}
+[aria-busy="true"] {
+  cursor: progress;
+}
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-disabled] {
+  cursor: default;
+}
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute;
+}
+[hidden][aria-hidden="false"]:focus {
+  clip: auto;
+}
 * {
-  margin: 0;
-  padding: 0;
+  background-repeat: no-repeat;
 }
 :root {
+  background-color: #fff;
   box-sizing: border-box;
+  color: #000;
   cursor: default;
   font: 100%/1.5 sans-serif;
-  text-rendering: optimizeLegibility;
-}
-html {
-  background-color: #fff;
-  color: #000;
 }
 a {
   text-decoration: none;
@@ -97,15 +179,7 @@ input,
 select,
 textarea {
   background-color: transparent;
-}
-button,
-input,
-select,
-textarea {
   color: inherit;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: inherit;
 }
 button,
 [type="button"],
@@ -126,7 +200,7 @@ button,
 [type="week"],
 select,
 textarea {
-  min-height: 1.5;
+  min-height: 1.5em;
 }
 code,
 kbd,
@@ -138,15 +212,8 @@ nav ol,
 nav ul {
   list-style: none;
 }
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-select::-ms-expand {
-  display: none;
-}
-select::-ms-value {
-  color: currentColor;
+small {
+  font-size: 75%;
 }
 table {
   border-collapse: collapse;
@@ -157,30 +224,13 @@ textarea {
 }
 ::-moz-selection {
   background-color: #b3d4fc;
-  color: #4c2b03;
+  color: #fff;
   text-shadow: none;
 }
 ::selection {
   background-color: #b3d4fc;
-  color: #4c2b03;
+  color: #fff;
   text-shadow: none;
-}
-[aria-busy="true"] {
-  cursor: progress;
-}
-[aria-controls] {
-  cursor: pointer;
-}
-[aria-disabled] {
-  cursor: default;
-}
-[hidden][aria-hidden="false"] {
-  clip: rect(0 0 0 0);
-  display: inherit;
-  position: absolute;
-}
-[hidden][aria-hidden="false"]:focus {
-  clip: auto;
 }
 main,
 header,
