@@ -47,6 +47,7 @@
     "gulp-clean-css": "^2.0.4",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+    "gulp-stylus": "^2.5.0"
   }
 }
