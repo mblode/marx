@@ -163,7 +163,7 @@ svg {
   box-sizing: border-box;
   color: #000000;
   cursor: default;
-  font: 100% / 1.5 sans-serif; }
+  font: 66.66667% sans-serif; }
 
 a {
   text-decoration: none; }
@@ -243,6 +243,7 @@ aside,
 details,
 summary {
   margin: 0 auto;
+  margin-bottom: 16px;
   width: 100%; }
 
 main {
@@ -259,6 +260,8 @@ footer {
   max-width: 100%;
   padding: 16px 0;
   text-align: center; }
+  footer p {
+    margin-bottom: 0; }
 
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
