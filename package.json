@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "The classless CSS reset (perfect for Communists).",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
