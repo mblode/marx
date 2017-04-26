@@ -1,4 +1,4 @@
-#[Marx](http://matthewblode.com/marx/)
+# [Marx](http://matthewblode.com/marx/)
 ![Bower version](https://img.shields.io/bower/v/marx.svg)
 [![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
 
