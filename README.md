@@ -1,15 +1,18 @@
 # [Marx](http://matthewblode.com/marx/)
+
 ![Bower version](https://img.shields.io/bower/v/marx.svg)
 [![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
 
-#### The classless CSS reset (perfect for Communists).
+**The classless CSS reset (perfect for Communists).**
 
-> No JavaScript. No Classes. Just raw *CSS.*
+    No JavaScript. No Classes. Just raw CSS.
 
-##Is Marx for you?
+## Is Marx for you?
+
 Marx is a CSS stylesheet to be used in any projects (namely small ones). If you don't need the weight of heavy frameworks or you would just like to make an edible website quickly, Marx is perfect for you. It can be used out of the minified box but it can also be customised and styled through the use of HTML classes.
 
-##Key features
+## Key features
+
 - Built atop of Sanitize.css, meaning all browsers render consistently.
 - Created using the SASS preprocessors (Customise all the variables!).
 - Responsive and mobile-friendly.
@@ -19,9 +22,11 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 - Drop-dead gorgeous.
 - It just works.
 
+
 ## [Demo](http://codepen.io/mblode/details/JdYbJj)
 
 ## Quick Start
+
 Several quick start options are available:
 
 - Install with [NPM](https://www.npmjs.com/): `npm install marx-css` (recommended).
@@ -35,7 +40,7 @@ Several quick start options are available:
 - [Download the latest release](https://github.com/mblode/marx/archive/master.zip).
 - Clone the repo: `git clone https://github.com/mblode/marx.git`.
 
-if you have cloned the repo or downloaded from .zip, there are a few steps you must take within the terminal.
+If you have cloned the repo or downloaded from .zip, there are a few steps you must take within the terminal:
 
 1. Change directory: `cd marx`.
 2. Install node modules: `npm install`.
@@ -43,6 +48,7 @@ if you have cloned the repo or downloaded from .zip, there are a few steps you m
 4. To run gulp: `gulp`.
 
 ## Running Github Pages
+
 The gh-pages branch is built using Jekyll and must therefore be install with `gem install jekyll`.
 
 1. Checkout in to gh-pages: `git checkout gh-pages`.
@@ -51,6 +57,7 @@ The gh-pages branch is built using Jekyll and must therefore be install with `ge
 4. Open in browser: `localhost:4567`.
 
 ## What's Included
+
 These are the files that are generated from `bower install marx`
 
 ```
@@ -75,8 +82,10 @@ These are the files that are generated from `bower install marx`
 ```
 
 ## Documentation
+
 ### Basic HTML Template
-```
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,8 +145,10 @@ Pull requests are the way to go.
 ## Creators
 
 **Matthew Blode**
+
 - <https://github.com/mblode>
 - <http://codepen.io/mblode>
 
 ## License
+
 MIT © [Matthew Blode](http://matthewblode.com)
