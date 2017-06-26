@@ -73,6 +73,7 @@ pre {
   margin: $md-pad 0;
   padding: $md-pad;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 code {
