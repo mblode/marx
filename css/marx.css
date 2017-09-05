@@ -348,7 +348,8 @@ pre {
   font-size: 16px;
   margin: 16px 0;
   padding: 16px;
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+  overflow-wrap: break-word; }
 
 code {
   color: rgba(0, 0, 0, 0.8);
