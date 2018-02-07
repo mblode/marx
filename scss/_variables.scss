@@ -1,52 +1,52 @@
 //Basic stylings
-$br: 4px;
-$xs-pad: 4px;
-$sm-pad: 8px;
-$md-pad: 16px;
-$lg-pad: 20px;
-$xlg-pad: 40px;
-$trans: .3s;
+$br: 4px !default;
+$xs-pad: 4px !default;
+$sm-pad: 8px !default;
+$md-pad: 16px !default;
+$lg-pad: 20px !default;
+$xlg-pad: 40px !default;
+$trans: 0.3s !default;
 
 //Breakpoints
-$small-breakpoint: 400px;
-$large-breakpoint: 768px;
+$small-breakpoint: 400px !default;
+$large-breakpoint: 768px !default;
 
 //Colors
-$primary: #2196f3;
-$accent: #64ffda;
-$red: #f44336;
-$yellow: #ffeb3b;
-$grey: #efefef;
-$white: #fff;
-$black: #000;
+$primary: #2196f3 !default;
+$accent: #64ffda !default;
+$red: #f44336 !default;
+$yellow: #ffeb3b !default;
+$grey: #efefef !default;
+$white: #fff !default;
+$black: #000 !default;
 
 //Text
-$text: rgba(0, 0, 0, .8);
-$secondary: rgba(0, 0, 0, .54);
-$disabled: rgba(0, 0, 0, .38);
-$dividers: rgba(0, 0, 0, .12);
+$text: rgba(0, 0, 0, 0.8) !default;
+$secondary: rgba(0, 0, 0, 0.54) !default;
+$disabled: rgba(0, 0, 0, 0.38) !default;
+$dividers: rgba(0, 0, 0, 0.12) !default;
 
 //Links
-$link-color: $primary;
-$link-hover-color: darken($link-color, 15%);
+$link-color: $primary !default;
+$link-hover-color: darken($link-color, 15%) !default;
 
 //Font
-$sans-serif: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
-$serif: Georgia, Times, 'Times New Roman', serif;
-$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
-$font-family: $sans-serif;
+$sans-serif: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif !default;
+$serif: Georgia, Times, 'Times New Roman', serif !default;
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+$font-family: $sans-serif !default;
 
 //Typography
-$font-size-base: 16px;
-$font-size-large: ceil(($font-size-base * 1.25));
-$font-size-small: ceil(($font-size-base * .85));
-$font-size-h1: 36px;
-$font-size-h2: 30px;
-$font-size-h3: 24px;
-$font-size-h4: 18px;
-$font-size-h5: $font-size-base;
-$font-size-h6: $font-size-small;
-$line-height-base: 1.4;
+$font-size-base: 16px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default;
+$font-size-small: ceil(($font-size-base * 0.85)) !default;
+$font-size-h1: 36px !default;
+$font-size-h2: 30px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: $font-size-small !default;
+$line-height-base: 1.4 !default;
 
 //Other
-$border: 1px solid $dividers;
+$border: 1px solid $dividers !default;
