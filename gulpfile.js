@@ -2,11 +2,11 @@ var browserSync = require('browser-sync')
 var gulp = require('gulp')
 var gulpAutoprefixer = require('gulp-autoprefixer')
 var gulpCleanCss = require('gulp-clean-css')
+var gulpDest = require('gulp-dest')
 var gulpPlumber = require('gulp-plumber')
 var gulpRename = require('gulp-rename')
 var gulpSass = require('gulp-sass')
 var gulpStylus = require('gulp-stylus')
-var gulpDest = require('gulp-dest')
 
 gulp.task('browser-sync', function () {
   browserSync({
