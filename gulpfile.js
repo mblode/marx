@@ -1,13 +1,14 @@
-var browserSync = require('browser-sync')
-var gulp = require('gulp')
-var gulpAutoprefixer = require('gulp-autoprefixer')
-var gulpCleanCss = require('gulp-clean-css')
-var gulpDest = require('gulp-dest')
-var gulpPlumber = require('gulp-plumber')
-var gulpRename = require('gulp-rename')
-var gulpSass = require('gulp-sass')
-var gulpSourcemaps = require('gulp-sourcemaps')
-var gulpStylus = require('gulp-stylus')
+const
+  browserSync = require('browser-sync'),
+  gulp = require('gulp'),
+  gulpAutoprefixer = require('gulp-autoprefixer'),
+  gulpCleanCss = require('gulp-clean-css'),
+  gulpDest = require('gulp-dest'),
+  gulpPlumber = require('gulp-plumber'),
+  gulpRename = require('gulp-rename'),
+  gulpSass = require('gulp-sass'),
+  gulpSourcemaps = require('gulp-sourcemaps'),
+  gulpStylus = require('gulp-stylus')
 
 gulp.task('browser-sync', function () {
   browserSync({
