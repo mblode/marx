@@ -3,7 +3,8 @@
 ::before,
 ::after {
   background-repeat: no-repeat; /* 1 */
-  box-sizing: inherit; /* 2 */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; /* 2 */
 }
 ::before,
 ::after {
@@ -11,7 +12,8 @@
   vertical-align: inherit; /* 2 */
 }
 html {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   cursor: default; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
@@ -41,7 +43,8 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -184,7 +187,8 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -201,7 +205,8 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 [type="number"]::-webkit-inner-spin-button,
@@ -615,7 +620,8 @@ input[type=button]:active,
 button:active {
   background: #0c7cd5;
   border-color: rgba(0,0,0,0.54);
-  box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
+          box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
   outline-offset: -2px;
 }
 input[type=submit]:focus,
@@ -624,7 +630,8 @@ input[type=button]:focus,
 button:focus {
   background: #0c7cd5;
   border-color: rgba(0,0,0,0.54);
-  box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
+          box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
   outline: 0;
 }
 input[type=submit]:disabled,

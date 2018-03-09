@@ -6,6 +6,7 @@
     "> 0.5%",
     "firefox >= 48",
     "chrome >= 49",
+    "safari >= 5",
     "edge >= 14",
     "ie >= 11",
     "ios >= 7",
