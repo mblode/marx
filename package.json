@@ -3,10 +3,13 @@
   "version": "3.0.0",
   "description": "The classless CSS reset (perfect for Communists).",
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "ie >= 8",
-    "firefox >= 52"
+      "> 0.5%",
+      "firefox >= 48",
+      "chrome >= 49",
+      "edge >= 14",
+      "ie >= 11",
+      "ios >= 7",
+      "android >= 4"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -10,8 +10,7 @@
 ::after {
   background-repeat: no-repeat;
   /* 1 */
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   /* 2 */ }
 
 /**
@@ -31,8 +30,7 @@
  * 3. Prevent font size adjustments after orientation changes in IE and iOS.
  */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   cursor: default;
   /* 2 */
@@ -91,8 +89,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -354,8 +351,7 @@ button:-moz-focusring,
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -394,8 +390,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -479,7 +474,6 @@ select,
 summary,
 textarea,
 [tabindex] {
-  -ms-touch-action: manipulation;
   /* 1 */
   touch-action: manipulation; }
 
@@ -867,8 +861,7 @@ input[type=button]:active,
 button:active {
   background: #0c7cd5;
   border-color: rgba(0, 0, 0, 0.54);
-  -webkit-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
   outline-offset: -2px; }
 
 input[type=submit]:focus,
@@ -877,8 +870,7 @@ input[type=button]:focus,
 button:focus {
   background: #0c7cd5;
   border-color: rgba(0, 0, 0, 0.54);
-  -webkit-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
   outline: 0; }
 
 input[type=submit]:disabled,
