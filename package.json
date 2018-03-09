@@ -61,5 +61,8 @@
     "gulp-stylus": "^2.5.0",
     "npm": "^5.7.0",
     "sanitize.css": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^2.6.4"
   }
 }
