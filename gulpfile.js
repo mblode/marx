@@ -5,7 +5,6 @@ const
   gulpCleanCss = require('gulp-clean-css'),
   gulpDest = require('gulp-dest'),
   gulpPlumber = require('gulp-plumber'),
-  gulpRename = require('gulp-rename'),
   gulpSass = require('gulp-sass'),
   gulpSourcemaps = require('gulp-sourcemaps'),
   gulpStylus = require('gulp-stylus')
