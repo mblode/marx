@@ -3,13 +3,13 @@
   "version": "3.0.0",
   "description": "The classless CSS reset (perfect for Communists).",
   "browserslist": [
-      "> 0.5%",
-      "firefox >= 48",
-      "chrome >= 49",
-      "edge >= 14",
-      "ie >= 11",
-      "ios >= 7",
-      "android >= 4"
+    "> 0.5%",
+    "firefox >= 48",
+    "chrome >= 49",
+    "edge >= 14",
+    "ie >= 11",
+    "ios >= 7",
+    "android >= 4"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -45,7 +45,17 @@
     "format",
     "classless"
   ],
-  "author": "Matthew Blode",
+  "author": "Matthew Blode https://github.com/mblode",
+  "contributors": [
+    {
+      "name": "inoas",
+      "url": "https://github.com/inoas"
+    },
+    {
+      "name": "John Williams",
+      "url": "https://github.com/johncomposed"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mblode/marx/issues"
