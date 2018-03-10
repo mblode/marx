@@ -2,17 +2,21 @@ input[type=submit],
 input[type=reset],
 input[type=button],
 button {
-  background: $primary;
-  border: $border;
+  background-color: $primary;
+  border: $primary;
   border-radius: $br;
   color: $white;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
   padding: $sm-pad $md-pad;
+  display: inline-block;
+  font-weight: 400;
   text-align: center;
-  vertical-align: middle;
   white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 input[type=submit]::-moz-focus-inner,
@@ -26,35 +30,35 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 button:hover {
-  background: darken($primary, 10);
-  border-color: $secondary;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: $white;
 }
 
-input[type=submit]:active,
-input[type=reset]:active,
-input[type=button]:active,
-button:active {
-  background: darken($primary, 10);
-  border-color: $secondary;
-  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, .2);
-  outline-offset: -2px;
+input[type=submit]:not(:disabled):active,
+input[type=reset]:not(:disabled):active,
+input[type=button]:not(:disabled):active,
+button:not(:disabled):active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+  color: $white;
 }
 
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
 button:focus {
-  background: darken($primary, 10);
-  border-color: $secondary;
-  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, .2);
   outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
 }
 
 input[type=submit]:disabled,
 input[type=reset]:disabled,
 input[type=button]:disabled,
 button:disabled {
-  background: $dividers;
-  color: $disabled;
+  opacity: .65;
   cursor: not-allowed;
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
 }

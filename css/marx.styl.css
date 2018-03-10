@@ -298,10 +298,16 @@ footer p {
   margin-bottom: 0;
 }
 hr {
+  border: 0;
   border-top: 1px solid rgba(0,0,0,0.12);
   display: block;
+  margin-top: 16px;
   margin-bottom: 16px;
   width: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 img {
   height: auto;
@@ -320,11 +326,16 @@ img {
     margin-right: 16px;
   }
 }
+embed,
+iframe,
+video {
+  border: 0;
+}
 body {
   color: rgba(0,0,0,0.8);
-  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 p {
   margin: 0;
@@ -338,38 +349,31 @@ h5,
 h6 {
   color: inherit;
   font-family: inherit;
-  line-height: inherit;
+  line-height: 1.2;
+  font-weight: 500;
 }
 h1 {
-  border-bottom: 1px solid rgba(0,0,0,0.12);
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 40px;
   margin: 20px 0 16px;
 }
 h2 {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 32px;
   margin: 20px 0 16px;
 }
 h3 {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
   margin: 16px 0 4px;
 }
 h4 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 24px;
   margin: 16px 0 4px;
 }
 h5 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
   margin: 16px 0 4px;
 }
 h6 {
-  color: rgba(0,0,0,0.54);
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
   margin: 16px 0 4px;
 }
 small {
@@ -377,7 +381,7 @@ small {
   vertical-align: bottom;
 }
 pre {
-  background: #efefef;
+  background: #f7f7f9;
   color: rgba(0,0,0,0.8);
   display: block;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -399,11 +403,13 @@ code {
   word-wrap: break-word;
 }
 a {
-  color: #2196f3;
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
 }
 a:hover,
 a:focus {
-  color: #2196f3;
+  color: #006fe6;
   text-decoration: underline;
 }
 dl {
@@ -419,7 +425,7 @@ ol {
   vertical-align: baseline;
 }
 blockquote {
-  border-left: 2px solid #2196f3;
+  border-left: 2px solid rgba(0,0,0,0.8);
   font-family: Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   margin: 16px 0;
@@ -458,14 +464,22 @@ input[type="week"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
-select {
+select,
+textarea {
   background: #fff;
+  background-clip: padding-box;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 4px;
   color: rgba(0,0,0,0.8);
-  display: inline-block;
-  padding: 4px;
-  vertical-align: middle;
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 1.5;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 input[type="color"] {
   background: #fff;
@@ -476,11 +490,19 @@ input[type="color"] {
 }
 input:not([type]) {
   -webkit-appearance: none;
+  background: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 4px;
-  display: inline-block;
-  padding: 8px;
+  color: rgba(0,0,0,0.8);
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  line-height: 1.5;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   text-align: left;
 }
 input[type="text"]:focus,
@@ -499,10 +521,18 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #2196f3;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
 }
 input:not([type]):focus {
-  border-color: #2196f3;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -528,11 +558,13 @@ textarea[disabled] {
   background-color: rgba(0,0,0,0.12);
   color: rgba(0,0,0,0.54);
   cursor: not-allowed;
+  opacity: 1;
 }
 input:not([type])[disabled] {
   background-color: rgba(0,0,0,0.12);
   color: rgba(0,0,0,0.54);
   cursor: not-allowed;
+  opacity: 1;
 }
 input[readonly],
 select[readonly],
@@ -556,10 +588,15 @@ select {
   border: 1px solid rgba(0,0,0,0.12);
   vertical-align: sub;
 }
+select:not([size]):not([multiple]) {
+  height: -webkit-calc(2.25rem + 2px);
+  height: calc(2.25rem + 2px);
+}
 select[multiple] {
   height: auto;
 }
 label {
+  display: inline-block;
   line-height: 2;
 }
 fieldset {
@@ -576,30 +613,43 @@ legend {
   width: 100%;
 }
 textarea {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 8px;
-  max-width: 100%;
-  padding: 8px;
-  vertical-align: middle;
+  overflow: auto;
+  resize: vertical;
+}
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  position: absolute;
+  margin-top: 0.25rem;
+  margin-left: -1.25rem;
 }
 input[type=submit],
 input[type=reset],
 input[type=button],
 button {
-  background: #2196f3;
-  border: 1px solid rgba(0,0,0,0.12);
+  background-color: #007bff;
+  border: #007bff;
   border-radius: 4px;
   color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
   padding: 8px 16px;
+  display: inline-block;
+  font-weight: 400;
   text-align: center;
-  vertical-align: middle;
   white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 input[type=submit]::-moz-focus-inner,
 input[type=reset]::-moz-focus-inner,
@@ -611,36 +661,35 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 button:hover {
-  background: #0c7cd5;
-  border-color: rgba(0,0,0,0.54);
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
 }
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active,
 button:active {
-  background: #0c7cd5;
-  border-color: rgba(0,0,0,0.54);
-  -webkit-box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
-          box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
-  outline-offset: -2px;
+  background-color: #0062cc;
+  border-color: #005cbf;
+  color: #fff;
 }
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
 button:focus {
-  background: #0c7cd5;
-  border-color: rgba(0,0,0,0.54);
-  -webkit-box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
-          box-shadow: inset 0 0 4px 0 rgba(0,0,0,0.2);
   outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.5);
+          box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.5);
 }
 input[type=submit]:disabled,
 input[type=reset]:disabled,
 input[type=button]:disabled,
 button:disabled {
-  background: rgba(0,0,0,0.12);
-  color: rgba(0,0,0,0.38);
+  opacity: 0.65;
   cursor: not-allowed;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
 }
 table {
   border-top: 1px solid rgba(0,0,0,0.12);

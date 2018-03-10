@@ -33,10 +33,15 @@ footer {
 }
 
 hr {
+  border: 0;
   border-top: $border;
   display: block;
+  margin-top: $md-pad;
   margin-bottom: $md-pad;
   width: 100%;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 img {
@@ -57,4 +62,10 @@ img {
   img {
     margin-right: $md-pad;
   }
+}
+
+embed,
+iframe,
+video {
+  border: 0;
 }

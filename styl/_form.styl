@@ -11,14 +11,19 @@ input[type="week"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
-select
+select,
+textarea
   background: $white
+  background-clip: padding-box
   border: $border
   border-radius: $br
   color: $text
-  display: inline-block
-  padding: $xs-pad
-  vertical-align: middle
+  display: block
+  width: 100%
+  padding: $sm-pad $md-pad
+  line-height: 1.5
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+  font-family: $sans-serif
 
 input[type="color"]
   background: $white
@@ -29,11 +34,16 @@ input[type="color"]
 
 input:not([type])
   -webkit-appearance: none
+  background: $white
   background-clip: padding-box
   border: $border
   border-radius: $br
-  display: inline-block
-  padding: $sm-pad
+  color: $text
+  display: block
+  width: 100%
+  padding: $sm-pad $md-pad
+  line-height: 1.5
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
   text-align: left
 
 input[type="text"]:focus,
@@ -52,10 +62,16 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus
-  border-color: $primary
+  background-color: #fff
+  border-color: #80bdff
+  outline: 0
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25)
 
 input:not([type]):focus
-  border-color: $primary
+  background-color: #fff
+  border-color: #80bdff
+  outline: 0
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25)
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -81,11 +97,13 @@ textarea[disabled]
   background-color: $dividers
   color: $secondary
   cursor: not-allowed
+  opacity: 1
 
 input:not([type])[disabled]
   background-color: $dividers
   color: $secondary
   cursor: not-allowed
+  opacity: 1
 
 input[readonly],
 select[readonly],
@@ -109,10 +127,14 @@ select
   border: $border
   vertical-align: sub
 
+select:not([size]):not([multiple])
+  height: calc(2.25rem + 2px)
+
 select[multiple]
   height: auto
 
 label
+  display: inline-block
   line-height: 2
 
 fieldset
@@ -129,11 +151,13 @@ legend
   width: 100%
 
 textarea
-  background: $white
-  border: $border
-  border-radius: $br
-  display: block
-  margin-bottom: $sm-pad
-  max-width: 100%
-  padding: $sm-pad
-  vertical-align: middle
+  overflow: auto
+  resize: vertical
+
+input[type=checkbox],
+input[type=radio]
+  box-sizing: border-box
+  padding: 0
+  position: absolute
+  margin-top: .25rem
+  margin-left: -1.25rem

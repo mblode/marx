@@ -16,38 +16,31 @@ h5,
 h6
   color: inherit
   font-family: inherit
-  line-height: inherit
+  line-height: 1.2
+  font-weight: 500
 
 h1
-  border-bottom: $border
   font-size: $font-size-h1
-  font-weight: 500
   margin: $lg-pad 0 $md-pad
 
 h2
   font-size: $font-size-h2
-  font-weight: 500
   margin: $lg-pad 0 $md-pad
 
 h3
   font-size: $font-size-h3
-  font-weight: 500
   margin: $md-pad 0 $xs-pad
 
 h4
   font-size: $font-size-h4
-  font-weight: 600
   margin: $md-pad 0 $xs-pad
 
 h5
   font-size: $font-size-h5
-  font-weight: 600
   margin: $md-pad 0 $xs-pad
 
 h6
-  color: $secondary
   font-size: $font-size-h6
-  font-weight: 600
   margin: $md-pad 0 $xs-pad
 
 small
@@ -78,9 +71,12 @@ code
 
 a
   color: $link-color
+  text-decoration: none
+  background-color: transparent
+
   &:hover,
   &:focus
-    color: $primary
+    color: darken($primary, 10%)
     text-decoration: underline
 
 dl
@@ -96,7 +92,7 @@ ol
   vertical-align: baseline
 
 blockquote
-  border-left: 2px solid $primary
+  border-left: 2px solid $text
   font-family: $serif
   font-style: italic
   margin: $md-pad 0

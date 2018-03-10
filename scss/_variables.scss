@@ -12,11 +12,11 @@ $small-breakpoint: 400px !default;
 $large-breakpoint: 768px !default;
 
 //Colors
-$primary: #2196f3 !default;
+$primary: #007bff !default;
 $accent: #64ffda !default;
 $red: #f44336 !default;
 $yellow: #ffeb3b !default;
-$grey: #efefef !default;
+$grey: #f7f7f9 !default;
 $white: #fff !default;
 $black: #000 !default;
 
@@ -31,22 +31,21 @@ $link-color: $primary !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
 //Font
-$sans-serif: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif !default;
+$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
 $serif: Georgia, Times, 'Times New Roman', serif !default;
 $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family: $sans-serif !default;
 
 //Typography
 $font-size-base: 16px !default;
-$font-size-large: ceil(($font-size-base * 1.25)) !default;
 $font-size-small: ceil(($font-size-base * 0.85)) !default;
-$font-size-h1: 36px !default;
-$font-size-h2: 30px !default;
-$font-size-h3: 24px !default;
-$font-size-h4: 18px !default;
-$font-size-h5: $font-size-base !default;
-$font-size-h6: $font-size-small !default;
-$line-height-base: 1.4 !default;
+$font-size-h1: 40px !default;
+$font-size-h2: 32px !default;
+$font-size-h3: 28px !default;
+$font-size-h4: 24px !default;
+$font-size-h5: 20px !default;
+$font-size-h6: 16px !default;
+$line-height-base: 1.5 !default;
 
 //Other
 $border: 1px solid $dividers !default;
