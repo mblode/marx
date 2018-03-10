@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The classless CSS reset (perfect for Communists).",
   "browserslist": [
     "> 0.5%",
