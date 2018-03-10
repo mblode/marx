@@ -8,7 +8,7 @@
     "chrome >= 49",
     "safari >= 5",
     "edge >= 14",
-    "ie >= 11",
+    "ie >= 8",
     "ios >= 7",
     "android >= 4"
   ],
