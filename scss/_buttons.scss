@@ -1,5 +1,6 @@
 input[type=submit],
 input[type=reset],
+input[type=button],
 button {
   background: $primary;
   border: $border;
@@ -16,12 +17,14 @@ button {
 
 input[type=submit]::-moz-focus-inner,
 input[type=reset]::-moz-focus-inner,
+input[type=button]::-moz-focus-inner,
 button::-moz-focus-inner {
   padding: 0;
 }
 
 input[type=submit]:hover,
 input[type=reset]:hover,
+input[type=button]:hover,
 button:hover {
   background: darken($primary, 10);
   border-color: $secondary;
@@ -29,6 +32,7 @@ button:hover {
 
 input[type=submit]:active,
 input[type=reset]:active,
+input[type=button]:active,
 button:active {
   background: darken($primary, 10);
   border-color: $secondary;
@@ -38,6 +42,7 @@ button:active {
 
 input[type=submit]:focus,
 input[type=reset]:focus,
+input[type=button]:focus,
 button:focus {
   background: darken($primary, 10);
   border-color: $secondary;
@@ -46,6 +51,8 @@ button:focus {
 }
 
 input[type=submit]:disabled,
+input[type=reset]:disabled,
+input[type=button]:disabled,
 button:disabled {
   background: $dividers;
   color: $disabled;

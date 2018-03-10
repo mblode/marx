@@ -1,7 +1,17 @@
 {
   "name": "marx-css",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "description": "The classless CSS reset (perfect for Communists).",
+  "browserslist": [
+    "> 0.5%",
+    "firefox >= 48",
+    "chrome >= 49",
+    "safari >= 5",
+    "edge >= 14",
+    "ie >= 11",
+    "ios >= 7",
+    "android >= 4"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +22,7 @@
   "files": [
     "css",
     "scss",
+    "styl",
     "LICENSE"
   ],
   "keywords": [
@@ -26,6 +37,7 @@
     "css",
     "sass",
     "scss",
+    "stylus",
     "web",
     "frontend",
     "bootstrap",
@@ -34,20 +46,34 @@
     "format",
     "classless"
   ],
-  "author": "Matthew Blode",
+  "author": "Matthew Blode https://github.com/mblode",
+  "contributors": [
+    {
+      "name": "inoas",
+      "url": "https://github.com/inoas"
+    },
+    {
+      "name": "John Williams",
+      "url": "https://github.com/johncomposed"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mblode/marx/issues"
   },
   "homepage": "https://github.com/mblode/marx",
   "devDependencies": {
-    "browser-sync": "^2.11.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.0.2",
-    "gulp-clean-css": "^2.0.4",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-stylus": "^2.5.0"
+    "browser-sync": "^2.11.0",
+    "browserslist": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-dest": "^0.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylus": "^2.5.0",
+    "sanitize.css": "^5.0.0"
   }
 }

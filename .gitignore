@@ -8,3 +8,5 @@ _posts
 .sass-cache
 components
 build
+tmp/*
+!tmp/.keep

@@ -1,11 +1,14 @@
-var gulp = require('gulp')
-var plumber = require('gulp-plumber')
-var rename = require('gulp-rename')
-var autoprefixer = require('gulp-autoprefixer')
-var cleanCSS = require('gulp-clean-css')
-var sass = require('gulp-sass')
-var stylus = require('gulp-stylus')
-var browserSync = require('browser-sync')
+const
+  browserSync = require('browser-sync'),
+  gulp = require('gulp'),
+  gulpAutoprefixer = require('gulp-autoprefixer'),
+  gulpCleanCss = require('gulp-clean-css'),
+  gulpDest = require('gulp-dest'),
+  gulpPlumber = require('gulp-plumber'),
+  gulpRename = require('gulp-rename'),
+  gulpSass = require('gulp-sass'),
+  gulpSourcemaps = require('gulp-sourcemaps'),
+  gulpStylus = require('gulp-stylus')
 
 gulp.task('browser-sync', function () {
   browserSync({
@@ -21,41 +24,48 @@ gulp.task('bs-reload', function () {
 
 gulp.task('scss', function () {
   gulp.src(['scss/**/*.scss'])
-    .pipe(plumber({
+    .pipe(gulpPlumber({
       errorHandler: function (error) {
         console.log(error.message)
         this.emit('end')
       }}))
-    .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpSass())
+    .pipe(gulpAutoprefixer())
     .pipe(gulp.dest('css/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulpRename({suffix: '.min'}))
+    .pipe(gulpCleanCss({compatibility: 'ie8'}))
+    .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.reload({stream: true}))
 })
 
 gulp.task('styl', function () {
+  gulp.src(['./node_modules/sanitize.css/sanitize.css'])
+    .pipe(gulpDest('tmp', {ext: '.styl'}))
+    .pipe(gulp.dest('./'))
   gulp.src(['styl/**/[^_]*.styl'])
-    .pipe(plumber({
+    .pipe(gulpPlumber({
       errorHandler: function (error) {
         console.log(error.message)
         this.emit('end')
       }}))
-    .pipe(stylus())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(rename({suffix: '.styl'}))
+    .pipe(gulpSourcemaps.init())
+    .pipe(gulpStylus())
+    .pipe(gulpAutoprefixer())
+    .pipe(gulpRename({suffix: '.styl'}))
     .pipe(gulp.dest('css/'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulpRename({suffix: '.min'}))
+    .pipe(gulpCleanCss({compatibility: 'ie8'}))
+    .pipe(gulpSourcemaps.write('.'))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('styles', ['styl', 'scss'])
+gulp.task('styles', ['scss', 'styl'])
 
 gulp.task('default', ['browser-sync'], function () {
-  gulp.watch('styl/**/*.styl', ['styl'])
   gulp.watch('scss/**/*.scss', ['scss'])
+  gulp.watch('styl/**/*.styl', ['styl'])
   gulp.watch('*.html', ['bs-reload'])
 })

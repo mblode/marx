@@ -1,6 +1,6 @@
 {
   "name": "marx",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "homepage": "https://github.com/mblode/marx",
   "authors": [
     "mblode"
@@ -22,6 +22,7 @@
     "css",
     "sass",
     "scss",
+    "stylus",
     "web",
     "frontend",
     "bootstrap",
@@ -37,6 +38,7 @@
     "bower_components",
     "test",
     "tests",
+    "tmp/*",
     "gulpfile.js",
     "_site",
     "_sass",
