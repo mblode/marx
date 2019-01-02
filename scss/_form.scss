@@ -134,7 +134,6 @@ input[type="checkbox"]:focus:invalid:focus {
 }
 
 select {
-  -webkit-appearance: menulist-button;
   border: $border;
   vertical-align: sub;
 }
