@@ -30,8 +30,8 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 button:hover {
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: darken($primary, 7.5%);
+  border-color: darken($primary, 10%);
   color: $white;
 }
 
@@ -39,8 +39,8 @@ input[type=submit]:not(:disabled):active,
 input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
 button:not(:disabled):active {
-  background-color: #0062cc;
-  border-color: #005cbf;
+  background-color: darken($primary, 10%);
+  border-color: darken($primary, 12.5%);
   color: $white;
 }
 
