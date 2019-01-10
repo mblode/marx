@@ -1,4 +1,5 @@
 // Load plugins
+const path = require('path');
 const browsersync = require('browser-sync').create();
 const gulp = require('gulp');
 const autoprefixer = require('autoprefixer');
@@ -36,7 +37,7 @@ function scss() {
 		.src('./scss/**/[^_]*.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
-		.pipe(sass())
+		.pipe(sass({ includePaths: [ path.resolve(__dirname, 'node_modules') ] }))
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(gulp.dest('css/'))
 		.pipe(rename({ suffix: '.min' }))
