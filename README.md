@@ -14,7 +14,7 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 ## Key features
 
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Created using the SASS preprocessors (Customise all the variables!).
+- Created using SASS and Stylus preprocessors (Customise all the variables!).
 - Responsive and mobile-friendly.
 - Clean, beautiful typography.
 - Forms, tables, buttons and navigation.
@@ -32,9 +32,12 @@ Several quick start options are available:
 - Install with [NPM](https://www.npmjs.com/): `npm install marx-css` (recommended).
 - Install with [Bower](http://bower.io): `bower install marx`.
 - Use the latest Marx CDN
-```
+
+``` html
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css">
+
 ```
 - [Source code.](https://raw.githubusercontent.com/mblode/marx/master/css/marx.min.css)
 - [Download the latest release](https://github.com/mblode/marx/archive/master.zip).
@@ -53,31 +56,48 @@ The gh-pages branch is built using Jekyll and must therefore be install with `ge
 
 1. Checkout in to gh-pages: `git checkout gh-pages`.
 2. Install marx dependency: `bower install`.
-3. Run middleman: `middleman serve`.
+3. Run middleman: `bundle exec middleman serve`.
 4. Open in browser: `localhost:4567`.
 
 ## What's Included
 
-These are the files that are generated from `bower install marx`
+These are the files that are generated from `npm install marx-css`
 
 ```
+
 .
-├── README.md
 ├── LICENSE.md
+├── README.md
 ├── bower.json
-├── package.json
 ├── css
-│   ├── marx.css
-│   ├── marx.min.css
-└── scss
-    ├── _base.scss
-    ├── _buttons.scss
-    ├── _forms.scss
-    ├── _sanitize.scss
-    ├── _tables.scss
-    ├── _typography.scss
-    ├── _variables.scss
-    └── marx.scss
+│   ├── marx.css
+│   ├── marx.min.css
+│   ├── marx.min.css.map
+│   ├── marx.styl.css
+│   ├── marx.styl.min.css
+│   └── marx.styl.min.css.map
+├── gulpfile.js
+├── index-stylus.html
+├── index.html
+├── package.json
+├── scss
+│   ├── _base.scss
+│   ├── _buttons.scss
+│   ├── _form.scss
+│   ├── _tables.scss
+│   ├── _typography.scss
+│   ├── _variables.scss
+│   └── marx.scss
+└── styl
+    ├── _base.styl
+    ├── _buttons.styl
+    ├── _form.styl
+    ├── _sanitize.styl
+    ├── _tables.styl
+    ├── _typography.styl
+    ├── _variables.styl
+    └── marx.styl
+
 
 ```
 
@@ -86,6 +106,7 @@ These are the files that are generated from `bower install marx`
 ### Basic HTML Template
 
 ```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +156,7 @@ These are the files that are generated from `bower install marx`
 
 </body>
 </html>
+
 ```
 
 ## Contributing to Marx
