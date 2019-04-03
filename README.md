@@ -36,7 +36,7 @@ Several quick start options are available:
 ``` html
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.rawgit.com/mblode/marx/master/css/marx.min.css">
+<link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
 
 ```
 - [Source code.](https://raw.githubusercontent.com/mblode/marx/master/css/marx.min.css)
