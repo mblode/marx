@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "The classless CSS reset (perfect for Communists).",
   "browserslist": [
     "> 0.5%",
@@ -13,6 +13,7 @@
     "android >= 4"
   ],
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -63,22 +64,22 @@
   },
   "homepage": "https://github.com/mblode/marx",
   "dependencies": {
-    "sanitize.css": "^8.0.0"
+    "sanitize.css": "^11.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.3",
-    "browser-sync": "^2.26.3",
-    "browserslist": "^4.3.7",
-    "cssnano": "^4.1.8",
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "autoprefixer": "^9.8.3",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.12.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-dest": "^0.2.3",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^2.0.0"
   }
 }

@@ -20,6 +20,7 @@ textarea {
   color: $text;
   display: block;
   width: 100%;
+  font-size: 1rem;
   padding: $sm-pad $md-pad;
   line-height: 1.5;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;

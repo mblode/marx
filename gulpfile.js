@@ -16,69 +16,69 @@ const merge = require('merge-stream');
 
 // BrowserSync
 function browserSync(done) {
-	browsersync.init({
-		server: {
-			baseDir: './'
-		},
-		port: 3000
-	});
-	done();
+    browsersync.init({
+        server: {
+            baseDir: './',
+        },
+        port: 3000,
+    });
+    done();
 }
 
 // BrowserSync Reload
 function browserSyncReload(done) {
-	browsersync.reload();
-	done();
+    browsersync.reload();
+    done();
 }
 
 // SCSS task
 function scss() {
-	return gulp
-		.src('./scss/**/[^_]*.scss')
-		.pipe(plumber())
-		.pipe(sourcemaps.init())
-		.pipe(sass({ includePaths: [ path.resolve(__dirname, 'node_modules') ] }))
-		.pipe(postcss([autoprefixer()]))
-		.pipe(gulp.dest('css/'))
-		.pipe(postcss([cssnano()]))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(cleanCss({ compatibility: 'ie8' }))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('css/'))
-		.pipe(browsersync.stream());
+    return gulp
+        .src('./scss/**/[^_]*.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(sass({ includePaths: [path.resolve(__dirname, 'node_modules')] }))
+        .pipe(postcss([autoprefixer()]))
+        .pipe(gulp.dest('css/'))
+        .pipe(postcss([cssnano()]))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleanCss({ compatibility: 'ie8' }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('css/'))
+        .pipe(browsersync.stream());
 }
 
 // SCSS task
 function styl() {
-	var sanitize = gulp
-		.src(['./node_modules/sanitize.css/sanitize.css'])
-		.pipe(dest('styl', { ext: '.styl' }))
-		.pipe(rename({ prefix: '_' }))
-		.pipe(gulp.dest('./'));
+    var sanitize = gulp
+        .src(['./node_modules/sanitize.css/sanitize.css'])
+        .pipe(dest('styl', { ext: '.styl' }))
+        .pipe(rename({ prefix: '_' }))
+        .pipe(gulp.dest('./'));
 
-	var compile = gulp
-		.src(['styl/**/[^_]*.styl'])
-		.pipe(plumber())
-		.pipe(sourcemaps.init())
-		.pipe(stylus())
-		.pipe(postcss([autoprefixer()]))
-		.pipe(rename({ suffix: '.styl' }))
-		.pipe(gulp.dest('css/'))
-		.pipe(postcss([cssnano()]))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(cleanCss({ compatibility: 'ie8' }))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('css/'))
-		.pipe(browsersync.stream());
+    var compile = gulp
+        .src(['styl/**/[^_]*.styl'])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(stylus())
+        .pipe(postcss([autoprefixer()]))
+        .pipe(rename({ suffix: '.styl' }))
+        .pipe(gulp.dest('css/'))
+        .pipe(postcss([cssnano()]))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleanCss({ compatibility: 'ie8' }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('css/'))
+        .pipe(browsersync.stream());
 
-	return merge(sanitize, compile);
+    return merge(sanitize, compile);
 }
 
 // Watch files
 function watchFiles() {
-	gulp.watch('./scss/**/*', scss);
-	gulp.watch('./styl/**/*', styl);
-	gulp.watch('*.html', browserSyncReload);
+    gulp.watch('./scss/**/*', scss);
+    gulp.watch('./styl/**/*', styl);
+    gulp.watch('*.html', browserSyncReload);
 }
 
 // define complex tasks

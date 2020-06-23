@@ -1,10 +1,8 @@
-/* sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat; /* 1 */
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 2 */
+          box-sizing: border-box;
 }
 ::before,
 ::after {
@@ -13,12 +11,11 @@
 }
 html {
   cursor: default; /* 1 */
-  font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system, /* Windows 6+ */ Segoe UI, /* Android 4+ */ Roboto, /* Ubuntu 10.10+ */ Ubuntu, /* Gnome 3+ */ Cantarell, /* KDE Plasma 5+ */ Noto Sans, /* fallback */ sans-serif, /* macOS emoji */ "Apple Color Emoji", /* Windows emoji */ "Segoe UI Emoji", /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
-/* 2 */
-  line-height: 1.15; /* 3 */
-  -moz-tab-size: 4; /* 4 */
+  line-height: 1.5; /* 2 */
+  -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
-     tab-size: 4; /* 4 */
+     tab-size: 4; /* 3 */
+  -webkit-tap-highlight-color: transparent /* 4 */;
   -ms-text-size-adjust: 100%; /* 5 */
   -webkit-text-size-adjust: 100%; /* 5 */
   word-break: break-word; /* 6 */
@@ -30,6 +27,19 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+  margin: 0;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
 hr {
   height: 0; /* 1 */
   overflow: visible; /* 2 */
@@ -40,10 +50,10 @@ main {
 nav ol,
 nav ul {
   list-style: none;
+  padding: 0;
 }
 pre {
-  font-family: /* macOS 10.10+ */ Menlo, /* Windows 6+ */ Consolas, /* Android 4+ */ Roboto Mono, /* Ubuntu 10.10+ */ Ubuntu Monospace, /* KDE Plasma 5+ */ Noto Mono, /* KDE Plasma 4+ */ Oxygen Mono, /* Linux/OpenOffice fallback */ Liberation Mono, /* fallback */ monospace;
-/* 1 */
+  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 a {
@@ -61,22 +71,11 @@ strong {
 code,
 kbd,
 samp {
-  font-family: /* macOS 10.10+ */ Menlo, /* Windows 6+ */ Consolas, /* Android 4+ */ Roboto Mono, /* Ubuntu 10.10+ */ Ubuntu Monospace, /* KDE Plasma 5+ */ Noto Mono, /* KDE Plasma 4+ */ Oxygen Mono, /* Linux/OpenOffice fallback */ Liberation Mono, /* fallback */ monospace;
-/* 1 */
+  font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 small {
   font-size: 80%;
-}
-::-moz-selection {
-  background-color: #b3d4fc; /* 1 */
-  color: #000; /* 1 */
-  text-shadow: none;
-}
-::selection {
-  background-color: #b3d4fc; /* 1 */
-  color: #000; /* 1 */
-  text-shadow: none;
 }
 audio,
 canvas,
@@ -94,6 +93,9 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
+iframe {
+  border-style: none;
+}
 img {
   border-style: none;
 }
@@ -105,14 +107,6 @@ svg:not(:root) {
 }
 table {
   border-collapse: collapse;
-}
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 button,
 input,
@@ -130,7 +124,8 @@ button,
   -webkit-appearance: button;
 }
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #a0a0a0; /* 1 */
+  padding: 0.35em 0.75em 0.625em; /* 2 */
 }
 input {
   overflow: visible;
@@ -182,6 +177,9 @@ textarea {
 }
 :-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
 }
 details {
   display: block;
@@ -240,9 +238,11 @@ textarea,
 [disabled] {
   cursor: not-allowed;
 }
+[aria-hidden="false"][hidden] {
+  display: initial;
+}
 [aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
-  display: inherit;
   position: absolute;
 }
 /*! Marx v3.0.6 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
@@ -448,6 +448,7 @@ textarea {
   color: rgba(0,0,0,0.8);
   display: block;
   width: 100%;
+  font-size: 1rem;
   padding: 8px 16px;
   line-height: 1.5;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
