@@ -68,15 +68,15 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  background-color: #fff;
-  border-color: mix($primary, #fff);
+  background-color: $white;
+  border-color: mix($primary, $white);
   outline: 0;
   box-shadow: 0 0 0 0.2rem fade_out($primary, 0.75);
 }
 
 input:not([type]):focus {
-  background-color: #fff;
-  border-color: mix($primary, #fff);
+  background-color: $white;
+  border-color: mix($primary, $white);
   outline: 0;
   box-shadow: 0 0 0 0.2rem fade_out($primary, 0.75);
 }
