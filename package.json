@@ -2,6 +2,7 @@
   "name": "marx-css",
   "version": "3.0.8",
   "description": "The classless CSS reset (perfect for Communists).",
+  "main": "css/marx.min.css",
   "browserslist": [
     "> 0.5%",
     "firefox >= 48",
