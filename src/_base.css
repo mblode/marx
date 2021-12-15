@@ -7,33 +7,33 @@ aside,
 details,
 summary {
   margin: 0 auto;
-  margin-bottom: $md-pad;
+  margin-bottom: var(--md-pad);
   width: 100%;
 }
 
 main {
   display: block;
   margin: 0 auto;
-  max-width: $large-breakpoint;
-  padding: 0 $md-pad $md-pad;
+  max-width: var(--lg-breakpoint);
+  padding: 0 var(--md-pad) var(--md-pad);
 }
 
 footer {
-  border-top: $border;
-  padding: $md-pad 0;
+  border-top: var(--border);
+  padding: var(--md-pad) 0;
   text-align: center;
+}
 
-  p {
-    margin-bottom: 0;
-  }
+footer p {
+  margin-bottom: 0;
 }
 
 hr {
   border: 0;
-  border-top: $border;
+  border-top: var(--border);
   display: block;
-  margin-top: $md-pad;
-  margin-bottom: $md-pad;
+  margin-top: var(--md-pad);
+  margin-bottom: var(--md-pad);
   width: 100%;
   box-sizing: content-box;
   height: 0;
@@ -46,7 +46,7 @@ img {
   vertical-align: baseline;
 }
 
-@media screen and (max-width: $small-breakpoint) {
+@media screen and (max-width: var(--sm-breakpoint)) {
   article,
   section,
   aside {
@@ -56,7 +56,7 @@ img {
   }
 
   img {
-    margin-right: $md-pad;
+    margin-right: var(--md-pad);
   }
 }
 

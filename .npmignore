@@ -7,7 +7,6 @@ tests
 public
 gulpfile.js
 _site
-_sass
 _posts
 index.html
 components

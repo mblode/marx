@@ -2,10 +2,8 @@
 node_modules
 bower_components
 _site
-_sass
 public
 _posts
-.sass-cache
 components
 build
 tmp/*

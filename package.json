@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "3.0.9",
+  "version": "4.0.0",
   "description": "The classless CSS reset (perfect for Communists).",
   "main": "css/marx.min.css",
   "browserslist": [
@@ -16,8 +16,7 @@
   },
   "files": [
     "css",
-    "scss",
-    "styl",
+    "src",
     "LICENSE"
   ],
   "keywords": [
@@ -30,9 +29,6 @@
     "layout",
     "framework",
     "css",
-    "sass",
-    "scss",
-    "stylus",
     "web",
     "frontend",
     "bootstrap",
@@ -57,9 +53,6 @@
     "url": "https://github.com/mblode/marx/issues"
   },
   "homepage": "https://github.com/mblode/marx",
-  "dependencies": {
-    "sanitize.css": "^13.0.0"
-  },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
@@ -71,10 +64,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-stylus": "^2.7.0",
     "merge-stream": "^2.0.0",
-    "sass": "^1.45.0"
+    "postcss-import": "^14.0.2"
   }
 }

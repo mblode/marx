@@ -13,39 +13,39 @@ input[type="search"],
 input[type="tel"],
 select,
 textarea {
-  background: $white;
+  background: var(--white);
   background-clip: padding-box;
-  border: $border;
-  border-radius: $br;
-  color: $text;
+  border: var(--border);
+  border-radius: var(--br);
+  color: var(--text);
   display: block;
   width: 100%;
   font-size: 1rem;
-  padding: $sm-pad $md-pad;
+  padding: var(--sm-pad) var(--md-pad);
   line-height: 1.5;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  font-family: $sans-serif;
+  font-family: var(--sans-serif);
   word-break: normal;
 }
 
-input[type="color"], {
-  background: $white;
-  border: $border;
-  border-radius: $br;
+input[type="color"] {
+  background-color: var(--white);
+  border: var(--border);
+  border-radius: var(--br);
   display: inline-block;
   vertical-align: middle;
 }
 
 input:not([type]) {
   -webkit-appearance: none;
-  background: $white;
+  background: var(--white);
   background-clip: padding-box;
-  border: $border;
-  border-radius: $br;
-  color: $text;
+  border: var(--border);
+  border-radius: var(--br);
+  color: var(--text);
   display: block;
   width: 100%;
-  padding: $sm-pad $md-pad;
+  padding: var(--sm-pad) var(--md-pad);
   line-height: 1.5;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   text-align: left;
@@ -68,23 +68,23 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  background-color: $white;
-  border-color: mix($primary, $white);
+  background-color: var(--white);
+  border-color: var(--primary-400);
   outline: 0;
-  box-shadow: 0 0 0 0.2rem fade_out($primary, 0.75);
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
 }
 
 input:not([type]):focus {
-  background-color: $white;
-  border-color: mix($primary, $white);
+  background-color: var(--white);
+  border-color: var(--primary-400);
   outline: 0;
-  box-shadow: 0 0 0 0.2rem fade_out($primary, 0.75);
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
 }
 
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: 1px thin $dividers;
+  outline: 1px thin var(--dividers);
 }
 
 input[type="text"][disabled],
@@ -103,15 +103,15 @@ input[type="tel"][disabled],
 input[type="color"][disabled],
 select[disabled],
 textarea[disabled] {
-  background-color: $dividers;
-  color: $secondary;
+  background-color: var(--dividers);
+  color: var(--secondary);
   cursor: not-allowed;
   opacity: 1;
 }
 
 input:not([type])[disabled] {
-  background-color: $dividers;
-  color: $secondary;
+  background-color: var(--dividers);
+  color: var(--secondary);
   cursor: not-allowed;
   opacity: 1;
 }
@@ -119,25 +119,25 @@ input:not([type])[disabled] {
 input[readonly],
 select[readonly],
 textarea[readonly] {
-  border-color: $dividers;
-  color: $secondary;
+  border-color: var(--dividers);
+  color: var(--secondary);
 }
 
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-  border-color: darken($red, 10);
-  color: $red;
+  border-color: var(--red-600);
+  color: var(--red);
 }
 
 input[type="file"]:focus:invalid:focus,
 input[type="radio"]:focus:invalid:focus,
 input[type="checkbox"]:focus:invalid:focus {
-  outline-color: $red;
+  outline-color: var(--red);
 }
 
 select {
-  border: $border;
+  border: var(--border);
   vertical-align: sub;
 }
 
@@ -157,15 +157,15 @@ label {
 fieldset {
   border: 0;
   margin: 0;
-  padding: $sm-pad 0;
+  padding: var(--sm-pad 0);
 }
 
 legend {
-  border-bottom: $border;
-  color: $text;
+  border-bottom: var(--border);
+  color: var(--text);
   display: block;
-  margin-bottom: $sm-pad;
-  padding: $sm-pad 0;
+  margin-bottom: var(--sm-pad);
+  padding: var(--sm-pad 0);
   width: 100%;
 }
 

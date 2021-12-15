@@ -1,0 +1,36 @@
+table {
+  border-top: var(--border);
+  margin-bottom: var(--md-pad);
+}
+
+caption {
+  padding: var(--sm-pad 0);
+}
+
+thead th {
+  border: 0;
+  border-bottom: 2px solid var(--dividers);
+  text-align: left;
+}
+
+tr {
+  margin-bottom: var(--sm-pad);
+}
+
+th,
+td {
+  border-bottom: var(--border);
+  padding: var(--md-pad);
+  vertical-align: inherit;
+}
+
+tfoot tr {
+  text-align: left;
+}
+
+tfoot td {
+  color: var(--secondary);
+  font-size: var(--sm-pad);
+  font-style: italic;
+  padding: var(--md-pad) var(--xs-pad);
+}

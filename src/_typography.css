@@ -1,0 +1,143 @@
+body {
+  color: var(--text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+p {
+  margin: 0;
+  margin-bottom: var(--md-pad);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin: var(--lg-pad) 0 var(--md-pad);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin: var(--lg-pad) 0 var(--md-pad);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  margin: var(--md-pad 0) var(--xs-pad);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  margin: var(--md-pad) 0 var(--xs-pad);
+}
+
+small {
+  color: var(--secondary);
+  vertical-align: bottom;
+}
+
+pre {
+  background-color: var(--grey);
+  color: var(--text);
+  display: block;
+  font-family: var(--monospace);
+  font-size: var(--font-size-base);
+  margin: var(--md-pad 0);
+  padding: var(--md-pad);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+code {
+  color: var(--text);
+  font-family: var(--monospace);
+  font-size: var(--font-size-base);
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-600);
+  text-decoration: underline;
+}
+
+dl {
+  margin-bottom: var(--md-pad);
+}
+
+dd {
+  margin-left: var(--xlg-pad);
+}
+
+ul,
+ol {
+  margin-bottom: var(--sm-pad);
+  padding-left: var(--xlg-pad);
+  vertical-align: baseline;
+}
+
+blockquote {
+  border-left: 2px solid var(--text);
+  font-family: var(--serif);
+  font-style: italic;
+  margin: var(--md-pad 0);
+  padding-left: var(--md-pad);
+}
+
+figcaption {
+  font-family: var(--serif);
+}
+
+u {
+  text-decoration: underline;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+sup {
+  font-size: var(--font-size-sm);
+  vertical-align: super;
+}
+
+sub {
+  font-size: var(--font-size-sm);
+  vertical-align: sub;
+}
+
+mark {
+  background-color: var(--yellow);
+}

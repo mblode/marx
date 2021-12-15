@@ -13,7 +13,6 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 ## Key features
 
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Created using SASS and Stylus preprocessors (Customise all the variables!).
 - Responsive and mobile-friendly.
 - Clean, beautiful typography.
 - Forms, tables, buttons and navigation.
@@ -45,7 +44,6 @@ If you have cloned the repo or downloaded from .zip, there are a few steps you m
 
 1. Change directory: `cd marx`.
 2. Install node modules: `npm install`.
-3. Install scss-lint Ruby gem: `gem install scss-lint`.
 4. To run gulp: `gulp`.
 
 ## Running Github Pages
@@ -70,31 +68,18 @@ These are the files that are generated from `npm install marx-css`
 │   ├── marx.css
 │   ├── marx.min.css
 │   ├── marx.min.css.map
-│   ├── marx.styl.css
-│   ├── marx.styl.min.css
-│   └── marx.styl.min.css.map
 ├── gulpfile.js
-├── index-stylus.html
 ├── index.html
 ├── package.json
-├── scss
-│   ├── _base.scss
-│   ├── _buttons.scss
-│   ├── _form.scss
-│   ├── _tables.scss
-│   ├── _typography.scss
-│   ├── _variables.scss
-│   └── marx.scss
-└── styl
-    ├── _base.styl
-    ├── _buttons.styl
-    ├── _form.styl
-    ├── _sanitize.styl
-    ├── _tables.styl
-    ├── _typography.styl
-    ├── _variables.styl
-    └── marx.styl
-
+└── src
+    ├── _base.css
+    ├── _buttons.css
+    ├── _form.css
+    ├── _sanitize.css
+    ├── _tables.css
+    ├── _typography.css
+    ├── _variables.css
+    └── marx.css
 
 ```
 
