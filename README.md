@@ -1,6 +1,5 @@
 # [Marx](http://mblode.github.io/marx/)
 
-![Bower version](https://img.shields.io/bower/v/marx.svg)
 [![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
 
 **The classless CSS reset (perfect for Communists).**
@@ -30,7 +29,6 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 Several quick start options are available:
 
 - Install with [NPM](https://www.npmjs.com/): `npm install marx-css` (recommended).
-- Install with [Bower](http://bower.io): `bower install marx`.
 - Use the latest Marx CDN
 
 ``` html
@@ -55,7 +53,7 @@ If you have cloned the repo or downloaded from .zip, there are a few steps you m
 The gh-pages branch is built using Jekyll and must therefore be install with `gem install jekyll`.
 
 1. Checkout in to gh-pages: `git checkout gh-pages`.
-2. Install marx dependency: `bower install`.
+2. Install marx dependency: `npm install`.
 3. Run middleman: `bundle exec middleman serve`.
 4. Open in browser: `localhost:4567`.
 
@@ -68,7 +66,6 @@ These are the files that are generated from `npm install marx-css`
 .
 ├── LICENSE.md
 ├── README.md
-├── bower.json
 ├── css
 │   ├── marx.css
 │   ├── marx.min.css
