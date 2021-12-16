@@ -312,6 +312,7 @@
   --dividers: rgba(0, 0, 0, 0.12);
 
   --link-color: var(--primary);
+  --link-hover-color: var(--primary-600);
 
   --sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --serif: Georgia, Times, 'Times New Roman', serif;
@@ -468,7 +469,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: var(--primary-600);
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 dl {

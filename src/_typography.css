@@ -89,7 +89,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--primary-600);
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
