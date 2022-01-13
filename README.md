@@ -132,7 +132,7 @@ These are the files that are generated from `npm install marx-css`
 
     <!-- footer -->
     <footer>
-      <p>&copy; Matthew Blode 2016</p>
+      <p>&copy; Matthew Blode</p>
     </footer>
   </main>
 
