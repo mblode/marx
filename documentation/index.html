@@ -1,0 +1,152 @@
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta http-equiv=X-UA-Compatible content='IE=edge;chrome=1'> <meta name=viewport content="width=device-width, initial-scale=1"> <title>Docs &middot; Marx</title> <link rel=apple-touch-icon sizes=180x180 href="../img/favicons/apple-touch-icon-71190191.png"> <link rel=icon type="image/png" sizes=32x32 href="../img/favicons/favicon-32x32-19df5616.png"> <link rel=icon type="image/png" sizes=16x16 href="../img/favicons/favicon-16x16-dc41c503.png"> <link rel=manifest href="/img/favicons/site.webmanifest"> <link rel=mask-icon href="../img/favicons/safari-pinned-tab-7d11c535.svg" color="#007bff"> <meta name=msapplication-TileColor content="#2b5797"> <meta name=theme-color content="#007bff"> <link rel=stylesheet href="https://rawgit.com/mblode/marx/master/css/marx.min.css"> <link href="../stylesheets/all-3e842764.css" rel=stylesheet /> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54745665-10"></script> <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-54745665-10');
+    </script> </head> <body> <nav> <ul> <li> <a href="../" class=brand>Marx </a></li> <li> <a href="../">Home </a></li> <li class=active> <a href="./">Docs </a></li> </ul> </nav> <main> <h1>Marx Documentation</h1> <hr> <h2>HTML Elements</h2> <h3>&lt;main&gt; <small>= Container</small> </h3> <footer> <p>&lt;footer&gt; <small>= 100% width + centered text</small> </p> </footer> <pre>
+  <code>
+  &lt;main&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+  &lt;/main&gt;
+  </code>
+</pre> <section> <h2>Typography</h2> <h3>Headings</h3> <h1>h1 <small>small h1</small> </h1> <h2>h2 <small>small h2</small> </h2> <h3>h3 <small>small h3</small> </h3> <h4>h4 <small>small h4</small> </h4> <h5>h5 <small>small h5</small> </h5> <h6>h6 <small>small h6</small> </h6> <pre>
+  <code>
+  &lt;h1&gt;h1
+    &lt;small&gt;small h1&lt;/small&gt;
+  &lt;/h1&gt;
+
+  &lt;h2&gt;h2
+    &lt;small&gt;small h2&lt;/small&gt;
+  &lt;/h2&gt;
+
+  &lt;h3&gt;h3
+    &lt;small&gt;small h3&lt;/small&gt;
+  &lt;/h3&gt;
+
+  &lt;h4&gt;h4
+    &lt;small&gt;small h4&lt;/small&gt;
+  &lt;/h4&gt;
+
+  &lt;h5&gt;h5
+    &lt;small&gt;small h5&lt;/small&gt;
+  &lt;/h5&gt;
+
+  &lt;h6&gt;h6
+    &lt;small&gt;small h6&lt;/small&gt;
+  &lt;/h6&gt;
+  </code>
+</pre> <h3>Body copy</h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsa tempore alias illum, in dicta sed laboriosam inventore sequi, accusantium magnam dolores modi commodi, magni labore illo a quisquam incidunt.</p> <p> <strong>strong tag</strong>, <b>b tag</b>, <em>em tag</em>, <i>italic tag</i>, <u>underline tag</u></p> <figcaption>Hello, world!</figcaption> <blockquote>"Capitalism? More like CRAPitalism, am I right?" <br> - Karl Marx, probably.</blockquote> <pre>
+  <code>
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;strong&gt;strong&lt;/strong&gt;
+    &lt;b&gt;b&lt;/b&gt;
+    &lt;em&gt;em&lt;/em&gt;
+    &lt;italic&gt;italic&lt;/italic&gt;
+    &lt;underline&gt;underline&lt;/underline&gt;
+  &lt;/p&gt;
+
+  &lt;figcaption&gt;Hello, world!&lt;/figcaption&gt;
+
+  &lt;blockquote&gt;Hello, world!&lt;/blockquote&gt;
+  </code>
+</pre> <h3>Code</h3> <pre>
+  <code>
+  pre {
+    background: #efefef;
+    color: #444;
+    display: block;
+    font-family: Menlo, monospace;
+    font-size: 1.4rem;
+    margin-bottom: .8remrem;
+    padding: 1.6rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  code {
+    background: #efefef;
+    color: #444;
+    font-family: Menlo, monospace;
+    font-size: 1.4rem;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  </code>
+</pre> <pre>
+  <code>
+  &lt;pre&gt;
+    &lt;code&gt;So meta&lt;/code&gt;
+  &lt;/pre&gt;
+  </code>
+</pre> <h3>Lists</h3> <ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li> <li>Vestibulum auctor dapibus neque.</li> </ul> <ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li> <li>Vestibulum auctor dapibus neque.</li> </ol> <dl> <dt>Lorum Ipsum</dt> <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd> <dt>Lorum Ipsum</dt> <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd> </dl> <pre>
+  <code>
+  &lt;ul&gt;
+    &lt;li&gt;Unordered list&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Unordered links&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;Ordered list&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Ordered links&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;dl&gt;
+    &lt;dt&gt;Description list title&lt;/dt&gt;
+    &lt;dd&gt;Description&lt;/dd&gt;
+  &lt;/dl&gt;
+  </code>
+</pre> <h2>Buttons</h2> <input type=submit value="Input Submit"> <button>Button</button> <a href="#"><button>Button Link</button></a> <button disabled>Disabled Button</button> <pre>
+  <code>
+  &lt;input type="submit" value="Submit"&gt;
+
+  &lt;button&gt;Button&lt;/button&gt;
+
+  &lt;a href="#"&gt;&lt;button&gt;Button Link&lt;/button&gt;&lt;/a&gt;
+  </code>
+</pre> <h2>Forms</h2> <form> <h3>Text Inputs</h3> <label for=name>Text Input:</label> <input name=name id=name tabindex=1 placeholder="Text Input"><br> <label for=textarea>Textarea:</label> <textarea rows=4 cols=27 id=textarea placeholder="Text Area"></textarea> <pre>
+  <code>
+  &lt;label for="text"&gt;Text:&lt;/label&gt;
+  &lt;input type="text" name="text" id="text" tab-index="1" placeholder="text"&gt;&lt;/input&gt;
+
+  &lt;label for="textarea"&gt;Text Area:&lt;/label&gt;
+  &lt;textarea rows="4" cols="27" id="textarea" placeholder="textarea"&gt;&lt;/textarea&gt;
+  </code>
+</pre> <h3>Radio Buttons</h3> <label for=radio-choice-1>Radio 1:</label> <input type=radio name=radio-1 id=radio-1 tabindex=1 value=radio-1 /><br> <label for=radio-2>Radio 2:</label> <input type=radio name=radio-2 id=radio-2 tabindex=2 value=radio-2 /> <pre>
+  <code>
+  &lt;label for="radio"&gt;Radio:&lt;/label&gt;
+  &lt;input type="radio" name="radio" id="radio" tab-index="1" value="true"&gt;&lt;/input&gt;
+  </code>
+</pre> <h3>Checkbox Buttons</h3> <label for=checkbox>Checkbox 1:</label> <input type=checkbox name=checkbox id=checkbox /><br> <label for=checkbox>Checkbox 2:</label> <input type=checkbox name=checkbox id=checkbox /> <pre>
+  <code>
+  &lt;label for="checkbox"&gt;Checkbox&lt;/label&gt;
+  &lt;input type="checkbox" name="checkbox" id="checkbox"&gt;&lt;/input&gt;
+  </code>
+</pre> <h3>Dropdown Choices</h3> <label for=select-choice>Select Dropdown Choice:</label> <select name=select-choice id=select-choice> <option value="Choice 1">Choice 1</option> <option value="Choice 2">Choice 2</option> <option value="Choice 3">Choice 3</option> </select><br> <pre>
+  <code>
+  &lt;label for="drop"&gt;Dropdown&lt;/label&gt;
+  &lt;select name="drop" id="drop"&gt;
+    &lt;option value="drop1"&gt;One&lt;/option&gt;
+    &lt;option value="drop2"&gt;Two&lt;/option&gt;
+    &lt;option value="drop3"&gt;Three&lt;/label&gt;
+  &lt;/select&gt;
+  </code>
+</pre> <input type=submit value=Submit> </form> <h2>Tables</h2> <table> <thead> <tr> <th>One</th> <th>Two</th> <th>Three</th> <th>Four</th> </tr> </thead> <tbody> <tr> <td>One</td> <td>Two</td> <td>Three</td> <td>Four</td> </tr> <tr> <td>One</td> <td>Two</td> <td>Three</td> <td>Four</td> </tr> <tr> <td>One</td> <td>Two</td> <td>Three</td> <td>Four</td> </tr> </tbody> </table> <pre>
+  <code>
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;One&lt;/th&gt;
+        &lt;th&gt;Two&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;One&lt;/td&gt;
+        &lt;td&gt;Two&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+  </code>
+</pre> </section> <footer> <p>&copy; 2022 &middot; <a href="https://github.com/mblode/">Matthew Blode</a></p> </footer> </main> </body> </html>
