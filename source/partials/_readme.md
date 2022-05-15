@@ -5,7 +5,6 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 ### Key Features
 
 - Built atop of Sanitize.css, meaning all browsers render consistently.
-- Customise using Sass and Stylus preprocessors.
 - Responsive and mobile-friendly.
 - Clean, beautiful typography.
 - Forms, tables, buttons and navigation.
