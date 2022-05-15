@@ -44,7 +44,7 @@ h4 {
 
 h5 {
   font-size: var(--font-size-h5);
-  margin: var(--md-pad 0) var(--xs-pad);
+  margin: var(--md-pad) 0 var(--xs-pad);
 }
 
 h6 {
