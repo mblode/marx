@@ -65,3 +65,7 @@ iframe,
 video {
   border: 0;
 }
+
+progress {
+  background-repeat: repeat;
+}
