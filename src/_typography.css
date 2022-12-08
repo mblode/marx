@@ -44,7 +44,7 @@ h4 {
 
 h5 {
   font-size: var(--font-size-h5);
-  margin: var(--md-pad 0) var(--xs-pad);
+  margin: var(--md-pad) 0 var(--xs-pad);
 }
 
 h6 {
@@ -63,7 +63,7 @@ pre {
   display: block;
   font-family: var(--monospace);
   font-size: var(--font-size-base);
-  margin: var(--md-pad 0);
+  margin: var(--md-pad) 0;
   padding: var(--md-pad);
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -112,7 +112,7 @@ blockquote {
   border-left: 2px solid var(--text);
   font-family: var(--serif);
   font-style: italic;
-  margin: var(--md-pad 0);
+  margin: var(--md-pad) 0;
   padding-left: var(--md-pad);
 }
 
