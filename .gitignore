@@ -8,3 +8,4 @@ components
 build
 tmp/*
 !tmp/.keep
+node_modules
