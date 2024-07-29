@@ -157,7 +157,7 @@ label {
 fieldset {
   border: 0;
   margin: 0;
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad);
 }
 
 legend {
@@ -165,7 +165,7 @@ legend {
   color: var(--text);
   display: block;
   margin-bottom: var(--sm-pad);
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad);
   width: 100%;
 }
 
