@@ -1,4 +1,4 @@
-/*! Marx v4.1.1 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+/*! Marx v4.1.2 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
 /* Document
  * ========================================================================== */
 /**
@@ -679,6 +679,7 @@ input[type=radio] {
 input[type=submit],
 input[type=reset],
 input[type=button],
+input[type=file]::file-selector-button,
 button {
   background-color: var(--primary);
   border: var(--primary);
@@ -707,6 +708,7 @@ button::-moz-focus-inner {
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
+input[type=file]:hover::file-selector-button,
 button:hover {
   background-color: var(--primary-600);
   border-color: var(--primary-600);
@@ -715,6 +717,7 @@ button:hover {
 input[type=submit]:not(:disabled):active,
 input[type=reset]:not(:disabled):active,
 input[type=button]:not(:disabled):active,
+input[type=file]:not(:disabled):active::file-selector-button,
 button:not(:disabled):active {
   background-color: var(--primary-600);
   border-color: var(--primary-600);
@@ -723,6 +726,7 @@ button:not(:disabled):active {
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
+input[type=file]:focus::file-selector-button,
 button:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
@@ -730,6 +734,7 @@ button:focus {
 input[type=submit]:disabled,
 input[type=reset]:disabled,
 input[type=button]:disabled,
+input[type=file]:disabled::file-selector-button,
 button:disabled {
   opacity: .65;
   cursor: not-allowed;
