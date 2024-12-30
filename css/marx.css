@@ -656,14 +656,14 @@ label {
 fieldset {
   border: 0;
   margin: 0;
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
 }
 legend {
   border-bottom: var(--border);
   color: var(--text);
   display: block;
   margin-bottom: var(--sm-pad);
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
   width: 100%;
 }
 textarea {
@@ -742,7 +742,7 @@ table {
   margin-bottom: var(--md-pad);
 }
 caption {
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
 }
 thead th {
   border: 0;
