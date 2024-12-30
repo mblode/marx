@@ -4,7 +4,7 @@ table {
 }
 
 caption {
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
 }
 
 thead th {
