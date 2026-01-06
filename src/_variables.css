@@ -28,12 +28,15 @@
   --link-color: var(--primary);
   --link-hover-color: var(--primary-600);
 
-  --sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  --serif: Georgia, Times, 'Times New Roman', serif;
-  --monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --sans-serif:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --serif: Georgia, Times, "Times New Roman", serif;
+  --monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
   --font-family: var(--sans-serif);
 
   --font-size-base: 16px;
+  --font-size-xs: 8px;
   --font-size-sm: 14px;
   --font-size-h1: 40px;
   --font-size-h2: 32px;
