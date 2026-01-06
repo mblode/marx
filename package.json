@@ -8,6 +8,9 @@
   ],
   "scripts": {
     "gulp": "gulp",
+    "build": "gulp",
+    "changeset": "changeset",
+    "release": "changeset publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,6 +57,7 @@
   },
   "homepage": "https://github.com/mblode/marx",
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
     "browserslist": "^4.22.1",
