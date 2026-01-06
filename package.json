@@ -73,11 +73,15 @@
     "lint-staged": "^16.2.7",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
-    "ultracite": "^7.0.8"
+    "ultracite": "^7.0.8",
+    "@types/node": "^25.0.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
       "npx ultracite fix"
     ]
+  },
+  "overrides": {
+    "@types/node": "^25.0.3"
   }
 }
