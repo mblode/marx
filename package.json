@@ -15,6 +15,8 @@
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
     "format:check": "biome format .",
+    "changeset": "changeset",
+    "release": "changeset publish",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
@@ -63,6 +65,7 @@
   "homepage": "https://github.com/mblode/marx",
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
+    "@changesets/cli": "^2.29.8",
     "autoprefixer": "^10.4.23",
     "browserslist": "^4.28.1",
     "cssnano": "^7.1.2",
