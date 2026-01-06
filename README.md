@@ -44,7 +44,8 @@ If you have cloned the repo or downloaded from .zip, there are a few steps you m
 
 1. Change directory: `cd marx`.
 2. Install node modules: `npm install`.
-4. To run gulp: `gulp`.
+4. Build CSS: `npm run build`.
+5. (Optional) Watch for changes: `npm run watch`.
 
 ## Running Github Pages
 
@@ -68,9 +69,9 @@ These are the files that are generated from `npm install marx-css`
 │   ├── marx.css
 │   ├── marx.min.css
 │   ├── marx.min.css.map
-├── gulpfile.js
 ├── index.html
 ├── package.json
+├── postcss.config.cjs
 └── src
     ├── _base.css
     ├── _buttons.css

@@ -23,7 +23,9 @@ textarea {
   font-size: 1rem;
   padding: var(--sm-pad) var(--md-pad);
   line-height: 1.5;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   font-family: var(--sans-serif);
   word-break: normal;
 }
@@ -47,7 +49,9 @@ input:not([type]) {
   width: 100%;
   padding: var(--sm-pad) var(--md-pad);
   line-height: 1.5;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   text-align: left;
   word-break: normal;
 }
@@ -157,7 +161,7 @@ label {
 fieldset {
   border: 0;
   margin: 0;
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
 }
 
 legend {
@@ -165,7 +169,7 @@ legend {
   color: var(--text);
   display: block;
   margin-bottom: var(--sm-pad);
-  padding: var(--sm-pad 0);
+  padding: var(--sm-pad) 0;
   width: 100%;
 }
 
@@ -174,8 +178,8 @@ textarea {
   resize: vertical;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
   display: inline;
