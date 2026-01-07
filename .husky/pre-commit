@@ -1,5 +1,3 @@
-npm test
-
 #!/bin/sh
 # Exit on any error
 set -e
