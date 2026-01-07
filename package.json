@@ -1,6 +1,6 @@
 {
   "name": "marx-css",
-  "version": "4.1.2",
+  "version": "4.1.3",
   "description": "The classless CSS reset (perfect for Communists).",
   "main": "css/marx.min.css",
   "browserslist": [
