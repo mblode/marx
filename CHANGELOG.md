@@ -1,5 +1,11 @@
 # marx-css
 
+## 4.1.3
+
+### Patch Changes
+
+- e8e193d: Update deps
+
 ## 4.1.2
 
 ### Patch Changes
