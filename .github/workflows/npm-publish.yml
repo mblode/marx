@@ -31,10 +31,12 @@ jobs:
         run: npm install -g npm@11.5.1
       - name: Install dependencies
         run: npm ci
+      - name: Build package
+        run: npm run build
       - name: Create release PR or publish
         uses: changesets/action@v1
         with:
-          publish: npm run build && npm run release
+          publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: "true"
