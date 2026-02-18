@@ -35,6 +35,7 @@ jobs:
           cp docs/.nojekyll _site/.nojekyll
           mkdir _site/css
           cp css/marx.min.css _site/css/marx.min.css
+          cp -r docs/img _site/img
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
