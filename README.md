@@ -1,4 +1,4 @@
-# [Marx](http://mblode.github.io/marx/)
+# [Marx](https://mblode.github.io/marx/)
 
 [![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
 
@@ -21,7 +21,7 @@ Marx is a CSS stylesheet to be used in any projects (namely small ones). If you 
 - It just works.
 
 
-## [Demo](http://codepen.io/mblode/details/JdYbJj)
+## [Demo](https://mblode.github.io/marx/)
 
 ## Quick Start
 
@@ -36,8 +36,8 @@ Several quick start options are available:
 <link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css">
 
 ```
-- [Source code.](https://raw.githubusercontent.com/mblode/marx/master/css/marx.min.css)
-- [Download the latest release](https://github.com/mblode/marx/archive/master.zip).
+- [Source code.](https://raw.githubusercontent.com/mblode/marx/main/css/marx.min.css)
+- [Download the latest release](https://github.com/mblode/marx/archive/main.zip).
 - Clone the repo: `git clone https://github.com/mblode/marx.git`.
 
 If you have cloned the repo or downloaded from .zip, there are a few steps you must take within the terminal:
@@ -46,15 +46,6 @@ If you have cloned the repo or downloaded from .zip, there are a few steps you m
 2. Install node modules: `npm install`.
 4. Build CSS: `npm run build`.
 5. (Optional) Watch for changes: `npm run watch`.
-
-## Running Github Pages
-
-The gh-pages branch is built using Jekyll and must therefore be install with `gem install jekyll`.
-
-1. Checkout in to gh-pages: `git checkout gh-pages`.
-2. Install marx dependency: `npm install`.
-3. Run middleman: `bundle exec middleman serve`.
-4. Open in browser: `localhost:4567`.
 
 ## What's Included
 
