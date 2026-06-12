@@ -19,6 +19,21 @@
     .site-nav li { display: inline; padding: 0 16px; }
     .site-nav .brand { font-size: 1.5rem; }
     .hero { border-bottom: 1px solid rgba(0,0,0,0.12); padding-bottom: 16px; margin-bottom: 32px; }
+    .hero .button {
+      background-color: #3b82f6;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: #fff;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0.375rem 0.75rem;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      white-space: nowrap;
+    }
+    .hero .button:hover { background-color: #2563eb; border-color: #2563eb; }
     footer { margin-bottom: 0; }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D0Z3DW6BT"></script>
@@ -45,8 +60,8 @@
       <h3>The classless CSS reset (perfect for Communists).</h3>
       <p>No JavaScript. No Classes. Just raw CSS.</p>
       <div>
-        <a href="https://unpkg.com/marx-css/css/marx.min.css" target="_blank" rel="noopener"><button>Download</button></a>
-        <a href="https://github.com/mblode/marx" target="_blank" rel="noopener"><button>GitHub</button></a>
+        <a href="https://unpkg.com/marx-css/css/marx.min.css" class="button" target="_blank" rel="noopener">Download</a>
+        <a href="https://github.com/mblode/marx" class="button" target="_blank" rel="noopener">GitHub</a>
       </div>
     </center>
 
@@ -392,21 +407,21 @@ p q r s t u v w x y z { | } ~ </pre>
             No <code>&lt;figure&gt;</code> element
           </h3>
           <p>
-            <img src="http://placekitten.com/480/480" alt="Image alt text">
+            <img src="https://picsum.photos/480/480" alt="Image alt text">
           </p>
           <h3>
             Wrapped in a <code>&lt;figure&gt;</code> element, no
             <code>&lt;figcaption&gt;</code>
           </h3>
           <figure>
-            <img src="http://placekitten.com/420/420" alt="Image alt text">
+            <img src="https://picsum.photos/420/420" alt="Image alt text">
           </figure>
           <h3>
             Wrapped in a <code>&lt;figure&gt;</code> element, with a
             <code>&lt;figcaption&gt;</code>
           </h3>
           <figure>
-            <img src="http://placekitten.com/420/420" alt="Image alt text">
+            <img src="https://picsum.photos/420/420" alt="Image alt text">
             <figcaption>Here is a caption for this image.</figcaption>
           </figure>
         </div>
