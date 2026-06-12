@@ -140,6 +140,35 @@ input[type="checkbox"]:focus:invalid:focus {
   outline-color: var(--red);
 }
 
+input[type="file"]::-webkit-file-upload-button,
+input[type="file"]::file-selector-button {
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: var(--br);
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-right: var(--md-pad);
+  padding: var(--sm-pad) var(--md-pad);
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+}
+
 select {
   border: var(--border);
   vertical-align: sub;
