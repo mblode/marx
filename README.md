@@ -148,3 +148,7 @@ Pull requests are the way to go.
 ## License
 
 MIT © [Matthew Blode](http://matthewblode.com)
+
+---
+
+Crafted by [<img src="https://matthewblode.com/avatar-sm.png" width="20" align="top" />](https://matthewblode.com) [Matthew Blode](https://matthewblode.com)
