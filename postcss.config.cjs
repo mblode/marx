@@ -1,12 +1,16 @@
 "use strict";
 
-module.exports = (ctx) => ({
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const postcssImport = require("postcss-import");
+
+module.exports = function postcssConfig(ctx) {
+  return {
   map: ctx.options.map,
   plugins: [
-    require("postcss-import"),
-    require("autoprefixer"),
-    ...(ctx.env === "production"
-      ? [require("cssnano")({ preset: "default" })]
-      : []),
+      postcssImport,
+      autoprefixer,
+      ...(ctx.env === "production" ? [cssnano({ preset: "default" })] : []),
   ],
-});
+  };
+};
