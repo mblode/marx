@@ -1,7 +1,15 @@
 pre-commit:
   parallel: true
   jobs:
-    - name: ultracite
-      glob: "*.{js,jsx,ts,tsx,json,jsonc,css}"
-      run: npx ultracite fix {staged_files}
+    # oxfmt/oxlint directly (not `ultracite fix`): ultracite exits non-zero
+    # when the staged set contains no lintable JS/TS files, which fails any
+    # commit that only touches JSON or CSS. CSS is checked repo-wide by
+    # `npm test` and CI.
+    - name: oxfmt
+      glob: "*.{js,jsx,ts,tsx,json,jsonc}"
+      run: npx oxfmt --write {staged_files}
+      stage_fixed: true
+    - name: oxlint
+      glob: "*.{js,jsx,ts,tsx}"
+      run: npx oxlint --fix {staged_files}
       stage_fixed: true

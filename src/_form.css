@@ -1,215 +1,124 @@
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-select,
-textarea {
-  background: var(--white);
-  background-clip: padding-box;
-  border: var(--border);
-  border-radius: var(--br);
-  color: var(--text);
+/* Text-like controls: everything except buttons, toggles, range, file, color,
+ * image. `input:not([type])` matches (no excluded type) so bare inputs are
+ * covered. Preflight already inherits font + resets appearance — don't repeat. */
+:where(
+  input:not(
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"],
+    [type="file"],
+    [type="color"],
+    [type="image"]
+  ),
+  select,
+  textarea
+) {
   display: block;
-  width: 100%;
-  font-size: 1rem;
-  padding: var(--sm-pad) var(--md-pad);
-  line-height: 1.5;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  font-family: var(--sans-serif);
-  word-break: normal;
+  inline-size: 100%;
+  padding: var(--marx-space-xs) var(--marx-space-md);
+  font-size: var(--marx-text-base);
+  line-height: var(--marx-leading);
+  color: var(--marx-text);
+  background-color: var(--marx-bg);
+  border: 1px solid var(--marx-border);
+  border-radius: var(--marx-radius);
+
+  &:user-invalid {
+    border-color: var(--marx-danger);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: border-color 0.15s ease-in-out;
+  }
 }
 
-input[type="color"] {
-  background-color: var(--white);
-  border: var(--border);
-  border-radius: var(--br);
-  display: inline-block;
-  vertical-align: middle;
+/* One focus ring for every control (buttons style their own). */
+:where(input, select, textarea):focus-visible {
+  outline: 2px solid var(--marx-ring);
+  outline-offset: 2px;
 }
 
-input:not([type]) {
-  -webkit-appearance: none;
-  background: var(--white);
-  background-clip: padding-box;
-  border: var(--border);
-  border-radius: var(--br);
-  color: var(--text);
-  display: block;
-  width: 100%;
-  padding: var(--sm-pad) var(--md-pad);
-  line-height: 1.5;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  text-align: left;
-  word-break: normal;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-select:focus,
-textarea:focus {
-  background-color: var(--white);
-  border-color: var(--primary-400);
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
-}
-
-input:not([type]):focus {
-  background-color: var(--white);
-  border-color: var(--primary-400);
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: 1px thin var(--dividers);
-}
-
-input[type="text"][disabled],
-input[type="password"][disabled],
-input[type="email"][disabled],
-input[type="url"][disabled],
-input[type="date"][disabled],
-input[type="month"][disabled],
-input[type="time"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="week"][disabled],
-input[type="number"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="color"][disabled],
-select[disabled],
-textarea[disabled] {
-  background-color: var(--dividers);
-  color: var(--secondary);
+/* Disabled + read-only. `[readonly]` (not `:read-only`, which also matches
+ * non-editable elements like buttons and plain divs). */
+:where(input, select, textarea):disabled {
+  color: var(--marx-disabled);
   cursor: not-allowed;
-  opacity: 1;
+  background-color: var(--marx-surface);
 }
 
-input:not([type])[disabled] {
-  background-color: var(--dividers);
-  color: var(--secondary);
-  cursor: not-allowed;
-  opacity: 1;
+:where(input, select, textarea)[readonly] {
+  color: var(--marx-muted);
+  border-color: var(--marx-border);
 }
 
-input[readonly],
-select[readonly],
-textarea[readonly] {
-  border-color: var(--dividers);
-  color: var(--secondary);
+/* Grow to fit content; start tall enough to read as a textarea. */
+:where(textarea) {
+  field-sizing: content;
+  min-block-size: 5lh;
 }
 
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-  border-color: var(--red-600);
-  color: var(--red);
+/* Native controls that paint with the accent color. */
+:where(
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="range"],
+  progress,
+  meter
+) {
+  accent-color: var(--marx-primary);
 }
 
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus,
-input[type="checkbox"]:focus:invalid:focus {
-  outline-color: var(--red);
+/* Bordered swatch at a comfortable tappable size. */
+:where(input[type="color"]) {
+  inline-size: 3rem;
+  block-size: 2.5rem;
+  padding: var(--marx-space-2xs);
+  background-color: var(--marx-bg);
+  border: 1px solid var(--marx-border);
+  border-radius: var(--marx-radius);
 }
 
-input[type="file"]::-webkit-file-upload-button,
-input[type="file"]::file-selector-button {
-  background-color: var(--primary);
-  border: 1px solid transparent;
-  border-radius: var(--br);
-  color: var(--white);
+/* File picker button matches the marx primary button. */
+:where(input[type="file"])::file-selector-button {
+  margin-inline-end: var(--marx-space-md);
+  padding: var(--marx-space-xs) var(--marx-space-md);
+  color: var(--marx-on-primary);
   cursor: pointer;
-  font-family: var(--sans-serif);
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-right: var(--md-pad);
-  padding: var(--sm-pad) var(--md-pad);
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  background-color: var(--marx-primary);
+  border: 1px solid transparent;
+  border-radius: var(--marx-radius);
 }
 
-input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
+:where(input[type="file"])::file-selector-button:hover {
+  background-color: var(--marx-primary-strong);
 }
 
-input[type="file"]::file-selector-button:hover {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
+@media (prefers-reduced-motion: no-preference) {
+  :where(input[type="file"])::file-selector-button {
+    transition: background-color 0.15s ease-in-out;
+  }
 }
 
-select {
-  border: var(--border);
-  vertical-align: sub;
+/* Placeholder: preflight sets a currentColor mix; marx prefers its muted token. */
+::placeholder {
+  color: var(--marx-muted);
 }
 
-select:not([size]):not([multiple]) {
-  height: calc(2.25rem + 2px);
-}
-
-select[multiple] {
-  height: auto;
-}
-
-label {
+:where(label) {
   display: inline-block;
-  line-height: 2;
+  line-height: var(--marx-leading);
 }
 
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: var(--sm-pad) 0;
+:where(fieldset) {
+  padding: var(--marx-space-md);
+  border: 1px solid var(--marx-border);
+  border-radius: var(--marx-radius);
 }
 
-legend {
-  border-bottom: var(--border);
-  color: var(--text);
-  display: block;
-  margin-bottom: var(--sm-pad);
-  padding: var(--sm-pad) 0;
-  width: 100%;
-}
-
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-  display: inline;
+:where(legend) {
+  padding-inline: var(--marx-space-xs);
+  font-weight: 500;
 }

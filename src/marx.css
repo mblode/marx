@@ -1,8 +1,31 @@
-/*! Marx v4.1.1 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
-@import "_sanitize.css";
-@import "_variables.css";
-@import "_base.css";
-@import "_typography.css";
-@import "_form.css";
-@import "_buttons.css";
-@import "_tables.css";
+/*! Marx — the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+@layer marx.base, marx.content, marx.forms;
+
+@import "_tokens.css" layer(marx.base);
+@import "_preflight.css" layer(marx.base);
+@import "_base.css" layer(marx.content);
+@import "_typography.css" layer(marx.content);
+@import "_tables.css" layer(marx.content);
+@import "_buttons.css" layer(marx.forms);
+@import "_form.css" layer(marx.forms);
+
+/* Flow fixup — lives after every content import so it wins same-specificity
+ * ties: the first block inside a padded or non-collapsing container must not
+ * add its own flow margin on top (typeset first-child pattern). */
+@layer marx.content {
+  :where(
+      dialog,
+      [popover],
+      td,
+      th,
+      li,
+      dd,
+      blockquote,
+      figure,
+      fieldset,
+      footer
+    )
+    > :where(:first-child) {
+    margin-block-start: 0;
+  }
+}

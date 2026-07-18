@@ -1,143 +1,254 @@
-body {
-  color: var(--text);
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-
-p {
-  margin: 0;
-  margin-bottom: var(--md-pad);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Headings — Marx keeps its 500 weight (lighter than typeset's 600). */
+:where(h1, h2, h3, h4, h5, h6) {
   color: inherit;
-  font-family: inherit;
-  line-height: 1.2;
   font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
-h1 {
-  font-size: var(--font-size-h1);
-  margin: var(--lg-pad) 0 var(--md-pad);
+:where(h1) {
+  font-size: var(--marx-text-h1);
 }
 
-h2 {
-  font-size: var(--font-size-h2);
-  margin: var(--lg-pad) 0 var(--md-pad);
+:where(h2) {
+  font-size: var(--marx-text-h2);
 }
 
-h3 {
-  font-size: var(--font-size-h3);
-  margin: var(--md-pad) 0 var(--xs-pad);
+:where(h3) {
+  font-size: var(--marx-text-h3);
 }
 
-h4 {
-  font-size: var(--font-size-h4);
-  margin: var(--md-pad) 0 var(--xs-pad);
+:where(h4) {
+  font-size: var(--marx-text-h4);
 }
 
-h5 {
-  font-size: var(--font-size-h5);
-  margin: var(--md-pad) 0 var(--xs-pad);
+:where(h5) {
+  font-size: var(--marx-text-h5);
 }
 
-h6 {
-  font-size: var(--font-size-h6);
-  margin: var(--md-pad) 0 var(--xs-pad);
+:where(h6) {
+  font-size: var(--marx-text-h6);
 }
 
-small {
-  color: var(--secondary);
-  vertical-align: bottom;
+/* h1/h2 open a section with more air than the sub-headings (old Marx cadence). */
+:where(h1, h2) {
+  margin-block-start: calc(var(--marx-flow) * 1.5);
 }
 
-pre {
-  background-color: var(--grey);
-  color: var(--text);
-  display: block;
-  font-family: var(--monospace);
-  font-size: var(--font-size-base);
-  margin: var(--md-pad) 0;
-  padding: var(--md-pad);
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
+:where(h3, h4, h5, h6) {
+  margin-block-start: var(--marx-flow);
 }
 
-code {
-  color: var(--text);
-  font-family: var(--monospace);
-  font-size: var(--font-size-base);
-  line-height: inherit;
-  margin: 0;
+/* Paragraphs. */
+:where(p) {
+  margin-block-start: var(--marx-flow);
+  text-wrap: pretty;
+}
+
+/* Links — Marx-blue with a subtle underline that firms up on hover (a11y default). */
+:where(a) {
+  color: var(--marx-link);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+  text-underline-offset: 0.15em;
+}
+
+:where(a:hover) {
+  color: var(--marx-link-hover);
+  text-decoration-color: currentColor;
+}
+
+:where(a:focus-visible) {
+  outline: 2px solid var(--marx-ring);
+  outline-offset: 2px;
+  border-radius: var(--marx-radius);
+}
+
+/* Inline semantics. */
+:where(small) {
+  color: var(--marx-muted);
+}
+
+:where(mark) {
+  background-color: var(--marx-mark);
+  color: inherit;
+  padding-block: 0.05em;
+  padding-inline: 0.15em;
+  border-radius: var(--marx-radius);
+}
+
+:where(del, s) {
+  color: var(--marx-muted);
+  text-decoration-line: line-through;
+}
+
+:where(u, ins) {
+  text-decoration-line: underline;
+}
+
+/* Preflight already sets `underline dotted`; add the help affordance + offset. */
+:where(abbr[title]) {
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+/* Lists — preflight strips markers, so restore them (muted) and the rhythm. */
+:where(ul) {
+  list-style-type: disc;
+}
+
+:where(ul ul) {
+  list-style-type: circle;
+}
+
+:where(ul ul ul) {
+  list-style-type: square;
+}
+
+:where(ol) {
+  list-style-type: decimal;
+}
+
+:where(ol[type="a" i]) {
+  list-style-type: lower-alpha;
+}
+
+:where(ol[type="i" i]) {
+  list-style-type: lower-roman;
+}
+
+:where(ol[type="A" s]) {
+  list-style-type: upper-alpha;
+}
+
+:where(ol[type="I" s]) {
+  list-style-type: upper-roman;
+}
+
+:where(ul, ol) {
+  margin-block-start: var(--marx-flow);
+  padding-inline-start: 1.5em;
+}
+
+:where(li) {
+  margin-block-start: var(--marx-space-xs);
+  padding-inline-start: 0.4em;
+}
+
+:where(li)::marker {
+  color: var(--marx-muted);
+}
+
+/* Nested lists hug their parent item — the li above already owns the gap. */
+:where(li > ul, li > ol) {
+  margin-block-start: 0;
+}
+
+/* Navigation lists are for structure, not bullets. Lives after the marker
+   rules above so it wins the same-specificity tie; the zero-width prefix keeps
+   the list semantics VoiceOver would otherwise drop. */
+:where(nav) :where(ol, ul) {
+  list-style-type: none;
   padding: 0;
-  vertical-align: baseline;
-  word-break: break-all;
-  word-wrap: break-word;
 }
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  background-color: transparent;
+:where(nav li)::before {
+  content: "\200B";
+  float: inline-start;
 }
 
-a:hover,
-a:focus {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+/* Definition lists. */
+:where(dl) {
+  margin-block-start: var(--marx-flow);
 }
 
-dl {
-  margin-bottom: var(--md-pad);
+:where(dt) {
+  font-weight: bold;
+  margin-block-start: var(--marx-space-md);
 }
 
-dd {
-  margin-left: var(--xlg-pad);
+:where(dd) {
+  color: var(--marx-muted);
+  margin-block-start: var(--marx-space-2xs);
+  margin-inline-start: var(--marx-space-md);
 }
 
-ul,
-ol {
-  margin-bottom: var(--sm-pad);
-  padding-left: var(--xlg-pad);
-  vertical-align: baseline;
-}
-
-blockquote {
-  border-left: 2px solid var(--text);
-  font-family: var(--serif);
+/* Blockquote — Marx identity: serif italic behind a hairline rule. */
+:where(blockquote) {
+  border-inline-start: 2px solid var(--marx-border);
+  font-family: var(--marx-font-serif);
   font-style: italic;
-  margin: var(--md-pad) 0;
-  padding-left: var(--md-pad);
+  margin-block-start: var(--marx-flow);
+  margin-inline: 0;
+  padding-inline-start: var(--marx-space-md);
 }
 
-figcaption {
-  font-family: var(--serif);
+/* Inline code. */
+:where(:not(pre) > code) {
+  background-color: var(--marx-surface);
+  font-size: 0.875em;
+  border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
+  padding-block: 0.125em;
+  padding-inline: 0.3em;
 }
 
-u {
-  text-decoration: underline;
+/* Shrink code set inside large headings so it sits on the text. */
+:where(:is(h1, h2, h3, h4) code) {
+  font-size: 0.9em;
 }
 
-s {
-  text-decoration: line-through;
+/* Code blocks — scroll wide lines rather than wrap (old Marx wrapped). */
+:where(pre) {
+  background-color: var(--marx-surface);
+  font-size: var(--marx-text-sm);
+  line-height: 1.5;
+  tab-size: 2;
+  border-radius: var(--marx-radius);
+  margin-block-start: var(--marx-flow);
+  padding-block: var(--marx-space-sm);
+  padding-inline: var(--marx-space-md);
+  overflow-x: auto;
 }
 
-sup {
-  font-size: var(--font-size-sm);
-  vertical-align: super;
+:where(pre code) {
+  background-color: transparent;
+  font-size: inherit;
+  border-radius: 0;
+  padding: 0;
 }
 
-sub {
-  font-size: var(--font-size-sm);
-  vertical-align: sub;
+/* Keyboard keys — keycap in the body font (typeset treatment). */
+:where(kbd) {
+  font-family: inherit;
+  font-size: 0.85em;
+  border: 1px solid var(--marx-border);
+  border-block-end-width: 2px;
+  border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
+  padding-block: 0.0625em;
+  padding-inline: 0.35em;
 }
 
-mark {
-  background-color: var(--yellow);
+/* Figures — serif caption keeps Marx's editorial voice. */
+:where(figure) {
+  margin-block-start: var(--marx-flow);
+  margin-inline: 0;
+}
+
+:where(figcaption) {
+  color: var(--marx-muted);
+  font-family: var(--marx-font-serif);
+  font-size: var(--marx-text-sm);
+  margin-block-start: var(--marx-space-xs);
+}
+
+/* Fragment targets clear the top of the viewport by one rhythm unit. */
+:where([id]) {
+  scroll-margin-block-start: var(--marx-flow);
+}
+
+/* Headings own the space below them: the next block sits closer than a full
+   flow gap. Placed last so it wins the equal-specificity tie over the block
+   rules above. */
+:where(:is(h1, h2, h3, h4, h5, h6) + *) {
+  margin-block-start: var(--marx-space-md);
 }

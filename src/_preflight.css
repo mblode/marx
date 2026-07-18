@@ -1,0 +1,295 @@
+/* Preflight — modern normalization base (Tailwind Preflight v4.3.3 techniques,
+ * adapted for Marx: tokens, logical properties, zero specificity).
+ * ========================================================================== */
+
+/*
+  1. Border-box sizing so padding and border never affect declared size.
+  2. Remove default margins and padding.
+  3. Reset all borders to 0-width solid so any `border-*-width` opts back in.
+*/
+
+*,
+::before,
+::after,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+  border: 0 solid; /* 3 */
+}
+
+/*
+  1. Consistent line-height across browsers.
+  2. Default body font.
+  3. Prevent font-size inflation after iOS orientation changes.
+  4. More readable tab size.
+  5. Disable the grey tap highlight on iOS.
+  6. Break long words rather than overflow the container.
+  7. Reserve the scrollbar gutter so layout doesn't shift when it appears.
+*/
+
+:where(html, :host) {
+  line-height: var(--marx-leading); /* 1 */
+  font-family: var(--marx-font-body); /* 2 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+  tab-size: 4; /* 4 */
+  -webkit-tap-highlight-color: transparent; /* 5 */
+  overflow-wrap: break-word; /* 6 */
+  scrollbar-gutter: stable; /* 7 */
+}
+
+/* Text-level semantics
+  * ========================================================================== */
+
+/* Restore bold weight dropped by the universal reset's cascade in some UAs. */
+
+:where(b, strong) {
+  font-weight: bolder;
+}
+
+/*
+  1. Monospace the code-ish elements.
+  2. Correct the odd `em` font sizing in all browsers.
+*/
+
+:where(code, kbd, samp, pre) {
+  font-family: var(--marx-font-mono); /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Correct the inconsistent `small` font size. */
+
+:where(small) {
+  font-size: 80%;
+}
+
+/* Prevent `sub`/`sup` from affecting line-height. */
+
+:where(sub, sup) {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+:where(sub) {
+  inset-block-end: -0.25em;
+}
+
+:where(sup) {
+  inset-block-start: -0.5em;
+}
+
+/* Add the correct text decoration in Safari. */
+
+:where(abbr[title]) {
+  text-decoration: underline dotted;
+}
+
+/*
+  1. Correct the box-sizing height in Firefox.
+  2. Correct border-color inheritance in Firefox.
+  3. Opt back into a 1px rule (the universal reset zeroed border width).
+*/
+
+:where(hr) {
+  block-size: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-block-start-width: 1px; /* 3 */
+}
+
+/* Tabular data
+  * ========================================================================== */
+
+/*
+  1. Remove text indentation from table contents in Chrome and Safari.
+  2. Correct table border-color inheritance in Chrome and Safari.
+  3. Collapse borders by default.
+*/
+
+:where(table) {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/* Embedded content
+  * ========================================================================== */
+
+/*
+  1. Block-level replaced elements by default.
+  2. Sensible baseline alignment for the remaining inline cases.
+*/
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/* Constrain media to its container while preserving aspect ratio. */
+
+:where(img, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Match an untinted SVG's fill to the surrounding text color. */
+
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Forms
+  * ========================================================================== */
+
+/*
+  1. Inherit typography from the page (marx.forms restyles later).
+  2. Remove the platform border radius.
+  3. Remove the platform background.
+  4. Consistent opacity for disabled states across browsers.
+*/
+
+:where(button, input, select, optgroup, textarea),
+::file-selector-button {
+  font: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  border-radius: 0; /* 2 */
+  background-color: transparent; /* 3 */
+  opacity: 1; /* 4 */
+}
+
+/* Restore the bold weight on list-box optgroups. */
+
+:where(select:is([multiple], [size]) optgroup) {
+  font-weight: bolder;
+}
+
+/* Restore the indentation on list-box options. */
+
+:where(select:is([multiple], [size]) optgroup option) {
+  padding-inline-start: 20px;
+}
+
+/* Only allow vertical resizing to avoid layout-breaking horizontal drags. */
+
+:where(textarea) {
+  resize: vertical;
+}
+
+/* Correct the inability to style the border radius on button-like controls. */
+
+:where(button, input:is([type="button"], [type="reset"], [type="submit"])),
+::file-selector-button {
+  appearance: button;
+}
+
+/* Remove Firefox's extra `:invalid` inner shadow. */
+
+:where(:-moz-ui-invalid) {
+  box-shadow: none;
+}
+
+/* Correct the cursor of the number spinner buttons in Safari. */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  block-size: auto;
+}
+
+/* Remove the inner padding of search inputs in Chrome and Safari on macOS. */
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+  1. Keep empty date/time inputs the same height in iOS Safari.
+  2. Allow text-align to apply to date/time inputs in iOS Safari.
+*/
+
+::-webkit-date-and-time-value {
+  min-block-size: 1lh; /* 1 */
+  text-align: inherit; /* 2 */
+}
+
+/* Keep date/time inputs from growing when set to `display: block` in Safari. */
+
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+
+/* Remove excess padding so date/time inputs match other controls' height. */
+
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field,
+::-webkit-datetime-edit-millisecond-field,
+::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+
+/* Center the datalist dropdown marker in Chrome. */
+
+::-webkit-calendar-picker-indicator {
+  line-height: 1;
+}
+
+/* Reset Firefox's inflated default placeholder opacity. The placeholder color
+   itself is set in the forms layer. */
+
+::placeholder {
+  opacity: 1;
+}
+
+/* Interactive
+  * ========================================================================== */
+
+/* Add the correct list-item display for the disclosure triangle in Safari. */
+
+:where(summary) {
+  display: list-item;
+}
+
+/* Restore centering the universal margin reset stripped from dialogs. */
+
+:where(dialog) {
+  margin: auto;
+}
+
+/* Add the correct vertical alignment in Chrome and Firefox. */
+
+:where(progress) {
+  vertical-align: baseline;
+}
+
+/* Accessibility
+  * ========================================================================== */
+
+/* Signal in-progress regions with a busy cursor. */
+
+:where([aria-busy="true"]) {
+  cursor: progress;
+}
+
+/* Signal non-interactive controls with a blocked cursor. */
+
+:where([aria-disabled="true"], [disabled]) {
+  cursor: not-allowed;
+}
+
+/* Keep `hidden` elements hidden against any author styles (except the
+   find-in-page reveal). The one sanctioned `!important` in Marx. */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none !important;
+}

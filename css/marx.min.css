@@ -1,637 +1,716 @@
-/*! Marx v4.1.1 - The classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
-*,
-:after,
-:before {
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-}
-:after,
-:before {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-:where(:root) {
-  cursor: default;
-  line-height: 1.5;
-  overflow-wrap: break-word;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-:where(body) {
-  margin: 0;
-}
-:where(h1) {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-:where(dl, ol, ul) :where(dl, ol, ul) {
-  margin: 0;
-}
-:where(hr) {
-  color: inherit;
-  height: 0;
-}
-:where(nav) :where(ol, ul) {
-  list-style-type: none;
-  padding: 0;
-}
-:where(nav li):before {
-  content: "\200B";
-  float: left;
-}
-:where(pre) {
-  font-family: monospace;
-  font-size: 1em;
-  overflow: auto;
-}
-:where(abbr[title]) {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-}
-:where(b, strong) {
-  font-weight: bolder;
-}
-:where(code, kbd, samp) {
-  font-family: monospace;
-  font-size: 1em;
-}
-:where(small) {
-  font-size: 80%;
-}
-:where(audio, canvas, iframe, img, svg, video) {
-  vertical-align: middle;
-}
-:where(iframe) {
-  border-style: none;
-}
-:where(svg:not([fill])) {
-  fill: currentColor;
-}
-:where(table) {
-  border-collapse: collapse;
-  border-color: currentColor;
-  text-indent: 0;
-}
-:where(button, input, select) {
-  margin: 0;
-}
-:where(button, [type="button" i], [type="reset" i], [type="submit" i]) {
-  -webkit-appearance: button;
-}
-:where(fieldset) {
-  border: 1px solid #a0a0a0;
-}
-:where(progress) {
-  vertical-align: baseline;
-}
-:where(textarea) {
-  margin: 0;
-  resize: vertical;
-}
-:where([type="search" i]) {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-:where(dialog) {
-  background-color: #fff;
-  border: solid;
-  color: #000;
-  height: -moz-fit-content;
-  height: fit-content;
-  left: 0;
-  margin: auto;
-  padding: 1em;
-  position: absolute;
-  right: 0;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-:where(dialog:not([open])) {
-  display: none;
-}
-:where(details > summary:first-of-type) {
-  display: list-item;
-}
-:where([aria-busy="true" i]) {
-  cursor: progress;
-}
-:where([aria-disabled="true" i], [disabled]) {
-  cursor: not-allowed;
-}
-:where([aria-hidden="false" i][hidden]) {
-  display: initial;
-}
-:where([aria-hidden="false" i][hidden]:not(:focus)) {
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
-}
-:root {
-  --br: 4px;
-  --xs-pad: 4px;
-  --sm-pad: 8px;
-  --md-pad: 16px;
-  --lg-pad: 20px;
-  --xlg-pad: 40px;
-  --sm-breakpoint: 400px;
-  --lg-breakpoint: 768px;
-  --primary-400: #60a5fa;
-  --primary: #3b82f6;
-  --primary-600: #2563eb;
-  --accent: #64ffda;
-  --red: #f43f5e;
-  --red-600: #dc2626;
-  --yellow: #eab308;
-  --grey: #f7f7f9;
-  --white: #fff;
-  --black: #000;
-  --text: rgba(0, 0, 0, 0.8);
-  --secondary: rgba(0, 0, 0, 0.54);
-  --disabled: rgba(0, 0, 0, 0.38);
-  --dividers: rgba(0, 0, 0, 0.12);
-  --link-color: var(--primary);
-  --link-hover-color: var(--primary-600);
-  --sans-serif:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --serif: Georgia, Times, "Times New Roman", serif;
-  --monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-  --font-family: var(--sans-serif);
-  --font-size-base: 16px;
-  --font-size-xs: 8px;
-  --font-size-sm: 14px;
-  --font-size-h1: 40px;
-  --font-size-h2: 32px;
-  --font-size-h3: 28px;
-  --font-size-h4: 24px;
-  --font-size-h5: 20px;
-  --font-size-h6: 16px;
-  --line-height-base: 1.5;
-  --border: 1px solid var(--dividers);
-}
-article,
-aside,
-details,
-footer,
-header,
-main,
-section,
-summary {
-  margin: 0 auto;
-  margin-bottom: var(--md-pad);
-  width: 100%;
-}
-main {
-  display: block;
-  margin: 0 auto;
-  max-width: var(--lg-breakpoint);
-  padding: 0 var(--md-pad) var(--md-pad);
-}
-footer {
-  border-top: var(--border);
-  padding: var(--md-pad) 0;
-  text-align: center;
-}
-footer p {
-  margin-bottom: 0;
-}
-hr {
-  border: 0;
-  border-top: var(--border);
-  display: block;
-  margin-top: var(--md-pad);
-  margin-bottom: var(--md-pad);
-  width: 100%;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: baseline;
-}
-@media screen and (max-width: var(--sm-breakpoint)) {
-  article,
-  aside,
-  section {
-    clear: both;
+/*! Marx — the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+@layer marx.base {
+  :where(:root) {
+    color-scheme: light dark;
+    --marx-leading: 1.5;
+    --marx-flow: 1.25rem;
+    --marx-measure: 48rem;
+    --marx-radius: 0.25rem;
+    --marx-space-2xs: 0.25rem;
+    --marx-space-xs: 0.5rem;
+    --marx-space-sm: 0.75rem;
+    --marx-space-md: 1rem;
+    --marx-space-lg: 1.25rem;
+    --marx-space-xl: 2.5rem;
+    --marx-text-sm: 0.875rem;
+    --marx-text-base: 1rem;
+    --marx-text-h1: 2.5rem;
+    --marx-text-h2: 2rem;
+    --marx-text-h3: 1.75rem;
+    --marx-text-h4: 1.5rem;
+    --marx-text-h5: 1.25rem;
+    --marx-text-h6: 1rem;
+    --marx-font-sans:
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+    --marx-font-serif: Georgia, Times, "Times New Roman", serif;
+    --marx-font-mono:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --marx-font-body: var(--marx-font-sans);
+    --marx-bg: light-dark(oklch(100% 0 0), oklch(18% 0.01 260));
+    --marx-text: light-dark(oklch(0% 0 0/0.8), oklch(100% 0 0/0.87));
+    --marx-muted: light-dark(oklch(0% 0 0/0.54), oklch(100% 0 0/0.6));
+    --marx-disabled: light-dark(oklch(0% 0 0/0.38), oklch(100% 0 0/0.42));
+    --marx-border: light-dark(oklch(0% 0 0/0.12), oklch(100% 0 0/0.16));
+    --marx-surface: light-dark(oklch(97.5% 0.002 280), oklch(24% 0.01 260));
+    --marx-primary: oklch(54.6% 0.245 262.9);
+    --marx-primary-strong: oklch(48.8% 0.243 264.4);
+    --marx-on-primary: oklch(100% 0 0);
+    --marx-link: light-dark(oklch(54.6% 0.245 262.9), oklch(70.7% 0.165 254.6));
+    --marx-link-hover: light-dark(
+      oklch(48.8% 0.243 264.4),
+      oklch(80.9% 0.105 251.8)
+    );
+    --marx-ring: light-dark(oklch(54.6% 0.245 262.9), oklch(70.7% 0.165 254.6));
+    --marx-danger: light-dark(oklch(57.7% 0.245 27.3), oklch(70.4% 0.191 22.2));
+    --marx-mark: oklab(86% -0.0148165 0.169353/0.4);
+  }
+  *,
+  :before,
+  :after,
+  ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+  ::file-selector-button {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+  :where(html, :host) {
+    line-height: var(--marx-leading);
+    font-family: var(--marx-font-body);
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    -webkit-tap-highlight-color: transparent;
+    overflow-wrap: break-word;
+    scrollbar-gutter: stable;
+  }
+  :where(b, strong) {
+    font-weight: bolder;
+  }
+  :where(code, kbd, samp, pre) {
+    font-family: var(--marx-font-mono);
+    font-size: 1em;
+  }
+  :where(small) {
+    font-size: 80%;
+  }
+  :where(sub, sup) {
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+  :where(sub) {
+    inset-block-end: -0.25em;
+  }
+  :where(sup) {
+    inset-block-start: -0.5em;
+  }
+  :where(abbr[title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  :where(hr) {
+    block-size: 0;
+    color: inherit;
+    border-block-start-width: 1px;
+  }
+  :where(table) {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :where(img, svg, video, canvas, audio, iframe, embed, object) {
+    vertical-align: middle;
     display: block;
-    max-width: 100%;
   }
-  img {
-    margin-right: var(--md-pad);
+  :where(img, video) {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+  :where(svg:not([fill])) {
+    fill: currentColor;
+  }
+  :where(button, input, select, optgroup, textarea) {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+  ::file-selector-button {
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+  :where(select:is([multiple], [size]) optgroup) {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size]) optgroup option) {
+    padding-inline-start: 20px;
+  }
+  :where(textarea) {
+    resize: vertical;
+  }
+  :where(button, input:is([type="button"], [type="reset"], [type="submit"])) {
+    appearance: button;
+  }
+  ::file-selector-button {
+    appearance: button;
+  }
+  :where(:-moz-ui-invalid) {
+    box-shadow: none;
+  }
+  ::-webkit-inner-spin-button {
+    block-size: auto;
+  }
+  ::-webkit-outer-spin-button {
+    block-size: auto;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-block-size: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-year-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-month-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-day-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-hour-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-minute-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-second-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-millisecond-field {
+    padding-block: 0;
+  }
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  :where(summary) {
+    display: list-item;
+  }
+  :where(dialog) {
+    margin: auto;
+  }
+  :where(progress) {
+    vertical-align: baseline;
+  }
+  :where([aria-busy="true"]) {
+    cursor: progress;
+  }
+  :where([aria-disabled="true"], [disabled]) {
+    cursor: not-allowed;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
   }
 }
-embed,
-iframe,
-video {
-  border: 0;
+@layer marx.content {
+  :where(body) {
+    background-color: var(--marx-bg);
+    color: var(--marx-text);
+    font-family: var(--marx-font-body);
+    font-size: var(--marx-text-base);
+    line-height: var(--marx-leading);
+    min-block-size: 100svh;
+  }
+  :where(main) {
+    max-inline-size: var(--marx-measure);
+    padding-inline: var(--marx-space-md);
+    margin-inline: auto;
+    padding-block-end: var(--marx-space-md);
+    display: block;
+  }
+  :where(header, footer, article, section, aside) {
+    margin-block-start: var(--marx-flow);
+  }
+  :where(footer) {
+    border-block-start: 1px solid var(--marx-border);
+    padding-block: var(--marx-space-md);
+    text-align: center;
+  }
+  :where(hr) {
+    border: 0;
+    border-block-start: 1px solid var(--marx-border);
+    margin-block-start: calc(var(--marx-flow) * 2);
+  }
+  :where(img, video, iframe, embed, object) {
+    margin-block-start: var(--marx-flow);
+  }
+  :where(img, video) {
+    border-radius: var(--marx-radius);
+  }
+  :where(dialog) {
+    background-color: canvas;
+    background-color: var(--marx-bg);
+    color: var(--marx-text);
+    border: 1px solid var(--marx-border);
+    border-radius: var(--marx-radius);
+    padding: var(--marx-space-lg);
+    max-inline-size: min(90vw, 32rem);
+  }
+  :where(dialog)::backdrop {
+    background-color: oklab(0% none none/0.4);
+  }
+  :where([popover]) {
+    background-color: canvas;
+    background-color: var(--marx-bg);
+    color: var(--marx-text);
+    border: 1px solid var(--marx-border);
+    border-radius: var(--marx-radius);
+    padding: var(--marx-space-lg);
+    margin: auto;
+  }
+  :where(details) {
+    margin-block-start: var(--marx-flow);
+  }
+  :where(summary) {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  :where(summary):focus-visible {
+    outline: 2px solid var(--marx-ring);
+    outline-offset: 2px;
+  }
+  @media print {
+    :where(pre, blockquote, table, figure, img) {
+      break-inside: avoid;
+    }
+    :where(h1, h2, h3, h4, h5, h6) {
+      break-after: avoid;
+    }
+  }
+  :where(h1, h2, h3, h4, h5, h6) {
+    color: inherit;
+    text-wrap: balance;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  :where(h1) {
+    font-size: var(--marx-text-h1);
+  }
+  :where(h2) {
+    font-size: var(--marx-text-h2);
+  }
+  :where(h3) {
+    font-size: var(--marx-text-h3);
+  }
+  :where(h4) {
+    font-size: var(--marx-text-h4);
+  }
+  :where(h5) {
+    font-size: var(--marx-text-h5);
+  }
+  :where(h6) {
+    font-size: var(--marx-text-h6);
+  }
+  :where(h1, h2) {
+    margin-block-start: calc(var(--marx-flow) * 1.5);
+  }
+  :where(h3, h4, h5, h6) {
+    margin-block-start: var(--marx-flow);
+  }
+  :where(p) {
+    text-wrap: pretty;
+    margin-block-start: var(--marx-flow);
+  }
+  :where(a) {
+    color: var(--marx-link);
+    text-decoration-line: underline;
+    -webkit-text-decoration-color: color-mix(
+      in oklab,
+      currentColor 30%,
+      transparent
+    );
+    text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
+    text-underline-offset: 0.15em;
+  }
+  :where(a:hover) {
+    color: var(--marx-link-hover);
+    text-decoration-color: currentColor;
+  }
+  :where(a:focus-visible) {
+    outline: 2px solid var(--marx-ring);
+    outline-offset: 2px;
+    border-radius: var(--marx-radius);
+  }
+  :where(small) {
+    color: var(--marx-muted);
+  }
+  :where(mark) {
+    background-color: var(--marx-mark);
+    color: inherit;
+    border-radius: var(--marx-radius);
+    padding-block: 0.05em;
+    padding-inline: 0.15em;
+  }
+  :where(del, s) {
+    color: var(--marx-muted);
+    text-decoration-line: line-through;
+  }
+  :where(u, ins) {
+    text-decoration-line: underline;
+  }
+  :where(abbr[title]) {
+    text-underline-offset: 0.2em;
+    cursor: help;
+  }
+  :where(ul) {
+    list-style-type: disc;
+  }
+  :where(ul ul) {
+    list-style-type: circle;
+  }
+  :where(ul ul ul) {
+    list-style-type: square;
+  }
+  :where(ol) {
+    list-style-type: decimal;
+  }
+  :where(ol[type="a" i]) {
+    list-style-type: lower-alpha;
+  }
+  :where(ol[type="i" i]) {
+    list-style-type: lower-roman;
+  }
+  :where(ol[type="A" s]) {
+    list-style-type: upper-alpha;
+  }
+  :where(ol[type="I" s]) {
+    list-style-type: upper-roman;
+  }
+  :where(ul, ol) {
+    margin-block-start: var(--marx-flow);
+    padding-inline-start: 1.5em;
+  }
+  :where(li) {
+    margin-block-start: var(--marx-space-xs);
+    padding-inline-start: 0.4em;
+  }
+  :where(li)::marker {
+    color: var(--marx-muted);
+  }
+  :where(li > ul, li > ol) {
+    margin-block-start: 0;
+  }
+  :where(nav) :where(ol, ul) {
+    padding: 0;
+    list-style-type: none;
+  }
+  :where(nav li):before {
+    content: "​";
+    float: inline-start;
+  }
+  :where(dl) {
+    margin-block-start: var(--marx-flow);
+  }
+  :where(dt) {
+    margin-block-start: var(--marx-space-md);
+    font-weight: 700;
+  }
+  :where(dd) {
+    color: var(--marx-muted);
+    margin-block-start: var(--marx-space-2xs);
+    margin-inline-start: var(--marx-space-md);
+  }
+  :where(blockquote) {
+    border-inline-start: 2px solid var(--marx-border);
+    font-family: var(--marx-font-serif);
+    margin-block-start: var(--marx-flow);
+    margin-inline: 0;
+    padding-inline-start: var(--marx-space-md);
+    font-style: italic;
+  }
+  :where(:not(pre) > code) {
+    background-color: var(--marx-surface);
+    border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
+    padding-block: 0.125em;
+    padding-inline: 0.3em;
+    font-size: 0.875em;
+  }
+  :where(:is(h1, h2, h3, h4) code) {
+    font-size: 0.9em;
+  }
+  :where(pre) {
+    background-color: var(--marx-surface);
+    font-size: var(--marx-text-sm);
+    tab-size: 2;
+    border-radius: var(--marx-radius);
+    padding-block: var(--marx-space-sm);
+    padding-inline: var(--marx-space-md);
+    margin-block-start: var(--marx-flow);
+    line-height: 1.5;
+    overflow-x: auto;
+  }
+  :where(pre code) {
+    font-size: inherit;
+    background-color: #0000;
+    border-radius: 0;
+    padding: 0;
+  }
+  :where(kbd) {
+    border: 1px solid var(--marx-border);
+    border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
+    border-block-end-width: 2px;
+    padding-block: 0.0625em;
+    padding-inline: 0.35em;
+    font-family: inherit;
+    font-size: 0.85em;
+  }
+  :where(figure) {
+    margin-block-start: var(--marx-flow);
+    margin-inline: 0;
+  }
+  :where(figcaption) {
+    color: var(--marx-muted);
+    font-family: var(--marx-font-serif);
+    font-size: var(--marx-text-sm);
+    margin-block-start: var(--marx-space-xs);
+  }
+  :where([id]) {
+    scroll-margin-block-start: var(--marx-flow);
+  }
+  :where(:is(h1, h2, h3, h4, h5, h6) + *) {
+    margin-block-start: var(--marx-space-md);
+  }
+  :where(table) {
+    font-variant-numeric: tabular-nums;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-block-start: 1px solid var(--marx-border);
+    border-block-end: 1px solid var(--marx-border);
+    inline-size: 100%;
+    margin-block-start: var(--marx-flow);
+  }
+  :where(caption) {
+    caption-side: bottom;
+    padding-block: var(--marx-space-sm);
+    color: var(--marx-muted);
+    font-size: var(--marx-text-sm);
+  }
+  :where(thead th) {
+    text-align: start;
+    border-block-end: 2px solid var(--marx-border);
+  }
+  :where(th, td) {
+    padding-block: var(--marx-space-sm);
+    padding-inline: var(--marx-space-md);
+    text-align: start;
+    vertical-align: top;
+  }
+  :where(tbody, tfoot) :where(td, th) {
+    border-block-start: 1px solid var(--marx-border);
+  }
+  :where(tbody:first-of-type tr:first-child) :where(td, th) {
+    border-block-start: 0;
+  }
+  :where(tfoot td) {
+    color: var(--marx-muted);
+    font-size: var(--marx-text-sm);
+  }
+  :where(th[align="center"], td[align="center"]) {
+    text-align: center;
+  }
+  :where(th[align="right"], td[align="right"]) {
+    text-align: end;
+  }
+  :where(
+      dialog,
+      [popover],
+      td,
+      th,
+      li,
+      dd,
+      blockquote,
+      figure,
+      fieldset,
+      footer
+    )
+    > :where(:first-child) {
+    margin-block-start: 0;
+  }
 }
-progress {
-  background-repeat: repeat;
-}
-body {
-  color: var(--text);
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-p {
-  margin: 0;
-  margin-bottom: var(--md-pad);
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: inherit;
-  font-family: inherit;
-  line-height: 1.2;
-  font-weight: 500;
-}
-h1 {
-  font-size: var(--font-size-h1);
-}
-h1,
-h2 {
-  margin: var(--lg-pad) 0 var(--md-pad);
-}
-h2 {
-  font-size: var(--font-size-h2);
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h3,
-h4 {
-  margin: var(--md-pad) 0 var(--xs-pad);
-}
-h4 {
-  font-size: var(--font-size-h4);
-}
-h5 {
-  font-size: var(--font-size-h5);
-}
-h5,
-h6 {
-  margin: var(--md-pad) 0 var(--xs-pad);
-}
-h6 {
-  font-size: var(--font-size-h6);
-}
-small {
-  color: var(--secondary);
-  vertical-align: bottom;
-}
-pre {
-  background-color: var(--grey);
-  display: block;
-  margin: var(--md-pad) 0;
-  padding: var(--md-pad);
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-}
-code,
-pre {
-  color: var(--text);
-  font-family: var(--monospace);
-  font-size: var(--font-size-base);
-}
-code {
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  background-color: transparent;
-}
-a:focus,
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-dl {
-  margin-bottom: var(--md-pad);
-}
-dd {
-  margin-left: var(--xlg-pad);
-}
-ol,
-ul {
-  margin-bottom: var(--sm-pad);
-  padding-left: var(--xlg-pad);
-  vertical-align: baseline;
-}
-blockquote {
-  border-left: 2px solid var(--text);
-  font-style: italic;
-  margin: var(--md-pad) 0;
-  padding-left: var(--md-pad);
-}
-blockquote,
-figcaption {
-  font-family: var(--serif);
-}
-u {
-  text-decoration: underline;
-}
-s {
-  text-decoration: line-through;
-}
-sup {
-  vertical-align: super;
-}
-sub,
-sup {
-  font-size: var(--font-size-sm);
-}
-sub {
-  vertical-align: sub;
-}
-mark {
-  background-color: var(--yellow);
-}
-input[type="date"],
-input[type="datetime-local"],
-input[type="datetime"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-select,
-textarea {
-  background: var(--white);
-  background-clip: padding-box;
-  border: var(--border);
-  border-radius: var(--br);
-  color: var(--text);
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-  padding: var(--sm-pad) var(--md-pad);
-  line-height: 1.5;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  font-family: var(--sans-serif);
-  word-break: normal;
-}
-input[type="color"] {
-  background-color: var(--white);
-  display: inline-block;
-  vertical-align: middle;
-}
-input:not([type]),
-input[type="color"] {
-  border: var(--border);
-  border-radius: var(--br);
-}
-input:not([type]) {
-  -webkit-appearance: none;
-  background: var(--white);
-  background-clip: padding-box;
-  color: var(--text);
-  display: block;
-  width: 100%;
-  padding: var(--sm-pad) var(--md-pad);
-  line-height: 1.5;
-  transition:
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  text-align: left;
-  word-break: normal;
-}
-input:not([type]):focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime-local"]:focus,
-input[type="datetime"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus,
-select:focus,
-textarea:focus {
-  background-color: var(--white);
-  border-color: var(--primary-400);
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
-}
-input[type="checkbox"]:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus {
-  outline: 1px thin var(--dividers);
-}
-input:not([type])[disabled],
-input[type="color"][disabled],
-input[type="date"][disabled],
-input[type="datetime-local"][disabled],
-input[type="datetime"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
-input[type="password"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="text"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled],
-select[disabled],
-textarea[disabled] {
-  background-color: var(--dividers);
-  color: var(--secondary);
-  cursor: not-allowed;
-  opacity: 1;
-}
-input[readonly],
-select[readonly],
-textarea[readonly] {
-  border-color: var(--dividers);
-  color: var(--secondary);
-}
-input:focus:invalid,
-select:focus:invalid,
-textarea:focus:invalid {
-  border-color: var(--red-600);
-  color: var(--red);
-}
-input[type="checkbox"]:focus:invalid:focus,
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus {
-  outline-color: var(--red);
-}
-input[type="file"]::file-selector-button:hover {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
-}
-select {
-  border: var(--border);
-  vertical-align: sub;
-}
-select:not([size]):not([multiple]) {
-  height: calc(2.25rem + 2px);
-}
-select[multiple] {
-  height: auto;
-}
-label {
-  display: inline-block;
-  line-height: 2;
-}
-fieldset {
-  border: 0;
-  margin: 0;
-}
-fieldset,
-legend {
-  padding: var(--sm-pad) 0;
-}
-legend {
-  border-bottom: var(--border);
-  color: var(--text);
-  display: block;
-  margin-bottom: var(--sm-pad);
-  width: 100%;
-}
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-  display: inline;
-}
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background-color: var(--primary);
-  border-radius: var(--br);
-  color: var(--white);
-  padding: var(--sm-pad) var(--md-pad);
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-}
-button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-  padding: 0;
-}
-button:hover,
-button:not(:disabled):active,
-input[type="button"]:hover,
-input[type="button"]:not(:disabled):active,
-input[type="reset"]:hover,
-input[type="reset"]:not(:disabled):active,
-input[type="submit"]:hover,
-input[type="submit"]:not(:disabled):active {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
-  color: var(--white);
-}
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
-}
-button:disabled,
-input[type="button"]:disabled,
-input[type="reset"]:disabled,
-input[type="submit"]:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: var(--white);
-}
-table {
-  border-top: var(--border);
-  margin-bottom: var(--md-pad);
-}
-caption {
-  padding: var(--sm-pad) 0;
-}
-thead th {
-  border: 0;
-  border-bottom: 2px solid var(--dividers);
-  text-align: left;
-}
-tr {
-  margin-bottom: var(--sm-pad);
-}
-td,
-th {
-  border-bottom: var(--border);
-  padding: var(--md-pad);
-  vertical-align: inherit;
-}
-tfoot tr {
-  text-align: left;
-}
-tfoot td {
-  color: var(--secondary);
-  font-size: var(--font-size-xs);
-  font-style: italic;
-  padding: var(--md-pad) var(--xs-pad);
+@layer marx.forms {
+  :where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"]
+  ) {
+    background-color: var(--marx-primary);
+    border-radius: var(--marx-radius);
+    color: var(--marx-on-primary);
+    padding: var(--marx-space-xs) var(--marx-space-md);
+    font-weight: 400;
+    font-size: var(--marx-text-base);
+    line-height: var(--marx-leading);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    border: 1px solid #0000;
+    display: inline-block;
+  }
+  :where(
+    button:not(:disabled),
+    input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
+  ):hover,
+  :where(
+    button:not(:disabled),
+    input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
+  ):active {
+    background-color: var(--marx-primary-strong);
+    border-color: var(--marx-primary-strong);
+  }
+  :where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"]
+  ):focus-visible {
+    outline: 2px solid var(--marx-ring);
+    outline-offset: 2px;
+  }
+  :where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"]
+  ):disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :where(
+      button,
+      input[type="submit"],
+      input[type="reset"],
+      input[type="button"]
+    ) {
+      transition:
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        color 0.15s ease-in-out;
+    }
+  }
+  :where(
+    input:not(
+      [type="button"],
+      [type="submit"],
+      [type="reset"],
+      [type="checkbox"],
+      [type="radio"],
+      [type="range"],
+      [type="file"],
+      [type="color"],
+      [type="image"]
+    ),
+    select,
+    textarea
+  ) {
+    inline-size: 100%;
+    padding: var(--marx-space-xs) var(--marx-space-md);
+    font-size: var(--marx-text-base);
+    line-height: var(--marx-leading);
+    color: var(--marx-text);
+    background-color: var(--marx-bg);
+    border: 1px solid var(--marx-border);
+    border-radius: var(--marx-radius);
+    display: block;
+    &:user-invalid {
+      border-color: var(--marx-danger);
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      transition: border-color 0.15s ease-in-out;
+    }
+  }
+  :where(input, select, textarea):focus-visible {
+    outline: 2px solid var(--marx-ring);
+    outline-offset: 2px;
+  }
+  :where(input, select, textarea):disabled {
+    color: var(--marx-disabled);
+    cursor: not-allowed;
+    background-color: var(--marx-surface);
+  }
+  :where(input, select, textarea)[readonly] {
+    color: var(--marx-muted);
+    border-color: var(--marx-border);
+  }
+  :where(textarea) {
+    field-sizing: content;
+    min-block-size: 5lh;
+  }
+  :where(
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="range"],
+    progress,
+    meter
+  ) {
+    accent-color: var(--marx-primary);
+  }
+  :where(input[type="color"]) {
+    block-size: 2.5rem;
+    inline-size: 3rem;
+    padding: var(--marx-space-2xs);
+    background-color: var(--marx-bg);
+    border: 1px solid var(--marx-border);
+    border-radius: var(--marx-radius);
+  }
+  :where(input[type="file"])::file-selector-button {
+    padding: var(--marx-space-xs) var(--marx-space-md);
+    color: var(--marx-on-primary);
+    cursor: pointer;
+    background-color: var(--marx-primary);
+    border-radius: var(--marx-radius);
+    border: 1px solid #0000;
+    margin-inline-end: var(--marx-space-md);
+  }
+  :where(input[type="file"])::file-selector-button:hover {
+    background-color: var(--marx-primary-strong);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :where(input[type="file"])::file-selector-button {
+      transition: background-color 0.15s ease-in-out;
+    }
+  }
+  ::placeholder {
+    color: var(--marx-muted);
+  }
+  :where(label) {
+    line-height: var(--marx-leading);
+    display: inline-block;
+  }
+  :where(fieldset) {
+    padding: var(--marx-space-md);
+    border: 1px solid var(--marx-border);
+    border-radius: var(--marx-radius);
+  }
+  :where(legend) {
+    padding-inline: var(--marx-space-xs);
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=marx.min.css.map */

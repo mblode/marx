@@ -1,71 +1,113 @@
-main,
-header,
-footer,
-article,
-section,
-aside,
-details,
-summary {
-  margin: 0 auto;
-  margin-bottom: var(--md-pad);
-  width: 100%;
+/* Document & page layout — content layer.
+ * The preflight layer already zeroes margins/padding, resets borders, and makes
+ * media `display: block; max-inline-size: 100%`. This file only adds Marx's look
+ * (centered column, one-directional flow rhythm, styled rules/media/overlays). */
+
+:where(body) {
+  background-color: var(--marx-bg);
+  color: var(--marx-text);
+  font-family: var(--marx-font-body);
+  font-size: var(--marx-text-base);
+  line-height: var(--marx-leading);
+  /* Defensive: keep the background/footer sensible on short pages. `svh`
+   * ignores mobile browser-chrome collapse so it never overflows. */
+  min-block-size: 100svh;
 }
 
-main {
+/* Centered reading column. */
+:where(main) {
   display: block;
-  margin: 0 auto;
-  max-width: var(--lg-breakpoint);
-  padding: 0 var(--md-pad) var(--md-pad);
+  margin-inline: auto;
+  max-inline-size: var(--marx-measure);
+  padding-inline: var(--marx-space-md);
+  padding-block-end: var(--marx-space-md);
 }
 
-footer {
-  border-top: var(--border);
-  padding: var(--md-pad) 0;
+/* Sectioning flow: one-directional rhythm (typeset pattern). The preflight
+ * reset already zeroed margins, so only the top margin is set. */
+:where(header, footer, article, section, aside) {
+  margin-block-start: var(--marx-flow);
+}
+
+:where(footer) {
+  border-block-start: 1px solid var(--marx-border);
+  padding-block: var(--marx-space-md);
   text-align: center;
 }
 
-footer p {
-  margin-bottom: 0;
-}
-
-hr {
+/* Thematic break. Typeset gives rules extra breathing room. Preflight already
+ * normalizes hr height/color/border, so no content-box/height hacks here. */
+:where(hr) {
   border: 0;
-  border-top: var(--border);
-  display: block;
-  margin-top: var(--md-pad);
-  margin-bottom: var(--md-pad);
-  width: 100%;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  border-block-start: 1px solid var(--marx-border);
+  margin-block-start: calc(var(--marx-flow) * 2);
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: baseline;
+/* Media in the content flow. Preflight makes these block-level and
+ * width-constrained; here they earn flow spacing. Rounded corners on img/video
+ * are a new Marx v5 look decision (borrowed from the typeset pattern). */
+:where(img, video, iframe, embed, object) {
+  margin-block-start: var(--marx-flow);
 }
 
-@media screen and (max-width: var(--sm-breakpoint)) {
-  article,
-  section,
-  aside {
-    clear: both;
-    display: block;
-    max-width: 100%;
+:where(img, video) {
+  border-radius: var(--marx-radius);
+}
+
+/* Modal dialog. Preflight restores the UA `margin: auto` centering; this is the
+ * surface treatment. The `Canvas` fallback keeps overlays opaque in browsers
+ * too old for `light-dark()` tokens. */
+:where(dialog) {
+  background-color: Canvas;
+  background-color: var(--marx-bg);
+  color: var(--marx-text);
+  border: 1px solid var(--marx-border);
+  border-radius: var(--marx-radius);
+  padding: var(--marx-space-lg);
+  max-inline-size: min(90vw, 32rem);
+}
+
+/* No backdrop token exists; a plain dark scrim works in both schemes. */
+:where(dialog)::backdrop {
+  background-color: color-mix(in oklab, oklch(0% 0 0) 40%, transparent);
+}
+
+/* Popovers get the same surface, positioned by the UA. Kept as its own rule so
+ * an unsupported `[popover]` selector can't take down the dialog styles.
+ * `margin: auto` restores the UA centering the universal reset stripped. */
+:where([popover]) {
+  margin: auto;
+  background-color: Canvas;
+  background-color: var(--marx-bg);
+  color: var(--marx-text);
+  border: 1px solid var(--marx-border);
+  border-radius: var(--marx-radius);
+  padding: var(--marx-space-lg);
+}
+
+/* Disclosure. */
+:where(details) {
+  margin-block-start: var(--marx-flow);
+}
+
+:where(summary) {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+:where(summary):focus-visible {
+  outline: 2px solid var(--marx-ring);
+  outline-offset: 2px;
+}
+
+/* Print: keep self-contained blocks whole and headings attached to their
+ * content (typeset pattern). */
+@media print {
+  :where(pre, blockquote, table, figure, img) {
+    break-inside: avoid;
   }
 
-  img {
-    margin-right: var(--md-pad);
+  :where(h1, h2, h3, h4, h5, h6) {
+    break-after: avoid;
   }
-}
-
-embed,
-iframe,
-video {
-  border: 0;
-}
-
-progress {
-  background-repeat: repeat;
 }

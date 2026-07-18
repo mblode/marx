@@ -1,14 +1,13 @@
 <!doctype html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    HTML 5 Test Page (https://github.com/cbracco/html5-test-page) with Marx
-    (SCSS)
+    HTML5 Test Page (https://github.com/cbracco/html5-test-page) with Marx
   </title>
-  <meta name="description" content="The stylish CSS reset.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/marx.min.css">
+  <meta name="description" content="The classless CSS framework." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/marx.min.css" />
 </head>
 <body>
   <main>
@@ -44,6 +43,9 @@
               <li><a href="#embedded__canvas">Canvas</a></li>
               <li><a href="#embedded__meter">Meter</a></li>
               <li><a href="#embedded__progress">Progress</a></li>
+              <li><a href="#embedded__details">Details</a></li>
+              <li><a href="#embedded__dialog">Dialog</a></li>
+              <li><a href="#embedded__popover">Popover</a></li>
               <li><a href="#embedded__svg">Inline SVG</a></li>
               <li><a href="#embedded__iframe">IFrames</a></li>
             </ul>
@@ -54,6 +56,7 @@
               <li><a href="#forms__input">Input fields</a></li>
               <li><a href="#forms__select">Select menus</a></li>
               <li><a href="#forms__checkbox">Checkboxes</a></li>
+              <li><a href="#forms__tasklist">Task list</a></li>
               <li><a href="#forms__radio">Radio buttons</a></li>
               <li><a href="#forms__textareas">Textareas</a></li>
               <li><a href="#forms__html5">HTML5 inputs</a></li>
@@ -156,7 +159,7 @@
               <h1>Horizontal rules</h1>
             </header>
             <div>
-              <hr>
+              <hr />
             </div>
             <footer>
               <p><a href="#top">[Top]</a></p>
@@ -167,7 +170,9 @@
               <h1>Tabular data</h1>
             </header>
             <table>
-              <caption>Table Caption</caption>
+              <caption>
+                Table Caption
+              </caption>
               <thead>
                 <tr>
                   <th>Table Heading 1</th>
@@ -239,7 +244,8 @@
                 <samp>This is sample output from a computer program.</samp>
               </p>
               <h2>Pre-formatted text</h2>
-              <pre>P R E F O R M A T T E D T E X T
+              <pre>
+P R E F O R M A T T E D T E X T
   ! " # $ % &amp; ' ( ) * + , - . /
   0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
   @ A B C D E F G H I J K L M N O
@@ -277,15 +283,9 @@
                 <del>This text is deleted</del> and
                 <ins>This text is inserted</ins>.
               </p>
-              <p>
-                <s>This text has a strikethrough</s>.
-              </p>
-              <p>
-                Superscript<sup>®</sup>.
-              </p>
-              <p>
-                Subscript for things like H<sub>2</sub>O.
-              </p>
+              <p><s>This text has a strikethrough</s>.</p>
+              <p>Superscript<sup>®</sup>.</p>
+              <p>Subscript for things like H<sub>2</sub>O.</p>
               <p>
                 <small>This small text is small for for fine print, etc.</small>
               </p>
@@ -303,12 +303,8 @@
               <p>
                 <cite>This is a citation.</cite>
               </p>
-              <p>
-                The <dfn>dfn element</dfn> indicates a definition.
-              </p>
-              <p>
-                The <mark>mark element</mark> indicates a highlight.
-              </p>
+              <p>The <dfn>dfn element</dfn> indicates a definition.</p>
+              <p>The <mark>mark element</mark> indicates a highlight.</p>
               <p>
                 The <var>variable element</var>, such as <var>x</var> =
                 <var>y</var>.
@@ -333,25 +329,23 @@
               <h2>Images</h2>
             </header>
             <div>
-              <h3>
-                No <code>&lt;figure&gt;</code> element
-              </h3>
+              <h3>No <code>&lt;figure&gt;</code> element</h3>
               <p>
-                <img src="https://picsum.photos/480/480" alt="Image alt text">
+                <img src="https://picsum.photos/480/480" alt="Image alt text" />
               </p>
               <h3>
                 Wrapped in a <code>&lt;figure&gt;</code> element, no
                 <code>&lt;figcaption&gt;</code>
               </h3>
               <figure>
-                <img src="https://picsum.photos/420/420" alt="Image alt text">
+                <img src="https://picsum.photos/420/420" alt="Image alt text" />
               </figure>
               <h3>
                 Wrapped in a <code>&lt;figure&gt;</code> element, with a
                 <code>&lt;figcaption&gt;</code>
               </h3>
               <figure>
-                <img src="https://picsum.photos/420/420" alt="Image alt text">
+                <img src="https://picsum.photos/420/420" alt="Image alt text" />
                 <figcaption>Here is a caption for this image.</figcaption>
               </figure>
             </div>
@@ -414,6 +408,62 @@
               <p><a href="#top">[Top]</a></p>
             </footer>
           </article>
+          <article id="embedded__details">
+            <header>
+              <h2>Details</h2>
+            </header>
+            <div>
+              <details>
+                <summary>Summary — click to expand</summary>
+                <p>
+                  The <code>&lt;details&gt;</code> element is a native
+                  disclosure widget: no JavaScript required.
+                </p>
+              </details>
+              <details open>
+                <summary>Open by default</summary>
+                <p>This one uses the <code>open</code> attribute.</p>
+              </details>
+            </div>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+          </article>
+          <article id="embedded__dialog">
+            <header>
+              <h2>Dialog</h2>
+            </header>
+            <div>
+              <dialog open>
+                <p>
+                  A <code>&lt;dialog open&gt;</code> renders inline so its
+                  styling is visible without JavaScript.
+                </p>
+              </dialog>
+            </div>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+          </article>
+          <article id="embedded__popover">
+            <header>
+              <h2>Popover</h2>
+            </header>
+            <div>
+              <button type="button" popovertarget="popover-demo">
+                Toggle popover
+              </button>
+              <div id="popover-demo" popover>
+                <p>
+                  This box uses the native <code>popover</code> attribute,
+                  toggled by the button above — still no JavaScript.
+                </p>
+              </div>
+            </div>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+          </article>
           <article id="embedded__svg">
             <header>
               <h2>Inline SVG</h2>
@@ -448,7 +498,7 @@
               <legend>Input fields</legend>
               <p>
                 <label for="input__text">Text Input</label>
-                <input id="input__text" type="text" placeholder="Text Input">
+                <input id="input__text" type="text" placeholder="Text Input" />
               </p>
               <p>
                 <label for="input__password">Password</label>
@@ -456,7 +506,7 @@
                   id="input__password"
                   type="password"
                   placeholder="Type your Password"
-                >
+                />
               </p>
               <p>
                 <label for="input__webaddress">Web Address</label>
@@ -464,7 +514,7 @@
                   id="input__webaddress"
                   type="url"
                   placeholder="http://yoursite.com"
-                >
+                />
               </p>
               <p>
                 <label for="input__emailaddress">Email Address</label>
@@ -472,7 +522,7 @@
                   id="input__emailaddress"
                   type="email"
                   placeholder="name@email.com"
-                >
+                />
               </p>
               <p>
                 <label for="input__phone">Phone Number</label>
@@ -480,7 +530,7 @@
                   id="input__phone"
                   type="tel"
                   placeholder="(999) 999-9999"
-                >
+                />
               </p>
               <p>
                 <label for="input__search">Search</label>
@@ -488,7 +538,7 @@
                   id="input__search"
                   type="search"
                   placeholder="Enter Search Term"
-                >
+                />
               </p>
               <p>
                 <label for="input__text2">Number Input</label>
@@ -496,7 +546,7 @@
                   id="input__text2"
                   type="number"
                   placeholder="Enter a Number"
-                >
+                />
               </p>
               <p>
                 <label for="input__text3" class="error">Error</label>
@@ -505,7 +555,7 @@
                   class="is-error"
                   type="text"
                   placeholder="Text Input"
-                >
+                />
               </p>
               <p>
                 <label for="input__text4" class="valid">Valid</label>
@@ -514,7 +564,7 @@
                   class="is-valid"
                   type="text"
                   placeholder="Text Input"
-                >
+                />
               </p>
             </fieldset>
             <footer>
@@ -546,20 +596,46 @@
                       name="checkbox"
                       type="checkbox"
                       checked="checked"
-                    >
+                    />
                     Choice A
                   </label>
                 </li>
                 <li>
                   <label for="checkbox2">
-                    <input id="checkbox2" name="checkbox" type="checkbox">
+                    <input id="checkbox2" name="checkbox" type="checkbox" />
                     Choice B
                   </label>
                 </li>
                 <li>
                   <label for="checkbox3">
-                    <input id="checkbox3" name="checkbox" type="checkbox">
+                    <input id="checkbox3" name="checkbox" type="checkbox" />
                     Choice C
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <footer>
+              <p><a href="#top">[Top]</a></p>
+            </footer>
+            <fieldset id="forms__tasklist">
+              <legend>Task list</legend>
+              <ul class="list list--bare">
+                <li>
+                  <label for="task1">
+                    <input id="task1" name="task" type="checkbox" checked />
+                    Write the docs
+                  </label>
+                </li>
+                <li>
+                  <label for="task2">
+                    <input id="task2" name="task" type="checkbox" checked />
+                    Ship the demo
+                  </label>
+                </li>
+                <li>
+                  <label for="task3">
+                    <input id="task3" name="task" type="checkbox" />
+                    Take a break
                   </label>
                 </li>
               </ul>
@@ -578,19 +654,29 @@
                       type="radio"
                       class="radio"
                       checked="checked"
-                    >
+                    />
                     Option 1
                   </label>
                 </li>
                 <li>
                   <label for="radio2">
-                    <input id="radio2" name="radio" type="radio" class="radio">
+                    <input
+                      id="radio2"
+                      name="radio"
+                      type="radio"
+                      class="radio"
+                    />
                     Option 2
                   </label>
                 </li>
                 <li>
                   <label for="radio3">
-                    <input id="radio3" name="radio" type="radio" class="radio">
+                    <input
+                      id="radio3"
+                      name="radio"
+                      type="radio"
+                      class="radio"
+                    />
                     Option 3
                   </label>
                 </li>
@@ -618,39 +704,43 @@
               <legend>HTML5 inputs</legend>
               <p>
                 <label for="ic">Color input</label>
-                <input type="color" id="ic" value="#000000">
+                <input type="color" id="ic" value="#000000" />
               </p>
               <p>
                 <label for="if">File input</label>
-                <input type="file" id="if">
+                <input type="file" id="if" />
               </p>
               <p>
                 <label for="in">Number input</label>
-                <input type="number" id="in" min="0" max="10" value="5">
+                <input type="number" id="in" min="0" max="10" value="5" />
               </p>
               <p>
                 <label for="ir">Range input</label>
-                <input type="range" id="ir" value="10">
+                <input type="range" id="ir" value="10" />
               </p>
               <p>
                 <label for="idd">Date input</label>
-                <input type="date" id="idd" value="1970-01-01">
+                <input type="date" id="idd" value="1970-01-01" />
               </p>
               <p>
                 <label for="idm">Month input</label>
-                <input type="month" id="idm" value="1970-01">
+                <input type="month" id="idm" value="1970-01" />
               </p>
               <p>
                 <label for="idw">Week input</label>
-                <input type="week" id="idw" value="1970-W01">
+                <input type="week" id="idw" value="1970-W01" />
               </p>
               <p>
                 <label for="idt">Datetime input</label>
-                <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+                <input type="datetime" id="idt" value="1970-01-01T00:00:00Z" />
               </p>
               <p>
                 <label for="idtl">Datetime-local input</label>
-                <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+                <input
+                  type="datetime-local"
+                  id="idtl"
+                  value="1970-01-01T00:00"
+                />
               </p>
             </fieldset>
             <footer>
@@ -659,10 +749,10 @@
             <fieldset id="forms__action">
               <legend>Action buttons</legend>
               <p>
-                <input type="submit" value="<input type=submit>">
-                <input type="button" value="<input type=button>">
-                <input type="reset" value="<input type=reset>">
-                <input type="submit" value="<input disabled>" disabled>
+                <input type="submit" value="<input type=submit>" />
+                <input type="button" value="<input type=button>" />
+                <input type="reset" value="<input type=reset>" />
+                <input type="submit" value="<input disabled>" disabled />
               </p>
               <p>
                 <button type="submit">&lt;button type=submit&gt;</button>

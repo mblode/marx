@@ -1,68 +1,70 @@
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-  background-color: var(--primary);
-  border: var(--primary);
-  border-radius: var(--br);
-  color: var(--white);
-  padding: var(--sm-pad) var(--md-pad);
+:where(
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"]
+) {
+  background-color: var(--marx-primary);
+  border: 1px solid transparent;
+  border-radius: var(--marx-radius);
+  color: var(--marx-on-primary);
+  padding: var(--marx-space-xs) var(--marx-space-md);
   display: inline-block;
   font-weight: 400;
+  font-size: var(--marx-text-base);
+  line-height: var(--marx-leading);
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: 1px solid transparent;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  /* Skip the 300ms tap delay on touch devices. */
+  touch-action: manipulation;
 }
 
-input[type="submit"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  padding: 0;
+/* `:not(:disabled)` inside `:where()` keeps the guard at zero specificity. */
+:where(
+  button:not(:disabled),
+  input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
+):hover,
+:where(
+  button:not(:disabled),
+  input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
+):active {
+  background-color: var(--marx-primary-strong);
+  border-color: var(--marx-primary-strong);
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
-  color: var(--white);
+:where(
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"]
+):focus-visible {
+  outline: 2px solid var(--marx-ring);
+  outline-offset: 2px;
 }
 
-input[type="submit"]:not(:disabled):active,
-input[type="reset"]:not(:disabled):active,
-input[type="button"]:not(:disabled):active,
-button:not(:disabled):active {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
-  color: var(--white);
-}
-
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus,
-button:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
-}
-
-input[type="submit"]:disabled,
-input[type="reset"]:disabled,
-input[type="button"]:disabled,
-button:disabled {
+:where(
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"]
+):disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: var(--white);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"]
+  ) {
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      color 0.15s ease-in-out;
+  }
 }

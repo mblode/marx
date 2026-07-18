@@ -1,36 +1,57 @@
-table {
-  border-top: var(--border);
-  margin-bottom: var(--md-pad);
+:where(table) {
+  margin-block-start: var(--marx-flow);
+  inline-size: 100%;
+  font-variant-numeric: tabular-nums;
+  /* separate + zero spacing so cell-borne row rules sit flush (append-safe) */
+  border-collapse: separate;
+  border-spacing: 0;
+  /* marx keeps a top rule; typeset closes the bottom */
+  border-block-start: 1px solid var(--marx-border);
+  border-block-end: 1px solid var(--marx-border);
 }
 
-caption {
-  padding: var(--sm-pad) 0;
+:where(caption) {
+  caption-side: bottom;
+  padding-block: var(--marx-space-sm);
+  color: var(--marx-muted);
+  font-size: var(--marx-text-sm);
 }
 
-thead th {
-  border: 0;
-  border-bottom: 2px solid var(--dividers);
-  text-align: left;
+/* No `white-space: nowrap` on headers — classless tables have no scroll
+   wrapper, so wide tables must be allowed to wrap instead of overflow. */
+:where(thead th) {
+  text-align: start;
+  /* stronger header rule, marx-style */
+  border-block-end: 2px solid var(--marx-border);
 }
 
-tr {
-  margin-bottom: var(--sm-pad);
+:where(th, td) {
+  padding-block: var(--marx-space-sm);
+  padding-inline: var(--marx-space-md);
+  text-align: start;
+  vertical-align: top;
 }
 
-th,
-td {
-  border-bottom: var(--border);
-  padding: var(--md-pad);
-  vertical-align: inherit;
+/* Row separators ride on cells, not tr/:last-child, so appended rows inherit them. */
+:where(tbody, tfoot) :where(td, th) {
+  border-block-start: 1px solid var(--marx-border);
 }
 
-tfoot tr {
-  text-align: left;
+/* First body row already sits under the table top rule (or thead's 2px rule),
+   so drop its own top border to avoid a doubled line. */
+:where(tbody:first-of-type tr:first-child) :where(td, th) {
+  border-block-start: 0;
 }
 
-tfoot td {
-  color: var(--secondary);
-  font-size: var(--font-size-xs);
-  font-style: italic;
-  padding: var(--md-pad) var(--xs-pad);
+:where(tfoot td) {
+  color: var(--marx-muted);
+  font-size: var(--marx-text-sm);
+}
+
+/* Honour HTML alignment attributes, mapped to logical values. */
+:where(th[align="center"], td[align="center"]) {
+  text-align: center;
+}
+:where(th[align="right"], td[align="right"]) {
+  text-align: end;
 }

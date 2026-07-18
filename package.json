@@ -38,45 +38,61 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mblode/marx.git"
+    "url": "git+https://github.com/mblode/marx.git"
   },
+  "style": "./css/marx.min.css",
   "files": [
     "css",
     "src",
     "LICENSE.md"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "css/marx.min.css",
+  "exports": {
+    ".": "./css/marx.min.css",
+    "./marx.css": "./css/marx.css",
+    "./marx.min.css": "./css/marx.min.css",
+    "./css/*": "./css/*",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "npm run build:dev && npm run build:min",
-    "build:dev": "postcss src/marx.css -o css/marx.css",
-    "build:min": "postcss src/marx.css -o css/marx.min.css --env production --map",
-    "watch": "postcss src/marx.css -o css/marx.css --watch",
+    "build:dev": "lightningcss --bundle --browserslist src/marx.css -o css/marx.css",
+    "build:min": "cd css && lightningcss --bundle --browserslist --minify --sourcemap ../src/marx.css -o marx.min.css",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "format": "oxfmt --write .",
     "format:check": "oxfmt .",
     "changeset": "changeset",
     "release": "changeset publish",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && npm run format:check && npm run build && npx publint",
     "prepare": "lefthook install || true"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@types/node": "^26.1.1",
-    "autoprefixer": "^10.5.2",
     "browserslist": "^4.28.6",
-    "cssnano": "^8.0.2",
     "lefthook": "^2.1.10",
+    "lightningcss-cli": "^1.32.0",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.73.0",
-    "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.1",
+    "publint": "^0.3.21",
     "ultracite": "7.9.3"
   },
   "overrides": {
     "@types/node": "^26.1.1"
   },
   "browserslist": [
-    "defaults"
+    "chrome >= 123",
+    "edge >= 123",
+    "firefox >= 120",
+    "safari >= 17.5",
+    "ios_saf >= 17.5",
+    "and_chr >= 123",
+    "and_ff >= 120",
+    "samsung >= 27",
+    "opera >= 109"
   ]
 }

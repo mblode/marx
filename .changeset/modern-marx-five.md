@@ -1,0 +1,21 @@
+---
+"marx-css": major
+---
+
+Marx 5: a ground-up modernization for the 2026 web, borrowing patterns from Tailwind CSS Preflight v4.3 and shadcn/ui typeset.
+
+**Highlights**
+
+- Automatic light/dark mode via `color-scheme` + `light-dark()` — force a scheme with `:root { color-scheme: light }` (or `dark`).
+- Zero specificity: every rule is wrapped in `:where()` inside cascade layers (`marx.base`, `marx.content`, `marx.forms`), so any consumer CSS overrides Marx.
+- New `--marx-*` design-token API (oklch colors, `rem` type scale) replaces the old unprefixed variables — see the migration table in the README.
+- Modern preflight-style base replaces the vendored sanitize.css snapshot.
+- Typeset-style rhythm: one-directional `margin-block-start` flow, logical properties throughout (RTL-ready), `text-wrap: balance`/`pretty`, styled `dialog`/`[popover]`/`kbd`, accent-colored native controls, `field-sizing` textareas.
+- Accessibility: `:focus-visible` outlines everywhere (no more removed outlines), `:user-invalid` instead of `:invalid`, transitions gated behind `prefers-reduced-motion`, print styles, WCAG AA-checked palette in both schemes.
+- Build swapped from PostCSS to Lightning CSS; package gains `exports`/`style`/`sideEffects` fields.
+
+**Breaking changes**
+
+- Theming variables renamed (`--md-pad` → `--marx-space-md`, `--link-color` → `--marx-link`, …) — full table in the README.
+- Pages now follow the OS dark-mode preference by default; add `:root { color-scheme: light }` to keep v4's always-light look.
+- Links are subtly underlined; type scale is `rem`-based; browser floor is Baseline 2024 (Chrome/Edge 123+, Firefox 120+, Safari 17.5+), with older browsers degrading to a readable light theme.
