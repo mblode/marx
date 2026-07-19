@@ -6,39 +6,32 @@
 
     No JavaScript. No classes. Just raw HTML that looks good.
 
-Drop one stylesheet onto a page of plain, semantic HTML and it turns
-drop-dead gorgeous — no class names, no build step, no config. Marx v5 is a
-ground-up rewrite for the modern web: automatic light/dark mode, a tidy
-`--marx-*` theming API, and **zero specificity**, so any CSS you write always
-wins.
+Add one stylesheet to plain, semantic HTML and the page styles itself. No class
+names, no build step, no config. Marx 5 is a full rewrite: automatic light and
+dark mode, a small `--marx-*` theming API, and **zero specificity**, so any CSS
+you write wins.
 
 ## Is Marx for you?
 
-Marx is for any project (especially small ones) where you'd rather write
-content than wire up a component library. Prose sites, docs, prototypes,
-side-project landing pages, HTML emails' cousins — anywhere raw HTML should
-just look right. Use it straight from the minified box, or retheme it with a
-handful of custom properties.
+Marx is for small projects where you'd rather write content than wire up a
+component library: prose sites, docs, prototypes, quick landing pages. Use it
+straight from the box, or retheme it with a few custom properties.
 
 ## Key features
 
-- **Zero classes** — it already works with the HTML you have.
-- **Automatic dark mode** via `color-scheme` + `light-dark()`. No toggle, no JS.
-- **Zero specificity** — every rule is wrapped in `:where()` inside cascade
-  layers, so your own CSS overrides Marx without a specificity fight or a single
-  `!important`.
-- **Modern base** — a compact, modern-preflight-style reset means modern
-  browsers render consistently.
-- **Themeable** — one flat set of `--marx-*` custom properties is the whole API.
-- **Modern CSS** — logical properties (RTL-ready), `rem`-based type scale,
-  `:focus-visible` outlines, and motion gated behind `prefers-reduced-motion`.
+- **Zero classes:** it works with the HTML you already have.
+- **Automatic dark mode** with `color-scheme` and `light-dark()`. No toggle, no JS.
+- **Zero specificity:** every rule is wrapped in `:where()` inside cascade
+  layers, so your CSS overrides Marx without a fight or a single `!important`.
+- **Modern base:** a small, modern reset so browsers render consistently.
+- **Themeable:** one set of `--marx-*` custom properties is the whole API.
+- **Modern CSS:** logical properties (RTL-ready), a `rem` type scale,
+  `:focus-visible` outlines, and motion behind `prefers-reduced-motion`.
 - It just works.
 
 ## [Demo](https://mblode.github.io/marx/)
 
 ## Quick start
-
-Pick whichever suits your setup.
 
 ### npm
 
@@ -60,12 +53,12 @@ With any bundler that reads the `exports` field (Vite, webpack, esbuild, …):
 import "marx-css";
 ```
 
-That resolves to the minified stylesheet — no path to remember.
+That loads the minified stylesheet.
 
 ## Dark mode
 
 Dark mode is automatic. Marx sets `color-scheme: light dark` and defines its
-colors with `light-dark()`, so the page follows the visitor's OS/browser
+colors with `light-dark()`, so the page follows the visitor's OS or browser
 preference with no toggle and no JavaScript.
 
 Force a single scheme by overriding `color-scheme` on the root in your own CSS:
@@ -77,10 +70,10 @@ Force a single scheme by overriding `color-scheme` on the root in your own CSS:
 
 ## Theming
 
-The entire theming API is the `--marx-*` custom properties below. Override any
-of them in your own (unlayered) CSS — because Marx lives in cascade layers, your
-values always win. Colors use `light-dark()`, so set both schemes at once or
-just change the value you care about.
+The whole theming API is the `--marx-*` custom properties below. Override any
+of them in your own (unlayered) CSS. Because Marx lives in cascade layers, your
+values win. Colors use `light-dark()`, so set both schemes at once or just
+change the value you care about.
 
 | Token | Purpose |
 |---|---|
@@ -88,9 +81,9 @@ just change the value you care about.
 | `--marx-flow` | Vertical rhythm between block elements (`1.25rem`) |
 | `--marx-measure` | Max content width of `main` (`48rem`) |
 | `--marx-radius` | Corner radius for controls and surfaces |
-| `--marx-space-2xs … -xl` | Spacing scale (`0.25`–`2.5rem`) |
+| `--marx-space-2xs … -xl` | Spacing scale (`0.25rem` to `2.5rem`) |
 | `--marx-text-sm / -base` | Body type sizes |
-| `--marx-text-h1 … -h6` | Heading sizes (`2.5rem` → `1rem`) |
+| `--marx-text-h1 … -h6` | Heading sizes (`2.5rem` to `1rem`) |
 | `--marx-font-sans / -serif / -mono` | Font stacks |
 | `--marx-font-body` | Font applied to `body` (defaults to sans) |
 | `--marx-bg` | Page background |
@@ -106,7 +99,7 @@ just change the value you care about.
 | `--marx-danger` | Error/invalid feedback |
 | `--marx-mark` | `<mark>` highlight |
 
-Example — a warmer accent and roomier corners:
+Example, a warmer accent and rounder corners:
 
 ```css
 :root {
@@ -152,8 +145,7 @@ Example — a warmer accent and roomier corners:
 
 ## What's included
 
-Installing `marx-css` gives you the compiled stylesheets plus the authored
-source:
+Installing `marx-css` gives you the compiled stylesheets plus the source:
 
 ```
 .
@@ -164,7 +156,7 @@ source:
 │   ├── marx.min.css    # minified build (the one you ship)
 │   └── marx.min.css.map
 └── src                 # authored partials, bundled by Lightning CSS
-    ├── marx.css        # entry — declares the @layer order
+    ├── marx.css        # entry: declares the @layer order
     ├── _tokens.css     # the --marx-* theming API
     ├── _preflight.css  # cross-browser reset
     ├── _base.css
@@ -177,10 +169,9 @@ source:
 ## Browser support
 
 Marx targets Baseline 2024 browsers: Chrome/Edge 123+, Firefox 120+, and
-Safari 17.5+ (all released by early 2024). Older browsers still get a readable
-page — `color-scheme` keeps text legible in both light and dark, and buttons
-keep their color — they just lose the finer theming (token-driven borders and
-surface tints).
+Safari 17.5+. Older browsers still get a readable page: `color-scheme` keeps
+text legible in light and dark, and buttons keep their color. They just lose
+the finer theming like token-driven borders and surface tints.
 
 ## Building from source
 
