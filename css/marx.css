@@ -5,14 +5,14 @@
     --marx-leading: 1.5;
     --marx-flow: 1.25rem;
     --marx-measure: 48rem;
-    --marx-radius: 0.25rem;
-    --marx-space-2xs: 0.25rem;
-    --marx-space-xs: 0.5rem;
-    --marx-space-sm: 0.75rem;
+    --marx-radius: .25rem;
+    --marx-space-2xs: .25rem;
+    --marx-space-xs: .5rem;
+    --marx-space-sm: .75rem;
     --marx-space-md: 1rem;
     --marx-space-lg: 1.25rem;
     --marx-space-xl: 2.5rem;
-    --marx-text-sm: 0.875rem;
+    --marx-text-sm: .875rem;
     --marx-text-base: 1rem;
     --marx-text-h1: 2.5rem;
     --marx-text-h2: 2rem;
@@ -20,38 +20,30 @@
     --marx-text-h4: 1.5rem;
     --marx-text-h5: 1.25rem;
     --marx-text-h6: 1rem;
-    --marx-font-sans:
-      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol", "Noto Color Emoji";
+    --marx-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
     --marx-font-serif: Georgia, Times, "Times New Roman", serif;
-    --marx-font-mono:
-      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-      "Courier New", monospace;
+    --marx-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
     --marx-font-body: var(--marx-font-sans);
-    --marx-bg: light-dark(oklch(100% 0 0), oklch(18% 0.01 260));
-    --marx-text: light-dark(oklch(0% 0 0 / 0.8), oklch(100% 0 0 / 0.87));
-    --marx-muted: light-dark(oklch(0% 0 0 / 0.54), oklch(100% 0 0 / 0.6));
-    --marx-disabled: light-dark(oklch(0% 0 0 / 0.38), oklch(100% 0 0 / 0.42));
-    --marx-border: light-dark(oklch(0% 0 0 / 0.12), oklch(100% 0 0 / 0.16));
-    --marx-surface: light-dark(oklch(97.5% 0.002 280), oklch(24% 0.01 260));
-    --marx-primary: oklch(54.6% 0.245 262.9);
-    --marx-primary-strong: oklch(48.8% 0.243 264.4);
+    --marx-bg: light-dark(oklch(100% 0 0), oklch(18% .01 260));
+    --marx-text: light-dark(oklch(0% 0 0 / .8), oklch(100% 0 0 / .87));
+    --marx-muted: light-dark(oklch(0% 0 0 / .54), oklch(100% 0 0 / .6));
+    --marx-disabled: light-dark(oklch(0% 0 0 / .38), oklch(100% 0 0 / .42));
+    --marx-border: light-dark(oklch(0% 0 0 / .12), oklch(100% 0 0 / .16));
+    --marx-surface: light-dark(oklch(97.5% .002 280), oklch(24% .01 260));
+    --marx-primary: oklch(54.6% .245 262.9);
+    --marx-primary-strong: oklch(48.8% .243 264.4);
     --marx-on-primary: oklch(100% 0 0);
-    --marx-link: light-dark(oklch(54.6% 0.245 262.9), oklch(70.7% 0.165 254.6));
-    --marx-link-hover: light-dark(
-      oklch(48.8% 0.243 264.4),
-      oklch(80.9% 0.105 251.8)
-    );
-    --marx-ring: light-dark(oklch(54.6% 0.245 262.9), oklch(70.7% 0.165 254.6));
-    --marx-danger: light-dark(oklch(57.7% 0.245 27.3), oklch(70.4% 0.191 22.2));
-    --marx-mark: oklab(86% -0.0148165 0.169353 / 0.4);
+    --marx-link: light-dark(oklch(54.6% .245 262.9), oklch(70.7% .165 254.6));
+    --marx-link-hover: light-dark(oklch(48.8% .243 264.4), oklch(80.9% .105 251.8));
+    --marx-ring: light-dark(oklch(54.6% .245 262.9), oklch(70.7% .165 254.6));
+    --marx-danger: light-dark(oklch(57.7% .245 27.3), oklch(70.4% .191 22.2));
+    --marx-mark: oklab(86% -.0148165 .169353 / .4);
   }
 
-  *,
-  :before,
-  :after,
-  ::backdrop {
+  *, :before, :after, ::backdrop {
     box-sizing: border-box;
     border: 0 solid;
     margin: 0;
@@ -96,11 +88,11 @@
   }
 
   :where(sub) {
-    inset-block-end: -0.25em;
+    inset-block-end: -.25em;
   }
 
   :where(sup) {
-    inset-block-start: -0.5em;
+    inset-block-start: -.5em;
   }
 
   :where(abbr[title]) {
@@ -323,7 +315,7 @@
   }
 
   :where(dialog)::backdrop {
-    background-color: oklab(0% none none / 0.4);
+    background-color: oklab(0% none none / .4);
   }
 
   :where([popover]) {
@@ -407,13 +399,9 @@
   :where(a) {
     color: var(--marx-link);
     text-decoration-line: underline;
-    -webkit-text-decoration-color: color-mix(
-      in oklab,
-      currentColor 30%,
-      transparent
-    );
+    -webkit-text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
     text-decoration-color: color-mix(in oklab, currentColor 30%, transparent);
-    text-underline-offset: 0.15em;
+    text-underline-offset: .15em;
   }
 
   :where(a:hover) {
@@ -435,8 +423,8 @@
     background-color: var(--marx-mark);
     color: inherit;
     border-radius: var(--marx-radius);
-    padding-block: 0.05em;
-    padding-inline: 0.15em;
+    padding-block: .05em;
+    padding-inline: .15em;
   }
 
   :where(del, s) {
@@ -449,7 +437,7 @@
   }
 
   :where(abbr[title]) {
-    text-underline-offset: 0.2em;
+    text-underline-offset: .2em;
     cursor: help;
   }
 
@@ -492,7 +480,7 @@
 
   :where(li) {
     margin-block-start: var(--marx-space-xs);
-    padding-inline-start: 0.4em;
+    padding-inline-start: .4em;
   }
 
   :where(li)::marker {
@@ -539,14 +527,14 @@
 
   :where(:not(pre) > code) {
     background-color: var(--marx-surface);
-    border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
-    padding-block: 0.125em;
-    padding-inline: 0.3em;
-    font-size: 0.875em;
+    border-radius: min(calc(var(--marx-radius) * .6), .35em);
+    padding-block: .125em;
+    padding-inline: .3em;
+    font-size: .875em;
   }
 
   :where(:is(h1, h2, h3, h4) code) {
-    font-size: 0.9em;
+    font-size: .9em;
   }
 
   :where(pre) {
@@ -570,12 +558,12 @@
 
   :where(kbd) {
     border: 1px solid var(--marx-border);
-    border-radius: min(calc(var(--marx-radius) * 0.6), 0.35em);
+    border-radius: min(calc(var(--marx-radius) * .6), .35em);
     border-block-end-width: 2px;
-    padding-block: 0.0625em;
-    padding-inline: 0.35em;
+    padding-block: .0625em;
+    padding-inline: .35em;
     font-family: inherit;
-    font-size: 0.85em;
+    font-size: .85em;
   }
 
   :where(figure) {
@@ -648,30 +636,13 @@
     text-align: end;
   }
 
-  :where(
-      dialog,
-      [popover],
-      td,
-      th,
-      li,
-      dd,
-      blockquote,
-      figure,
-      fieldset,
-      footer
-    )
-    > :where(:first-child) {
+  :where(dialog, [popover], td, th, li, dd, blockquote, figure, fieldset, footer) > :where(:first-child) {
     margin-block-start: 0;
   }
 }
 
 @layer marx.forms {
-  :where(
-    button,
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"]
-  ) {
+  :where(button, input[type="submit"], input[type="reset"], input[type="button"]) {
     background-color: var(--marx-primary);
     border-radius: var(--marx-radius);
     color: var(--marx-on-primary);
@@ -690,67 +661,28 @@
     display: inline-block;
   }
 
-  :where(
-    button:not(:disabled),
-    input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
-  ):hover,
-  :where(
-    button:not(:disabled),
-    input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])
-  ):active {
+  :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):hover, :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):active {
     background-color: var(--marx-primary-strong);
     border-color: var(--marx-primary-strong);
   }
 
-  :where(
-    button,
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"]
-  ):focus-visible {
+  :where(button, input[type="submit"], input[type="reset"], input[type="button"]):focus-visible {
     outline: 2px solid var(--marx-ring);
     outline-offset: 2px;
   }
 
-  :where(
-    button,
-    input[type="submit"],
-    input[type="reset"],
-    input[type="button"]
-  ):disabled {
-    opacity: 0.65;
+  :where(button, input[type="submit"], input[type="reset"], input[type="button"]):disabled {
+    opacity: .65;
     cursor: not-allowed;
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    :where(
-      button,
-      input[type="submit"],
-      input[type="reset"],
-      input[type="button"]
-    ) {
-      transition:
-        background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out,
-        color 0.15s ease-in-out;
+    :where(button, input[type="submit"], input[type="reset"], input[type="button"]) {
+      transition: background-color .15s ease-in-out, border-color .15s ease-in-out, color .15s ease-in-out;
     }
   }
 
-  :where(
-    input:not(
-      [type="button"],
-      [type="submit"],
-      [type="reset"],
-      [type="checkbox"],
-      [type="radio"],
-      [type="range"],
-      [type="file"],
-      [type="color"],
-      [type="image"]
-    ),
-    select,
-    textarea
-  ) {
+  :where(input:not([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="color"], [type="image"]), select, textarea) {
     inline-size: 100%;
     padding: var(--marx-space-xs) var(--marx-space-md);
     font-size: var(--marx-text-base);
@@ -766,7 +698,7 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      transition: border-color 0.15s ease-in-out;
+      transition: border-color .15s ease-in-out;
     }
   }
 
@@ -791,13 +723,7 @@
     min-block-size: 5lh;
   }
 
-  :where(
-    input[type="checkbox"],
-    input[type="radio"],
-    input[type="range"],
-    progress,
-    meter
-  ) {
+  :where(input[type="checkbox"], input[type="radio"], input[type="range"], progress, meter) {
     accent-color: var(--marx-primary);
   }
 
@@ -826,7 +752,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     :where(input[type="file"])::file-selector-button {
-      transition: background-color 0.15s ease-in-out;
+      transition: background-color .15s ease-in-out;
     }
   }
 

@@ -63,12 +63,12 @@ so the browser rejects a tampered file:
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/marx-css@5.0.0/css/marx.min.css"
-  integrity="sha384-…"
+  integrity="sha384-noo+dE2BdMuqkmKxLP0ZPNcFFPome+kRF7f6RCI0q+F98DQ8qh1ZeUihv8n33wVl"
   crossorigin="anonymous"
 >
 ```
 
-Replace `sha384-…` with the hash for your pinned release — jsDelivr shows the
+When you pin a different release, swap in its hash — jsDelivr shows the
 current SRI hash for any file via its "SRI" link, so it always matches the exact
 version you pin.
 
