@@ -1,5 +1,11 @@
 # marx-css
 
+## 5.1.1
+
+### Patch Changes
+
+- 98fe33a: Tighten the README: shorter, plainer copy with every em dash removed. No code or API changes.
+
 ## 5.1.0
 
 ### Minor Changes
