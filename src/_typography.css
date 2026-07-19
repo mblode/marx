@@ -30,6 +30,12 @@
   font-size: var(--marx-text-h6);
 }
 
+/* Tighten tracking on display-size headings; large system sans looks loose
+   at its default spacing. */
+:where(h1, h2) {
+  letter-spacing: -0.01em;
+}
+
 /* h1/h2 open a section with more air than the sub-headings (old Marx cadence). */
 :where(h1, h2) {
   margin-block-start: calc(var(--marx-flow) * 1.5);

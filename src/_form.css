@@ -31,7 +31,7 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    transition: border-color 0.15s ease-in-out;
+    transition: border-color 0.15s ease;
   }
 }
 
@@ -142,7 +142,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   :where(input[type="file"])::file-selector-button {
-    transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease;
   }
 }
 

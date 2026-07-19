@@ -10,7 +10,7 @@
   color: var(--marx-on-primary);
   padding: var(--marx-space-xs) var(--marx-space-md);
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--marx-text-base);
   line-height: var(--marx-leading);
   text-align: center;
@@ -63,8 +63,8 @@
     input[type="button"]
   ) {
     transition:
-      background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out,
-      color 0.15s ease-in-out;
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
   }
 }

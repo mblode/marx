@@ -40,20 +40,43 @@
         width: 100%;
       }
       .site-nav ul {
-        padding: 16px 0;
+        padding: var(--marx-space-md) 0;
         margin: 0;
       }
       .site-nav li {
         display: inline;
-        padding: 0 16px;
+        padding: 0 var(--marx-space-md);
+      }
+      .site-nav a {
+        text-decoration: none;
+      }
+      .site-nav a:hover {
+        text-decoration: underline;
       }
       .site-nav .brand {
         font-size: 1.5rem;
+        font-weight: 600;
       }
       .hero {
+        text-align: center;
+        padding-block: var(--marx-space-xl);
         border-bottom: 1px solid var(--marx-border);
-        padding-bottom: 16px;
-        margin-bottom: 32px;
+        margin-bottom: var(--marx-space-xl);
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+      .hero .tagline {
+        font-size: var(--marx-text-h3);
+        font-weight: 500;
+      }
+      .hero .actions {
+        display: flex;
+        gap: var(--marx-space-sm);
+        justify-content: center;
+        margin-block-start: var(--marx-space-md);
       }
       .hero .button {
         background-color: var(--marx-primary);
@@ -61,9 +84,9 @@
         border-radius: var(--marx-radius);
         color: var(--marx-on-primary);
         display: inline-block;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.5;
-        padding: 0.375rem 0.75rem;
+        padding: 0.5rem 1rem;
         text-align: center;
         text-decoration: none;
         white-space: nowrap;
@@ -72,11 +95,20 @@
         background-color: var(--marx-primary-strong);
         border-color: var(--marx-primary-strong);
       }
+      .hero .button.secondary {
+        background-color: transparent;
+        color: var(--marx-link);
+        border-color: var(--marx-border);
+      }
+      .hero .button.secondary:hover {
+        background-color: var(--marx-surface);
+        border-color: var(--marx-border);
+      }
       @media (prefers-reduced-motion: no-preference) {
         .hero .button {
           transition:
-            background-color 0.15s ease-in-out,
-            border-color 0.15s ease-in-out;
+            background-color 0.15s ease,
+            border-color 0.15s ease;
         }
       }
       footer {
@@ -114,11 +146,11 @@
       </nav>
 
       <!-- Hero -->
-      <center class="hero">
+      <header class="hero">
         <h1>Marx</h1>
-        <h3>The classless CSS reset (perfect for Communists).</h3>
+        <p class="tagline">The classless CSS reset (perfect for Communists).</p>
         <p>No JavaScript. No Classes. Just raw CSS.</p>
-        <div>
+        <div class="actions">
           <a
             href="https://cdn.jsdelivr.net/npm/marx-css@5/css/marx.min.css"
             class="button"
@@ -128,25 +160,25 @@
           >
           <a
             href="https://github.com/mblode/marx"
-            class="button"
+            class="button secondary"
             target="_blank"
             rel="noopener"
             >GitHub</a
           >
         </div>
-      </center>
+      </header>
 
       <!-- About -->
-      <h3>Is Marx for you?</h3>
+      <h2>Is Marx for you?</h2>
       <p>
         Marx is a CSS stylesheet to be used in any projects (namely small ones).
-        If you don't need the weight of heavy frameworks or you would just like
-        to make an edible website quickly, Marx is perfect for you. Use it
+        If you don&rsquo;t need the weight of heavy frameworks or you would just
+        like to make an edible website quickly, Marx is perfect for you. Use it
         straight from the minified box, or retheme it with a handful of
         <code>--marx-*</code> custom properties.
       </p>
 
-      <h3>Key Features</h3>
+      <h2>Key Features</h2>
       <ul>
         <li>Zero classes, so it already works with your HTML.</li>
         <li>Automatic light and dark mode, no toggle and no JavaScript.</li>
@@ -246,12 +278,12 @@
           </header>
           <div>
             <p>
-              A paragraph (from the Greek paragraphos, "to write beside" or
-              "written beside") is a self-contained unit of a discourse in
-              writing dealing with a particular point or idea. A paragraph
-              consists of one or more sentences. Though not required by the
-              syntax of any language, paragraphs are usually an expected part of
-              formal writing, used to organize longer prose.
+              A paragraph (from the Greek paragraphos, &ldquo;to write
+              beside&rdquo; or &ldquo;written beside&rdquo;) is a self-contained
+              unit of a discourse in writing dealing with a particular point or
+              idea. A paragraph consists of one or more sentences. Though not
+              required by the syntax of any language, paragraphs are usually an
+              expected part of formal writing, used to organize longer prose.
             </p>
           </div>
           <footer>

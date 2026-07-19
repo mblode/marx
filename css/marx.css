@@ -4,8 +4,8 @@
     color-scheme: light dark;
     --marx-leading: 1.5;
     --marx-flow: 1.25rem;
-    --marx-measure: 48rem;
-    --marx-radius: .25rem;
+    --marx-measure: 42rem;
+    --marx-radius: .5rem;
     --marx-space-2xs: .25rem;
     --marx-space-xs: .5rem;
     --marx-space-sm: .75rem;
@@ -16,9 +16,9 @@
     --marx-text-base: 1rem;
     --marx-text-h1: 2.5rem;
     --marx-text-h2: 2rem;
-    --marx-text-h3: 1.75rem;
-    --marx-text-h4: 1.5rem;
-    --marx-text-h5: 1.25rem;
+    --marx-text-h3: 1.6rem;
+    --marx-text-h4: 1.35rem;
+    --marx-text-h5: 1.15rem;
     --marx-text-h6: 1rem;
     --marx-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -354,6 +354,46 @@
     }
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :where(html) {
+      scroll-behavior: smooth;
+    }
+
+    :where(dialog), :where([popover]) {
+      opacity: 1;
+      transition: opacity .2s ease,
+      transform .2s ease,
+      overlay .2s allow-discrete,
+      display .2s allow-discrete;
+      transform: scale(1);
+    }
+
+    :is(:where(dialog):not([open]), :where([popover]):not(:popover-open)) {
+      opacity: 0;
+      transform: scale(.97);
+    }
+
+    @starting-style {
+      :where(dialog[open]), :where([popover]:popover-open) {
+        opacity: 0;
+        transform: scale(.97);
+      }
+    }
+
+    :where(dialog[open])::backdrop {
+      opacity: 1;
+      transition: opacity .2s ease,
+      overlay .2s allow-discrete,
+      display .2s allow-discrete;
+    }
+
+    @starting-style {
+      :where(dialog[open])::backdrop {
+        opacity: 0;
+      }
+    }
+  }
+
   :where(h1, h2, h3, h4, h5, h6) {
     color: inherit;
     text-wrap: balance;
@@ -386,6 +426,7 @@
   }
 
   :where(h1, h2) {
+    letter-spacing: -.01em;
     margin-block-start: calc(var(--marx-flow) * 1.5);
   }
 
@@ -649,7 +690,7 @@
     border-radius: var(--marx-radius);
     color: var(--marx-on-primary);
     padding: var(--marx-space-xs) var(--marx-space-md);
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--marx-text-base);
     line-height: var(--marx-leading);
     text-align: center;
@@ -680,7 +721,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     :where(button, input[type="submit"], input[type="reset"], input[type="button"]) {
-      transition: background-color .15s ease-in-out, border-color .15s ease-in-out, color .15s ease-in-out;
+      transition: background-color .15s, border-color .15s, color .15s;
     }
   }
 
@@ -700,7 +741,7 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      transition: border-color .15s ease-in-out;
+      transition: border-color .15s;
     }
   }
 
@@ -798,7 +839,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     :where(input[type="file"])::file-selector-button {
-      transition: background-color .15s ease-in-out;
+      transition: background-color .15s;
     }
   }
 

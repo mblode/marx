@@ -111,3 +111,54 @@
     break-after: avoid;
   }
 }
+
+/* Motion — opt-in only, skipped entirely when the visitor prefers reduced
+ * motion (the whole block is inside the query, so the default is no motion). */
+@media (prefers-reduced-motion: no-preference) {
+  :where(html) {
+    scroll-behavior: smooth;
+  }
+
+  /* Dialog and popover fade + scale in from the top layer. `allow-discrete`
+   * animates the display/overlay switch so the exit isn't an instant cut;
+   * `@starting-style` gives the entrance a from-state. Degrades to instant
+   * show/hide where unsupported. */
+  :where(dialog),
+  :where([popover]) {
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      overlay 0.2s allow-discrete,
+      display 0.2s allow-discrete;
+  }
+
+  :where(dialog):not([open]),
+  :where([popover]):not(:popover-open) {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  @starting-style {
+    :where(dialog[open]),
+    :where([popover]:popover-open) {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+  }
+
+  :where(dialog[open])::backdrop {
+    opacity: 1;
+    transition:
+      opacity 0.2s ease,
+      overlay 0.2s allow-discrete,
+      display 0.2s allow-discrete;
+  }
+
+  @starting-style {
+    :where(dialog[open])::backdrop {
+      opacity: 0;
+    }
+  }
+}
