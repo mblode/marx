@@ -115,6 +115,19 @@
   background-color: var(--marx-success);
 }
 
+/* Single selects: swap the cramped native chevron for a roomy custom one.
+ * The mid-grey stroke reads on both light and dark surfaces (a background SVG
+ * can't follow a token color). Multi/size selects are list boxes, so they keep
+ * their native rendering. */
+:where(select:not([multiple], [size])) {
+  appearance: none;
+  padding-inline-end: var(--marx-space-xl);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--marx-space-md) center;
+  background-size: 1em;
+}
+
 /* Bordered swatch at a comfortable tappable size. */
 :where(input[type="color"]) {
   inline-size: 3rem;
