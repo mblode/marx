@@ -1,5 +1,11 @@
 # marx-css
 
+## 5.3.0
+
+### Minor Changes
+
+- 73bfa0d: A `<ul>` whose items contain a checkbox or radio now drops its bullets and indent automatically, so checkbox lists and task lists read as option groups instead of bulleted controls. Classless (no `.task-list` class needed), via `:has()`; browsers without `:has()` keep the bullets.
+
 ## 5.2.1
 
 ### Patch Changes
