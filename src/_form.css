@@ -61,14 +61,58 @@
 }
 
 /* Native controls that paint with the accent color. */
-:where(
-  input[type="checkbox"],
-  input[type="radio"],
-  input[type="range"],
-  progress,
-  meter
-) {
+:where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
   accent-color: var(--marx-primary);
+}
+
+/* Progress + meter — replace the native chrome with a clean Marx bar.
+ * Each vendor pseudo-element lives in its own rule: an engine that doesn't
+ * recognise one must not drop the others. */
+:where(progress, meter) {
+  appearance: none;
+  display: block;
+  inline-size: 100%;
+  block-size: var(--marx-space-xs);
+  border: 0;
+  border-radius: var(--marx-radius);
+  /* Track: the element background is the Firefox track and the fallback. */
+  background-color: var(--marx-surface);
+  /* Clip the fill to the rounded track. */
+  overflow: hidden;
+}
+
+:where(progress)::-webkit-progress-bar {
+  background-color: var(--marx-surface);
+}
+
+:where(progress)::-webkit-progress-value {
+  background-color: var(--marx-primary);
+}
+
+:where(progress)::-moz-progress-bar {
+  background-color: var(--marx-primary);
+}
+
+:where(meter)::-webkit-meter-bar {
+  background-color: var(--marx-surface);
+  border: 0;
+}
+
+:where(meter)::-webkit-meter-optimum-value {
+  background-color: var(--marx-success);
+}
+
+:where(meter)::-webkit-meter-suboptimum-value {
+  background-color: var(--marx-warning);
+}
+
+:where(meter)::-webkit-meter-even-less-good-value {
+  background-color: var(--marx-danger);
+}
+
+/* Firefox can't split the meter bands by pseudo-element; colour the fill green. */
+:where(meter)::-moz-meter-bar {
+  background-color: var(--marx-success);
 }
 
 /* Bordered swatch at a comfortable tappable size. */

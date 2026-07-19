@@ -49,28 +49,8 @@ npm install marx-css
 ### CDN
 
 ```html
-<!-- jsDelivr (recommended) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marx-css@5/css/marx.min.css">
-
-<!-- unpkg -->
-<link rel="stylesheet" href="https://unpkg.com/marx-css@5/css/marx.min.css">
 ```
-
-For production, pin an exact version and add [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
-so the browser rejects a tampered file:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/marx-css@5.0.0/css/marx.min.css"
-  integrity="sha384-noo+dE2BdMuqkmKxLP0ZPNcFFPome+kRF7f6RCI0q+F98DQ8qh1ZeUihv8n33wVl"
-  crossorigin="anonymous"
->
-```
-
-When you pin a different release, swap in its hash — jsDelivr shows the
-current SRI hash for any file via its "SRI" link, so it always matches the exact
-version you pin.
 
 ### Bundler
 
@@ -134,55 +114,6 @@ Example — a warmer accent and roomier corners:
   --marx-radius: 0.75rem;
 }
 ```
-
-## Migrating from v4
-
-v5 renames every variable under a `--marx-*` namespace and switches to a
-`rem`-based scale. If you customised v4 through its `--*` variables, remap them:
-
-| v4 variable | v5 token | Notes |
-|---|---|---|
-| `--link-color` | `--marx-link` | |
-| `--link-hover-color` | `--marx-link-hover` | |
-| `--primary` | `--marx-primary` | |
-| `--primary-600` | `--marx-primary-strong` | |
-| `--text` | `--marx-text` | |
-| `--secondary` | `--marx-muted` | |
-| `--disabled` | `--marx-disabled` | |
-| `--grey` | `--marx-surface` | |
-| `--dividers` | `--marx-border` | |
-| `--red` | `--marx-danger` | |
-| `--yellow` | `--marx-mark` | |
-| `--br` (`4px`) | `--marx-radius` (`0.25rem`) | |
-| `--xs-pad` (`4px`) | `--marx-space-2xs` (`0.25rem`) | |
-| `--sm-pad` (`8px`) | `--marx-space-xs` (`0.5rem`) | |
-| `--md-pad` (`16px`) | `--marx-space-md` (`1rem`) | |
-| `--lg-pad` (`20px`) | `--marx-space-lg` (`1.25rem`) | |
-| `--xlg-pad` (`40px`) | `--marx-space-xl` (`2.5rem`) | |
-| `--sans-serif` | `--marx-font-sans` | |
-| `--serif` | `--marx-font-serif` | |
-| `--monospace` | `--marx-font-mono` | |
-| `--font-family` | `--marx-font-body` | |
-| `--font-size-base` (`16px`) | `--marx-text-base` (`1rem`) | |
-| `--font-size-sm` (`14px`) | `--marx-text-sm` (`0.875rem`) | |
-| `--font-size-h1` (`40px`) | `--marx-text-h1` (`2.5rem`) | |
-| `--font-size-h2` … `--font-size-h6` | `--marx-text-h2` … `--marx-text-h6` | Now `2rem`, `1.75rem`, `1.5rem`, `1.25rem`, `1rem` |
-| `--font-size-base` / `--font-size-sm` | `--marx-text-base` / `--marx-text-sm` | |
-| `--line-height-base` | `--marx-leading` | |
-| `--accent` | — | Dropped (unused) |
-| `--sm-breakpoint` / `--lg-breakpoint` | `--marx-measure` | Dropped: a `var()` inside a media query never worked. `--marx-measure` now controls the layout width instead |
-
-Other breaking changes worth knowing:
-
-- **Automatic dark mode** — pages now respond to `prefers-color-scheme`. Force a
-  scheme with `:root { color-scheme: light }` if you relied on always-light.
-- **Links are subtly underlined** by default (accessibility), not color-only.
-- **`rem`-based scale** — sizes are relative units now; they respect the user's
-  root font size.
-- **Buttons and form fields** use `:focus-visible` outlines instead of the old
-  focus styles.
-- **Zero specificity** — Marx no longer competes with your CSS; drop any
-  `!important` overrides you added to beat v4.
 
 ## Basic template
 
@@ -265,13 +196,6 @@ See [AGENTS.md](AGENTS.md) for the architecture and contribution conventions.
 ## Contributing to Marx
 
 Pull requests are the way to go.
-
-## Creators
-
-**Matthew Blode**
-
-- <https://github.com/mblode>
-- <http://codepen.io/mblode>
 
 ## License
 

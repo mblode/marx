@@ -79,5 +79,9 @@
   /* Feedback */
   --marx-danger: oklch(57.7% 0.245 27.3);
   --marx-danger: light-dark(oklch(57.7% 0.245 27.3), oklch(70.4% 0.191 22.2));
+  --marx-success: oklch(60% 0.16 150);
+  --marx-success: light-dark(oklch(60% 0.16 150), oklch(72% 0.16 152));
+  --marx-warning: oklch(70% 0.16 75);
+  --marx-warning: light-dark(oklch(70% 0.16 75), oklch(80% 0.14 80));
   --marx-mark: color-mix(in oklab, oklch(86% 0.17 95) 40%, transparent);
 }

@@ -40,6 +40,8 @@
     --marx-link-hover: light-dark(oklch(48.8% .243 264.4), oklch(80.9% .105 251.8));
     --marx-ring: light-dark(oklch(54.6% .245 262.9), oklch(70.7% .165 254.6));
     --marx-danger: light-dark(oklch(57.7% .245 27.3), oklch(70.4% .191 22.2));
+    --marx-success: light-dark(oklch(60% .16 150), oklch(72% .16 152));
+    --marx-warning: light-dark(oklch(70% .16 75), oklch(80% .14 80));
     --marx-mark: oklab(86% -.0148165 .169353 / .4);
   }
 
@@ -723,8 +725,52 @@
     min-block-size: 5lh;
   }
 
-  :where(input[type="checkbox"], input[type="radio"], input[type="range"], progress, meter) {
+  :where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
     accent-color: var(--marx-primary);
+  }
+
+  :where(progress, meter) {
+    appearance: none;
+    inline-size: 100%;
+    block-size: var(--marx-space-xs);
+    border-radius: var(--marx-radius);
+    background-color: var(--marx-surface);
+    border: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  :where(progress)::-webkit-progress-bar {
+    background-color: var(--marx-surface);
+  }
+
+  :where(progress)::-webkit-progress-value {
+    background-color: var(--marx-primary);
+  }
+
+  :where(progress)::-moz-progress-bar {
+    background-color: var(--marx-primary);
+  }
+
+  :where(meter)::-webkit-meter-bar {
+    background-color: var(--marx-surface);
+    border: 0;
+  }
+
+  :where(meter)::-webkit-meter-optimum-value {
+    background-color: var(--marx-success);
+  }
+
+  :where(meter)::-webkit-meter-suboptimum-value {
+    background-color: var(--marx-warning);
+  }
+
+  :where(meter)::-webkit-meter-even-less-good-value {
+    background-color: var(--marx-danger);
+  }
+
+  :where(meter)::-moz-meter-bar {
+    background-color: var(--marx-success);
   }
 
   :where(input[type="color"]) {
