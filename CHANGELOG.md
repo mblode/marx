@@ -1,5 +1,11 @@
 # marx-css
 
+## 5.2.1
+
+### Patch Changes
+
+- fd775d1: Give single `<select>` menus a custom dropdown chevron with proper spacing, instead of the cramped native arrow jammed against the edge. Multi/size selects keep their native rendering.
+
 ## 5.2.0
 
 ### Minor Changes
