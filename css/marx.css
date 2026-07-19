@@ -770,6 +770,15 @@
     accent-color: var(--marx-primary);
   }
 
+  :where(ul:has(input:is([type="checkbox"], [type="radio"]))) {
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  :where(ul:has(input:is([type="checkbox"], [type="radio"])) > li) {
+    padding-inline-start: 0;
+  }
+
   :where(progress, meter) {
     appearance: none;
     inline-size: 100%;

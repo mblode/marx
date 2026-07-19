@@ -65,6 +65,19 @@
   accent-color: var(--marx-primary);
 }
 
+/* A list whose items hold a checkbox or radio is an option group, not a bullet
+ * list: drop the markers and the indent so the controls sit flush. Classless
+ * (no `.task-list` needed); lives in the forms layer so it wins over the list
+ * rules in the content layer. Browsers without `:has()` keep the bullets. */
+:where(ul:has(input:is([type="checkbox"], [type="radio"]))) {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+:where(ul:has(input:is([type="checkbox"], [type="radio"])) > li) {
+  padding-inline-start: 0;
+}
+
 /* Progress + meter — replace the native chrome with a clean Marx bar.
  * Each vendor pseudo-element lives in its own rule: an engine that doesn't
  * recognise one must not drop the others. */
