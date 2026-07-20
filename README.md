@@ -190,7 +190,7 @@ Pull requests are the way to go.
 
 ## License
 
-MIT © [Matthew Blode](http://matthewblode.com)
+MIT
 
 ---
 
