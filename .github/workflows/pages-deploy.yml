@@ -22,20 +22,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: npm
-      - run: npm ci
-      - run: npm run build
       - name: Prepare site
         run: |
           mkdir _site
-          cp docs/index.html _site/index.html
+          cp docs/redirect.html _site/index.html
           cp docs/.nojekyll _site/.nojekyll
-          mkdir _site/css
-          cp css/marx.min.css _site/css/marx.min.css
-          cp -r docs/img _site/img
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
