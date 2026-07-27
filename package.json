@@ -61,6 +61,7 @@
     "build": "npm run build:dev && npm run build:min",
     "build:dev": "lightningcss --bundle --browserslist src/marx.css -o css/marx.css",
     "build:min": "cd css && lightningcss --bundle --browserslist --minify --sourcemap ../src/marx.css -o marx.min.css",
+    "build:site": "rm -rf dist && mkdir -p dist/marx/css && cp docs/index.html dist/marx/index.html && cp css/marx.min.css dist/marx/css/marx.min.css && cp -R docs/img dist/marx/img",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "format": "oxfmt --write .",

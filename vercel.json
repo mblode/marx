@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build && npm run build:site",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/marx",
+      "destination": "/marx/index.html"
+    }
+  ]
+}

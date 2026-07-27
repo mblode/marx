@@ -15,5 +15,7 @@
   ],
   "theme_color": "#007bff",
   "background_color": "#007bff",
+  "scope": "/marx/",
+  "start_url": "/marx/",
   "display": "standalone"
 }

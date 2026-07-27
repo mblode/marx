@@ -1,4 +1,4 @@
-# [Marx](https://mblode.github.io/marx/)
+# [Marx](https://blode.co/marx)
 
 [![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
 
@@ -29,7 +29,7 @@ straight from the box, or retheme it with a few custom properties.
   `:focus-visible` outlines, and motion behind `prefers-reduced-motion`.
 - It just works.
 
-## [Demo](https://mblode.github.io/marx/)
+## [Demo](https://blode.co/marx)
 
 ## Quick start
 
@@ -190,8 +190,8 @@ Pull requests are the way to go.
 
 ## License
 
-MIT
+MIT © [Matthew Blode](https://blode.co)
 
 ---
 
-Crafted by [<img src="https://matthewblode.com/avatar-circle.png" width="20" align="top" />](https://matthewblode.com) [Matthew Blode](https://matthewblode.com)
+Crafted by [<img src="https://blode.co/avatar-circle.png" width="20" align="top" />](https://blode.co) [Matthew Blode](https://blode.co)

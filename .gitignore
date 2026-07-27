@@ -6,6 +6,9 @@ public
 _posts
 components
 build
+dist
 tmp/*
 !tmp/.keep
 node_modules
+.vercel
+.env*
