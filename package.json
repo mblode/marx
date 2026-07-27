@@ -65,7 +65,7 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt .",
+    "format:check": "oxfmt --check .",
     "changeset": "changeset",
     "release": "changeset publish",
     "test": "npm run lint && npm run format:check && npm run build && npx publint",
