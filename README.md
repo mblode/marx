@@ -191,6 +191,7 @@ Pull requests are the way to go.
 ## License
 
 MIT
+
 ---
 
 Crafted by [<img src="https://blode.co/avatar-circle.png" width="20" align="top" />](https://blode.co) [Matthew Blode](https://blode.co)
