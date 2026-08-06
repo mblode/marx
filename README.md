@@ -1,114 +1,43 @@
+<div align="center">
+
 # [Marx](https://blode.co/marx)
 
-[![npm version](https://img.shields.io/npm/v/marx-css.svg)](https://www.npmjs.com/package/marx-css)
+**The classless CSS framework that styles plain semantic HTML (perfect for Communists)**
 
-**The classless CSS framework (perfect for Communists).**
+Add one stylesheet and the page styles itself: no class names, no build step, no config.
 
-    No JavaScript. No classes. Just raw HTML that looks good.
+<p align="center">
+  <a href="https://www.npmjs.com/package/marx-css">
+    <img src="https://img.shields.io/npm/v/marx-css?style=flat&colorA=000000&colorB=000000" />
+  </a>
+  <a href="https://github.com/mblode/marx/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/mblode/marx?style=flat&colorA=000000&colorB=000000" />
+  </a>
+</p>
 
-Add one stylesheet to plain, semantic HTML and the page styles itself. No class
-names, no build step, no config. Marx 5 is a full rewrite: automatic light and
-dark mode, a small `--marx-*` theming API, and **zero specificity**, so any CSS
-you write wins.
+</div>
 
-## Is Marx for you?
+## Demo
 
-Marx is for small projects where you'd rather write content than wire up a
-component library: prose sites, docs, prototypes, quick landing pages. Use it
-straight from the box, or retheme it with a few custom properties.
+Every element Marx styles, on one page.
 
-## Key features
+<p>
+<a href="https://blode.co/marx">
+<img alt="View demo" src=".github/assets/demo.svg" width="200" />
+</a>
+</p>
 
-- **Zero classes:** it works with the HTML you already have.
-- **Automatic dark mode** with `color-scheme` and `light-dark()`. No toggle, no JS.
-- **Zero specificity:** every rule is wrapped in `:where()` inside cascade
-  layers, so your CSS overrides Marx without a fight or a single `!important`.
-- **Modern base:** a small, modern reset so browsers render consistently.
-- **Themeable:** one set of `--marx-*` custom properties is the whole API.
-- **Modern CSS:** logical properties (RTL-ready), a `rem` type scale,
-  `:focus-visible` outlines, and motion behind `prefers-reduced-motion`.
-- It just works.
-
-## [Demo](https://blode.co/marx)
-
-## Quick start
-
-### npm
+## Install
 
 ```bash
 npm install marx-css
 ```
 
-### CDN
+Or skip the install and link `https://cdn.jsdelivr.net/npm/marx-css@5/css/marx.min.css` directly.
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marx-css@5/css/marx.min.css">
-```
+## Quickstart
 
-### Bundler
-
-With any bundler that reads the `exports` field (Vite, webpack, esbuild, …):
-
-```js
-import "marx-css";
-```
-
-That loads the minified stylesheet.
-
-## Dark mode
-
-Dark mode is automatic. Marx sets `color-scheme: light dark` and defines its
-colors with `light-dark()`, so the page follows the visitor's OS or browser
-preference with no toggle and no JavaScript.
-
-Force a single scheme by overriding `color-scheme` on the root in your own CSS:
-
-```css
-:root { color-scheme: light; } /* always light */
-:root { color-scheme: dark;  } /* always dark  */
-```
-
-## Theming
-
-The whole theming API is the `--marx-*` custom properties below. Override any
-of them in your own (unlayered) CSS. Because Marx lives in cascade layers, your
-values win. Colors use `light-dark()`, so set both schemes at once or just
-change the value you care about.
-
-| Token | Purpose |
-|---|---|
-| `--marx-leading` | Base line-height (`1.5`) |
-| `--marx-flow` | Vertical rhythm between block elements (`1.25rem`) |
-| `--marx-measure` | Max content width of `main` (`48rem`) |
-| `--marx-radius` | Corner radius for controls and surfaces |
-| `--marx-space-2xs … -xl` | Spacing scale (`0.25rem` to `2.5rem`) |
-| `--marx-text-sm / -base` | Body type sizes |
-| `--marx-text-h1 … -h6` | Heading sizes (`2.5rem` to `1rem`) |
-| `--marx-font-sans / -serif / -mono` | Font stacks |
-| `--marx-font-body` | Font applied to `body` (defaults to sans) |
-| `--marx-bg` | Page background |
-| `--marx-text` | Body text color |
-| `--marx-muted` | Secondary/subtle text |
-| `--marx-disabled` | Disabled control text |
-| `--marx-border` | Borders and dividers |
-| `--marx-surface` | Raised surfaces (code, tables, wells) |
-| `--marx-primary` / `--marx-primary-strong` | Button/brand blue + hover |
-| `--marx-on-primary` | Text on primary surfaces |
-| `--marx-link` / `--marx-link-hover` | Link colors |
-| `--marx-ring` | `:focus-visible` outline color |
-| `--marx-danger` | Error/invalid feedback |
-| `--marx-mark` | `<mark>` highlight |
-
-Example, a warmer accent and rounder corners:
-
-```css
-:root {
-  --marx-primary: hotpink;
-  --marx-radius: 0.75rem;
-}
-```
-
-## Basic template
+One `<link>` tag, then plain HTML.
 
 ```html
 <!DOCTYPE html>
@@ -116,77 +45,57 @@ Example, a warmer accent and rounder corners:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marx Template</title>
+  <title>Marx</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marx-css@5/css/marx.min.css">
 </head>
 <body>
-  <!-- main is the centered container -->
   <main>
-    <nav>
-      <ul>
-        <li><a href="#"><b>First</b></a></li>
-        <li><a href="#">Second</a></li>
-        <li><a href="#">Third</a></li>
-      </ul>
-    </nav>
+    <h1>Workers of the world</h1>
+    <p>Plain HTML, styled automatically.</p>
 
-    <article>
-      <h1>Article</h1>
-      <p>Plain HTML, styled automatically.</p>
-    </article>
-
-    <footer>
-      <p>&copy; Matthew Blode</p>
-    </footer>
+    <form>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="karl@marx.de">
+      <button type="submit">Subscribe</button>
+    </form>
   </main>
 </body>
 </html>
 ```
 
-## What's included
+`main` is the centered container. With a bundler, `import "marx-css"` loads the same stylesheet.
 
-Installing `marx-css` gives you the compiled stylesheets plus the source:
+## Theming
 
+The whole API is the `--marx-*` custom properties. Override them in your own unlayered CSS and your
+values win: every Marx rule sits inside `:where()` in a cascade layer, at zero specificity.
+
+```css
+:root {
+  --marx-primary: hotpink;
+  --marx-radius: 0.75rem;
+  --marx-measure: 60rem;
+}
 ```
-.
-├── LICENSE.md
-├── README.md
-├── css
-│   ├── marx.css        # readable build
-│   ├── marx.min.css    # minified build (the one you ship)
-│   └── marx.min.css.map
-└── src                 # authored partials, bundled by Lightning CSS
-    ├── marx.css        # entry: declares the @layer order
-    ├── _tokens.css     # the --marx-* theming API
-    ├── _preflight.css  # cross-browser reset
-    ├── _base.css
-    ├── _typography.css
-    ├── _tables.css
-    ├── _buttons.css
-    └── _form.css
-```
+
+| Tokens | Control |
+|---|---|
+| `--marx-bg`, `--marx-text`, `--marx-muted`, `--marx-surface`, `--marx-border` | Page and surface colors |
+| `--marx-primary`, `--marx-on-primary`, `--marx-link`, `--marx-ring`, `--marx-danger` | Brand blue, links, focus rings, error feedback |
+| `--marx-font-sans`, `--marx-font-serif`, `--marx-font-mono`, `--marx-font-body` | Font stacks |
+| `--marx-text-base`, `--marx-text-h1` through `--marx-text-h6` | Type scale |
+| `--marx-space-2xs` through `--marx-space-xl`, `--marx-flow`, `--marx-leading` | Spacing and rhythm |
+| `--marx-measure`, `--marx-radius` | Content width and corner radius |
+
+Colors are declared with `light-dark()` under `color-scheme: light dark`, so dark mode follows the
+visitor's OS with no toggle and no JavaScript. Force one scheme with `:root { color-scheme: light }`.
+[`src/_tokens.css`](src/_tokens.css) lists every token and its default.
 
 ## Browser support
 
-Marx targets Baseline 2024 browsers: Chrome/Edge 123+, Firefox 120+, and
-Safari 17.5+. Older browsers still get a readable page: `color-scheme` keeps
-text legible in light and dark, and buttons keep their color. They just lose
-the finer theming like token-driven borders and surface tints.
-
-## Building from source
-
-```bash
-git clone https://github.com/mblode/marx.git
-cd marx
-npm install
-npm run build     # bundles src/ -> css/
-```
-
-See [AGENTS.md](AGENTS.md) for the architecture and contribution conventions.
-
-## Contributing to Marx
-
-Pull requests are the way to go.
+Chrome and Edge 123+, Firefox 120+, Safari 17.5+. Layout uses logical properties, so it works
+right-to-left, and transitions sit behind `prefers-reduced-motion`. Browsers without `light-dark()`
+keep the static light value of each color, losing the dark scheme but not the page.
 
 ## License
 
