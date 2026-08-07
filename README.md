@@ -17,6 +17,10 @@ Add one stylesheet and the page styles itself: no class names, no build step, no
 
 </div>
 
+<p align="center">
+  <img alt="Plain semantic HTML styled by Marx with no classes" src=".github/assets/screenshot.jpg" width="800" />
+</p>
+
 ## Demo
 
 Every element Marx styles, on one page.
