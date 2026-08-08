@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build && npm run build:site",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/marx/index.html",
+      "destination": "/marx",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/marx",
