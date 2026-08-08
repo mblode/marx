@@ -10,6 +10,9 @@
     />
     <title>Marx: The classless CSS reset</title>
     <link rel="canonical" href="https://blode.co/marx" />
+    <link rel="icon" href="img/favicons/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
     <meta property="og:title" content="Marx: The classless CSS reset" />
     <meta
       property="og:description"
@@ -54,6 +57,56 @@
     <link rel="preconnect" href="https://r.blode.co" />
     <link rel="stylesheet" href="css/marx.min.css" />
     <style>
+      /*
+       * Glide 2.0.0 (https://github.com/mblode/glide), on this docs page only.
+       * Deliberately not in src/: Marx is installed into other people's sites,
+       * and a @font-face in the published stylesheet would push 200KB and a
+       * typeface nobody chose onto every one of them. The default stays the
+       * platform stack.
+       *
+       * Relative URLs because <base href="/marx/"> is set above, the same way
+       * the stylesheet and images are linked.
+       */
+      @font-face {
+        font-family: "Glide";
+        src: url("fonts/glide-variable.woff2") format("woff2-variations");
+        font-weight: 100 950;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Glide";
+        src: url("fonts/glide-variable-italic.woff2") format("woff2-variations");
+        font-weight: 100 950;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Glide Mono";
+        src: url("fonts/glide-mono.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /*
+       * Unlayered, so it beats the :where(:root) defaults in layer marx.base
+       * without a single !important. This is the retheming path the token
+       * comment describes, so the docs page is also a demonstration of it.
+       *
+       * --marx-font-serif is left as Georgia: blockquotes are meant to break
+       * from the body face, and Glide has no serif to break to.
+       */
+      :root {
+        --marx-font-body: "Glide", var(--marx-font-sans);
+        /* Cannot chain to var(--marx-font-mono) the way body does: a custom
+           property that references itself is a cycle, so this keeps a short
+           fallback rather than a stale copy of the shipped stack. */
+        --marx-font-mono: "Glide Mono", ui-monospace, monospace;
+      }
+
       .site-nav {
         background: var(--marx-bg);
         width: 100%;
