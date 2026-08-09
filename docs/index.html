@@ -291,11 +291,11 @@
       <ol>
         <li>
           <a href="https://blode.co" rel="author">Matthew Blode</a>
-          <span aria-hidden>&rsaquo;</span>
+          <span aria-hidden="true">&rsaquo;</span>
         </li>
         <li>
           <a href="https://blode.co/projects">Projects</a>
-          <span aria-hidden>&rsaquo;</span>
+          <span aria-hidden="true">&rsaquo;</span>
         </li>
         <li aria-current="page">Marx</li>
       </ol>
@@ -813,7 +813,19 @@ p q r s t u v w x y z { | } ~ </pre>
             <h2>IFrame</h2>
           </header>
           <div>
-            <iframe src="index.html" height="300"></iframe>
+            <!--
+              srcdoc, not src="index.html": under <base href="/marx/"> that
+              resolved to this very page, so every visit loaded the whole
+              document a second time inside itself and fired a duplicate
+              PostHog pageview. A srcdoc document inherits this page's base
+              URL, so the relative stylesheet path still resolves and the
+              frame still demonstrates Marx-styled content.
+            -->
+            <iframe
+              title="A separate document styled by Marx"
+              height="300"
+              srcdoc="<link rel='stylesheet' href='css/marx.min.css'><main><h1>Inside an iframe</h1><p>A separate document, wearing the same stylesheet as its parent.</p></main>"
+            ></iframe>
           </div>
           <footer></footer>
         </article>
