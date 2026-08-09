@@ -57,6 +57,34 @@
     <link rel="preconnect" href="https://r.blode.co" />
     <link rel="stylesheet" href="css/marx.min.css" />
     <style>
+      /* Breadcrumb back to the hub. Marx already strips markers and padding from
+         lists inside a <nav>, so this only sets the reading-column alignment and
+         keeps the strip small and muted — chrome, not page content. */
+      .breadcrumb {
+        font-size: var(--marx-text-sm);
+        margin-inline: auto;
+        max-inline-size: var(--marx-measure);
+        padding-block-start: var(--marx-space-md);
+        padding-inline: var(--marx-space-md);
+      }
+      .breadcrumb ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--marx-space-2xs);
+        margin-block-start: 0;
+      }
+      .breadcrumb li {
+        color: var(--marx-muted);
+        margin-block-start: 0;
+        padding-inline-start: 0;
+      }
+      .breadcrumb a {
+        color: var(--marx-muted);
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
       .site-nav {
         background: var(--marx-bg);
         width: 100%;
@@ -202,8 +230,77 @@
         ui_host: "https://us.posthog.com",
       });
     </script>
+    <!--
+      One block, one @graph — search engines can't join separate blocks into a
+      single entity. The Person/WebSite/Organization live on blode.co and are
+      referenced by @id only; redefining them here would fork the identity.
+      itemListElement must match the visible breadcrumb exactly.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://blode.co/marx#webpage",
+            "url": "https://blode.co/marx",
+            "name": "Marx: The classless CSS reset",
+            "description": "Marx is a classless CSS reset that makes plain HTML look good with no classes, no build step, and no JavaScript. Drop in one stylesheet and ship.",
+            "isPartOf": { "@id": "https://blode.co/#website" },
+            "author": { "@id": "https://blode.co/#person" },
+            "publisher": { "@id": "https://blode.co/#organization" },
+            "breadcrumb": { "@id": "https://blode.co/marx#breadcrumb" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://blode.co/marx#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Matthew Blode",
+                "item": "https://blode.co/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Projects",
+                "item": "https://blode.co/projects"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Marx",
+                "item": "https://blode.co/marx"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!--
+      /marx is the same origin as blode.co behind a rewrite, so these are
+      internal links: absolute hrefs (a bare "/" would resolve against the
+      wrong origin under <base href="/marx/">), same tab, and no
+      rel="noopener noreferrer", which only means something cross-origin.
+      The trail must match the BreadcrumbList JSON-LD in <head> exactly.
+    -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol>
+        <li>
+          <a href="https://blode.co" rel="author">Matthew Blode</a>
+          <span aria-hidden>&rsaquo;</span>
+        </li>
+        <li>
+          <a href="https://blode.co/projects">Projects</a>
+          <span aria-hidden>&rsaquo;</span>
+        </li>
+        <li aria-current="page">Marx</li>
+      </ol>
+    </nav>
+
     <main>
       <nav class="site-nav">
         <ul>
