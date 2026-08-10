@@ -69,10 +69,17 @@
       /* Breadcrumb back to the hub. Marx already strips markers and padding from
          lists inside a <nav>, so this only sets the reading-column alignment and
          keeps the strip small and muted — chrome, not page content. */
+      /*
+        Lives inside <main> so it shares the same measure as .site-nav below
+        it. It used to sit outside, centred on --marx-measure with its own
+        inline padding, which put its left edge a few pixels off the nav's and
+        read as a misalignment rather than a header.
+
+        The inline padding matches .site-nav li's, so "Matthew Blode" starts on
+        the same vertical as the "Marx" wordmark.
+      */
       .breadcrumb {
         font-size: var(--marx-text-sm);
-        margin-inline: auto;
-        max-inline-size: var(--marx-measure);
         padding-block-start: var(--marx-space-md);
         padding-inline: var(--marx-space-md);
       }
@@ -92,7 +99,16 @@
         text-decoration: none;
       }
       .breadcrumb a:hover {
+        color: var(--marx-text);
         text-decoration: underline;
+      }
+      /* The trail needs a terminus: the current page reads as where you are,
+         the links as where you can go. */
+      .breadcrumb [aria-current="page"] {
+        color: var(--marx-text);
+      }
+      .breadcrumb [aria-hidden="true"] {
+        opacity: 0.5;
       }
       .site-nav {
         background: var(--marx-bg);
@@ -137,10 +153,24 @@
         justify-content: center;
         margin-block-start: var(--marx-space-md);
       }
-      .hero .github-star {
-        display: flex;
-        justify-content: center;
-        margin-block-start: var(--marx-space-md);
+      /*
+        The count is proof, not a second action, so it sits inside the button
+        subordinate to the label: muted, tabular so it cannot reflow the
+        button's width, and separated by a hairline rather than a gap so the
+        two read as one control.
+      */
+      .hero .star-count {
+        align-items: center;
+        border-inline-start: 1px solid var(--marx-border);
+        color: var(--marx-muted);
+        display: inline-flex;
+        font-variant-numeric: tabular-nums;
+        gap: 0.25rem;
+        margin-inline-start: 0.625rem;
+        padding-inline-start: 0.625rem;
+      }
+      .hero .button.secondary:hover .star-count {
+        color: inherit;
       }
       .hero .github-star iframe {
         border: 0;
@@ -151,7 +181,11 @@
         border: 1px solid transparent;
         border-radius: var(--marx-radius);
         color: var(--marx-on-primary);
-        display: inline-block;
+        /* inline-flex, not inline-block: the GitHub button carries a star
+           icon and count that have to sit on the label's optical centre. */
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
         font-weight: 500;
         line-height: 1.5;
         padding: 0.5rem 1rem;
@@ -296,21 +330,21 @@
       rel="noopener noreferrer", which only means something cross-origin.
       The trail must match the BreadcrumbList JSON-LD in <head> exactly.
     -->
-    <nav aria-label="Breadcrumb" class="breadcrumb">
-      <ol>
-        <li>
-          <a href="https://blode.co" rel="author">Matthew Blode</a>
-          <span aria-hidden="true">&rsaquo;</span>
-        </li>
-        <li>
-          <a href="https://blode.co/projects">Projects</a>
-          <span aria-hidden="true">&rsaquo;</span>
-        </li>
-        <li aria-current="page">Marx</li>
-      </ol>
-    </nav>
-
     <main>
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+          <li>
+            <a href="https://blode.co" rel="author">Matthew Blode</a>
+            <span aria-hidden="true">&rsaquo;</span>
+          </li>
+          <li>
+            <a href="https://blode.co/projects">Projects</a>
+            <span aria-hidden="true">&rsaquo;</span>
+          </li>
+          <li aria-current="page">Marx</li>
+        </ol>
+      </nav>
+
       <nav class="site-nav">
         <ul>
           <li><a href="/marx" class="brand">Marx</a></li>
@@ -339,23 +373,39 @@
             rel="noopener"
             >Download</a
           >
+          <!--
+            The star count lives in the button rather than a ghbtns.com iframe
+            below it. That widget has no dark theme, so it rendered as a white
+            slab on this page, and it is a third-party JavaScript frame on a
+            page whose pitch is "No JavaScript. No Classes. Just raw CSS."
+
+            Rounded rather than exact: a hardcoded 1,708 in static HTML is
+            wrong within a week, and "1.7k" matches how blode.co/projects
+            already reports it.
+          -->
           <a
             href="https://github.com/mblode/marx"
             class="button secondary"
             target="_blank"
             rel="noopener"
-            >GitHub</a
           >
+            GitHub
+            <span class="star-count">
+              <svg
+                aria-hidden="true"
+                fill="currentColor"
+                height="12"
+                viewBox="0 0 16 16"
+                width="12"
+              >
+                <path
+                  d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"
+                />
+              </svg>
+              1.7k
+            </span>
+          </a>
         </div>
-        <p class="github-star">
-          <iframe
-            src="https://ghbtns.com/github-btn.html?user=mblode&amp;repo=marx&amp;type=star&amp;count=true&amp;size=large"
-            width="170"
-            height="30"
-            title="Star mblode/marx on GitHub"
-            loading="lazy"
-          ></iframe>
-        </p>
       </header>
 
       <!-- About -->
