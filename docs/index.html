@@ -70,18 +70,14 @@
          lists inside a <nav>, so this only sets the reading-column alignment and
          keeps the strip small and muted — chrome, not page content. */
       /*
-        Lives inside <main> so it shares the same measure as .site-nav below
-        it. It used to sit outside, centred on --marx-measure with its own
-        inline padding, which put its left edge a few pixels off the nav's and
-        read as a misalignment rather than a header.
-
-        The inline padding matches .site-nav li's, so "Matthew Blode" starts on
-        the same vertical as the "Marx" wordmark.
+        Lives inside <main> so it inherits the reading column and its inline
+        padding — no padding of its own, or the trail sits indented from every
+        other line on the page and reads as a misalignment rather than a
+        header.
       */
       .breadcrumb {
         font-size: var(--marx-text-sm);
         padding-block-start: var(--marx-space-md);
-        padding-inline: var(--marx-space-md);
       }
       .breadcrumb ol {
         display: flex;
@@ -109,28 +105,6 @@
       }
       .breadcrumb [aria-hidden="true"] {
         opacity: 0.5;
-      }
-      .site-nav {
-        background: var(--marx-bg);
-        width: 100%;
-      }
-      .site-nav ul {
-        padding: var(--marx-space-md) 0;
-        margin: 0;
-      }
-      .site-nav li {
-        display: inline;
-        padding: 0 var(--marx-space-md);
-      }
-      .site-nav a {
-        text-decoration: none;
-      }
-      .site-nav a:hover {
-        text-decoration: underline;
-      }
-      .site-nav .brand {
-        font-size: 1.5rem;
-        font-weight: 600;
       }
       .hero {
         text-align: center;
@@ -213,8 +187,60 @@
             border-color 0.15s ease;
         }
       }
-      footer {
-        margin-bottom: 0;
+      /*
+        Classed, not a bare `footer`: the HTML5 test page below is full of
+        empty <footer> elements demoing Marx's own footer rule, and they must
+        keep it. That rule draws a top border; here the 4rem above is
+        separation enough, so this one is borderless to match blode.co.
+      */
+      .site-footer {
+        align-items: center;
+        border-block-start: 0;
+        color: var(--marx-muted);
+        display: flex;
+        flex-direction: column;
+        font-size: var(--marx-text-sm);
+        gap: var(--marx-space-xs);
+        padding-block: 4rem var(--marx-space-xl);
+      }
+      .site-footer a {
+        color: var(--marx-muted);
+        text-decoration: none;
+      }
+      .site-footer a:hover {
+        color: var(--marx-text);
+      }
+      .site-footer .author,
+      .site-footer .links {
+        align-items: center;
+        display: flex;
+      }
+      .site-footer .author {
+        gap: var(--marx-space-2xs);
+      }
+      /* The avatar's hit area is the pill, so the padding sits on the link and
+         the gap keeps the 20px face off the name. */
+      .site-footer .author a {
+        align-items: center;
+        border-radius: 9999px;
+        display: inline-flex;
+        gap: var(--marx-space-xs);
+        padding-block: 0.375rem;
+        padding-inline: 0.375rem 0.625rem;
+      }
+      .site-footer .author img {
+        border-radius: 50%;
+      }
+      .site-footer .links {
+        gap: var(--marx-space-sm);
+      }
+      .site-footer .links [aria-hidden="true"] {
+        opacity: 0.5;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .site-footer a {
+          transition: color 0.15s ease;
+        }
       }
     </style>
     <script>
@@ -345,21 +371,12 @@
         </ol>
       </nav>
 
-      <nav class="site-nav">
-        <ul>
-          <li><a href="/marx" class="brand">Marx</a></li>
-          <li><a href="/marx">Home</a></li>
-          <li>
-            <a
-              href="https://github.com/mblode/marx"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-        </ul>
-      </nav>
-
+      <!--
+        No wordmark nav row above this: it linked "Marx" and "Home" to this
+        same page, sat directly on top of an <h1> that already says Marx, and
+        repeated the hero's GitHub button. The breadcrumb is the trail out;
+        the footer carries GitHub and npm.
+      -->
       <!-- Hero -->
       <header class="hero">
         <h1>Marx</h1>
@@ -1138,19 +1155,41 @@ p q r s t u v w x y z { | } ~ </pre>
       </section>
 
       <!--
-        blode.co and blode.co/projects are this same origin behind a rewrite, so
-        both are internal links: same tab, and no rel="noopener noreferrer",
-        which only means something cross-origin. The projects link is the edge
-        back to the hub, without which this zone is a dead end. See
+        blode.co is this same origin behind a rewrite, so the author link is
+        internal: same tab, and no rel="noopener noreferrer", which only means
+        something cross-origin. The hub edge this zone needs lives in the
+        breadcrumb at the top (blode.co/projects), so the footer carries only
+        the project's own links. See
         blode-co/apps/web/.claude/knowledge/zone-conventions.md.
       -->
-      <footer>
-        <p>
-          &copy; 2026 &middot;
-          <a href="https://blode.co" rel="author">Matthew Blode</a>
-          &middot;
-          <a href="https://blode.co/projects">All projects</a>
-        </p>
+      <footer class="site-footer">
+        <div class="author">
+          Crafted by
+          <a href="https://blode.co" rel="author">
+            <img
+              alt="Avatar of Matthew Blode"
+              height="20"
+              src="img/avatar-sm.png"
+              width="20"
+            />
+            Matthew Blode
+          </a>
+        </div>
+        <div class="links">
+          <a
+            href="https://github.com/mblode/marx"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub</a
+          >
+          <span aria-hidden="true">&middot;</span>
+          <a
+            href="https://www.npmjs.com/package/marx-css"
+            rel="noopener noreferrer"
+            target="_blank"
+            >npm</a
+          >
+        </div>
       </footer>
     </main>
   </body>
