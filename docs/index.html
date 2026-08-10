@@ -20,7 +20,13 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://blode.co/marx" />
-    <meta property="og:site_name" content="Marx" />
+    <!--
+      The person, not the product: /marx is a path on blode.co, and og:title
+      already says Marx. Safe to change here because this zone is a single
+      page whose og:title names the product; a zone with inner routes needs
+      its og:title template checked first, or the card names nothing.
+    -->
+    <meta property="og:site_name" content="Matthew Blode" />
     <meta
       property="og:image"
       content="https://blode.co/marx/img/opengraph-image.png"
