@@ -1,5 +1,16 @@
 # marx-css
 
+## 5.3.2
+
+### Patch Changes
+
+- 0d99e55: ---
+  "marx-css": patch
+
+  ***
+
+  Line up submit inputs with buttons, sit radios and checkboxes on the label text, and space the unit after a title header so meters and buttons are not flush to the heading.
+
 ## 5.3.1
 
 ### Patch Changes
