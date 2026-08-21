@@ -1,5 +1,12 @@
 # marx-css
 
+## 5.3.1
+
+### Patch Changes
+
+- dd5f84b: Use a colon in the stylesheet banner so the comment stays ASCII on CDNs that omit charset.
+- dd5f84b: Give labels 8px of space below, 16px below code blocks, and line up buttons, radios, and checkboxes with their labels.
+
 ## 5.3.0
 
 ### Minor Changes
