@@ -626,7 +626,7 @@
     scroll-margin-block-start: var(--marx-flow);
   }
 
-  :where(:is(h1, h2, h3, h4, h5, h6) + *) {
+  :where(:is(h1, h2, h3, h4, h5, h6) + *), :where(:is(article, section) > header + *) {
     margin-block-start: var(--marx-space-md);
   }
 
@@ -691,10 +691,13 @@
     background-color: var(--marx-primary);
     border-radius: var(--marx-radius);
     color: var(--marx-on-primary);
-    padding: var(--marx-space-xs) var(--marx-space-md);
+    block-size: calc((var(--marx-text-base) * var(--marx-leading)) + (2 * var(--marx-space-xs)) +
+      2px);
+    padding-block: 0;
+    padding-inline: var(--marx-space-md);
     font-weight: 500;
     font-size: var(--marx-text-base);
-    line-height: var(--marx-leading);
+    line-height: calc((var(--marx-text-base) * var(--marx-leading)) + (2 * var(--marx-space-xs)));
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -703,9 +706,7 @@
     cursor: pointer;
     touch-action: manipulation;
     border: 1px solid #0000;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
+    display: inline-block;
   }
 
   :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):hover, :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):active {
@@ -775,7 +776,9 @@
   }
 
   :where(input[type="checkbox"], input[type="radio"]) {
-    vertical-align: middle;
+    vertical-align: -.15em;
+    block-size: 1em;
+    inline-size: 1em;
   }
 
   :where(ul:has(input:is([type="checkbox"], [type="radio"]))) {
@@ -875,8 +878,12 @@
 
   :where(label) {
     line-height: var(--marx-leading);
-    margin-block-end: var(--marx-space-xs);
+    vertical-align: middle;
     display: inline-block;
+  }
+
+  :where(label + :is(input:not([type="checkbox"], [type="radio"], [type="hidden"], [type="button"], [type="submit"], [type="reset"], [type="image"]), select, textarea)) {
+    margin-block-start: var(--marx-space-xs);
   }
 
   :where(label:has( > input:is([type="checkbox"], [type="radio"]))) {

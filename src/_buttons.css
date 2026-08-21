@@ -4,20 +4,25 @@
   input[type="reset"],
   input[type="button"]
 ) {
-  /* `appearance: none` so <input type=submit> and <button> share one box.
-     Preflight's `appearance: button` otherwise leaves extra UA padding. */
+  /* Replaced <input> elements ignore flex. Lock the box so submit inputs and
+     <button> paint the same height on one line. */
   appearance: none;
+  display: inline-block;
   background-color: var(--marx-primary);
   border: 1px solid transparent;
   border-radius: var(--marx-radius);
   color: var(--marx-on-primary);
-  padding: var(--marx-space-xs) var(--marx-space-md);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  block-size: calc(
+    (var(--marx-text-base) * var(--marx-leading)) + (2 * var(--marx-space-xs)) +
+      2px
+  );
+  padding-block: 0;
+  padding-inline: var(--marx-space-md);
   font-weight: 500;
   font-size: var(--marx-text-base);
-  line-height: var(--marx-leading);
+  line-height: calc(
+    (var(--marx-text-base) * var(--marx-leading)) + (2 * var(--marx-space-xs))
+  );
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;

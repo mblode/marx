@@ -253,9 +253,14 @@
   scroll-margin-block-start: var(--marx-flow);
 }
 
-/* Headings own the space below them: the next block sits closer than a full
-   flow gap. Placed last so it wins the equal-specificity tie over the block
-   rules above. */
+/* Headings and title <header>s do not own space below. The next unit does.
+   `h + *` covers a heading beside its content; `article > header + *` covers
+   the HTML5 pattern where the title is wrapped and the content is a sibling
+   of that header. Scoped so a page hero is not tightened. */
 :where(:is(h1, h2, h3, h4, h5, h6) + *) {
+  margin-block-start: var(--marx-space-md);
+}
+
+:where(:is(article, section) > header + *) {
   margin-block-start: var(--marx-space-md);
 }

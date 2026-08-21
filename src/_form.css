@@ -65,9 +65,11 @@
   accent-color: var(--marx-primary);
 }
 
-/* Sit the control on the label's x-height, not the line-box top. */
+/* Native widgets sit high on the text line; size them to 1em and shift down. */
 :where(input[type="checkbox"], input[type="radio"]) {
-  vertical-align: middle;
+  inline-size: 1em;
+  block-size: 1em;
+  vertical-align: -0.15em;
 }
 
 /* A list whose items hold a checkbox or radio is an option group, not a bullet
@@ -185,7 +187,28 @@
 :where(label) {
   display: inline-block;
   line-height: var(--marx-leading);
-  margin-block-end: var(--marx-space-xs);
+  vertical-align: middle;
+}
+
+/* 8px above the field, not below the label: margin on an inline-block label
+   grows the line box and lifts a sibling radio or checkbox. */
+:where(
+  label
+    + :is(
+      input:not(
+        [type="checkbox"],
+        [type="radio"],
+        [type="hidden"],
+        [type="button"],
+        [type="submit"],
+        [type="reset"],
+        [type="image"]
+      ),
+      select,
+      textarea
+    )
+) {
+  margin-block-start: var(--marx-space-xs);
 }
 
 :where(label:has(> input:is([type="checkbox"], [type="radio"]))) {
