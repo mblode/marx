@@ -1,4 +1,4 @@
-/*! Marx — the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+/*! Marx: the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
 @layer marx.base, marx.content, marx.forms;
 
 @import "_tokens.css" layer(marx.base);

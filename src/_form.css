@@ -65,6 +65,11 @@
   accent-color: var(--marx-primary);
 }
 
+/* Sit the control on the label's x-height, not the line-box top. */
+:where(input[type="checkbox"], input[type="radio"]) {
+  vertical-align: middle;
+}
+
 /* A list whose items hold a checkbox or radio is an option group, not a bullet
  * list: drop the markers and the indent so the controls sit flush. Classless
  * (no `.task-list` needed); lives in the forms layer so it wins over the list
@@ -180,6 +185,13 @@
 :where(label) {
   display: inline-block;
   line-height: var(--marx-leading);
+  margin-block-end: var(--marx-space-xs);
+}
+
+:where(label:has(> input:is([type="checkbox"], [type="radio"]))) {
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--marx-space-2xs);
 }
 
 :where(fieldset) {

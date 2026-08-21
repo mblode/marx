@@ -211,6 +211,7 @@
   tab-size: 2;
   border-radius: var(--marx-radius);
   margin-block-start: var(--marx-flow);
+  margin-block-end: var(--marx-space-md);
   padding-block: var(--marx-space-sm);
   padding-inline: var(--marx-space-md);
   overflow-x: auto;

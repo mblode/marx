@@ -1,4 +1,4 @@
-/*! Marx — the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
+/*! Marx: the classless CSS reset (perfect for Communists) | MIT License | https://github.com/mblode/marx */
 @layer marx.base {
   :where(:root) {
     color-scheme: light dark;
@@ -588,6 +588,7 @@
     padding-block: var(--marx-space-sm);
     padding-inline: var(--marx-space-md);
     margin-block-start: var(--marx-flow);
+    margin-block-end: var(--marx-space-md);
     line-height: 1.5;
     overflow-x: auto;
   }
@@ -686,6 +687,7 @@
 
 @layer marx.forms {
   :where(button, input[type="submit"], input[type="reset"], input[type="button"]) {
+    appearance: none;
     background-color: var(--marx-primary);
     border-radius: var(--marx-radius);
     color: var(--marx-on-primary);
@@ -701,7 +703,9 @@
     cursor: pointer;
     touch-action: manipulation;
     border: 1px solid #0000;
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
   }
 
   :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):hover, :where(button:not(:disabled), input:not(:disabled):is([type="submit"], [type="reset"], [type="button"])):active {
@@ -768,6 +772,10 @@
 
   :where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
     accent-color: var(--marx-primary);
+  }
+
+  :where(input[type="checkbox"], input[type="radio"]) {
+    vertical-align: middle;
   }
 
   :where(ul:has(input:is([type="checkbox"], [type="radio"]))) {
@@ -867,7 +875,14 @@
 
   :where(label) {
     line-height: var(--marx-leading);
+    margin-block-end: var(--marx-space-xs);
     display: inline-block;
+  }
+
+  :where(label:has( > input:is([type="checkbox"], [type="radio"]))) {
+    align-items: center;
+    column-gap: var(--marx-space-2xs);
+    display: inline-flex;
   }
 
   :where(fieldset) {
