@@ -72,7 +72,7 @@
     "prepare": "lefthook install || true"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.31.0",
+    "@changesets/cli": "^3.0.1",
     "@types/node": "^26.1.1",
     "browserslist": "^4.28.6",
     "lefthook": "^2.1.10",
