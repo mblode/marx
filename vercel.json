@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build && npm run build:site",
   "outputDirectory": "dist",
-  "ignoreCommand": "if [ \"$VERCEL_ENV\" = \"preview\" ]; then exit 0; fi; exit 1",
+  "ignoreCommand": "case \"$VERCEL_GIT_COMMIT_MESSAGE\" in *\"[skip ci]\"*) exit 0 ;; esac; if [ \"$VERCEL_ENV\" = \"preview\" ]; then exit 0; fi; exit 1",
   "rewrites": [
     {
       "source": "/marx",
