@@ -83,7 +83,8 @@
     "ultracite": "7.9.3"
   },
   "overrides": {
-    "@types/node": "^26.1.1"
+    "@types/node": "^26.1.1",
+    "shell-quote": "^1.11.0"
   },
   "browserslist": [
     "chrome >= 123",
