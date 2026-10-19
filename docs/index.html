@@ -300,6 +300,10 @@
         api_host: "https://r.blode.co",
         defaults: "2026-05-30",
         ui_host: "https://us.posthog.com",
+        before_send: (event) => {
+          if (event) event.properties.project = "marx";
+          return event;
+        },
       });
     </script>
     <!--
